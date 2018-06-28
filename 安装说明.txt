@@ -1,0 +1,46 @@
+安装说明：
+1. 全部上传到FTP
+2. 导入源码根目录下的：xuer.sql
+3. 修改application目录下的：user_config.php 数据库配置信息+修改成自己的网址
+4. 后台地址：http://您的网址/admin.php 账号：admin 密码：19930710
+---------------------------------
+
+安装说明（详细）
+
+1. 全部上传到服务器或虚拟主机网站根目录下（不支持二级目录）
+
+2. 创建数据库导入源码根目录下的数据库：edu.sql (演示站数据)
+
+3. 修改application目录下的：user_config.php 
+define('W_BASE_URL_PATH','http://localhost/'); 修改成自己的域名
+
+define('DB_HOST',		'localhost');//数据库地址
+define('DB_USER',		'root'); //数据库账号
+define('DB_PASSWD',		'123456'); //数据库密码
+define('DB_NAME',		'edu');//数据库名
+
+4. 后台地址：http://您的网址/admin.php 账号：admin 密码：admin
+
+---------------------------------
+
+如果安装后 后台帐号密码不对，请仔细看，上面我说的是两种方法，所以数据库密码不一样，自己看上面说的密码 都不一样，亲，一定要仔细
+
+注意事项：
+1、修改文件请用编程编辑器（推荐：N++编辑器 绿色版），修改文件注意编码标点符号
+2、注意数据库需全部导入（推荐工具:Navicat for MySQL 绿色版）
+3.视频调用 需要使用 CC视频  
+
+官网  http://www.bokecc.com/
+
+说明 http://doc.bokecc.com/vod/manual/video/
+
+视频添加
+代码格式如下
+
+<script src="http://p.bokecc.com/player?vid=ECA4DD1C98E1B91C9C33DC5901307461&siteid=159B280E26968646&autoStart=true&width=100%&height=100%&playerid=EC7AF4CC912E7739&playertype=1" type="text/javascript"></script>
+
+
+视频转码地址：http://101.200.140.160:10000/player/
+
+---------------------------------
+
