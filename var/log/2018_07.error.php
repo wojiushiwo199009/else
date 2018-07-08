@@ -296,3 +296,13 @@
 ====================/index.php?m=courSystem.index&couClass=4 Start====================
 [2018-07-08 19:25:43]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:select * from xsmart_article_class where  classid = 	
 ====================/index.php?m=courSystem.index&couClass=4 End====================
+
+====================/index.php?m=courSystem.index&couClass=97 Start====================
+[2018-07-08 22:49:21]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:select * from xsmart_article_class where  classid = 	
+====================/index.php?m=courSystem.index&couClass=97 End====================
+
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 Start====================
+[2018-07-08 22:58:25]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:select * from xsmart_users where id=	
+[2018-07-08 22:58:27]:	XXXSMART	0.2	12345	[db]	[warning]	[execute]数据库查询 Used=2.12075805664	a:6:{s:3:"sql";s:39:"select * from xsmart_course where id=32";s:6:"result";i:0;s:14:"last_insert_id";i:0;s:13:"affected_rows";i:1;s:5:"error";s:0:"";s:5:"errno";i:0;}
+[2018-07-08 22:58:27]:	XXXSMART	0.2	12345	[db]	[warning]	[query]数据库查询:sql=select * from xsmart_course where id=32 Used=2.12086892128	
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 End====================

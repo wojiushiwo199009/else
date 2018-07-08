@@ -329,8 +329,10 @@ $(function(){
             //   maskLayer.style.display = "block";
 		    maskLayer.style.display = "block";
             $(".zhuceAndDenglu").css("display",'block');
-             $('#alert').fadeIn(400);
-             $(message12).css({'display':'none'});
+            //  $('#alert').fadeIn(400);
+            //  $(message12).css({'display':'none'});
+            $(".denglu").show()
+            $(".zhuce").hide()
          }
          //关闭按钮
         mClose.onclick = function() {
@@ -368,10 +370,15 @@ $(function(){
         }
         //弹出框的注册方法
         zcc.onclick = function(){
-              $('#alert').fadeOut();
-              //message12.style.display = "block";
-              $(message12).fadeIn(400);
-              maskLayer.style.display = "block";
+              $(".zhuceAndDenglu").addClass('switching')
+            setTimeout(function(){
+            	$(".denglu").toggle()
+            	$(".zhuce").toggle()
+            }, 400);
+            
+            setTimeout(function(){
+            	$(".zhuceAndDenglu").removeClass('switching')
+            }, 800);
          }
          dl_rr.onclick = function(){  
               myAlert.style.display = "none";
@@ -381,10 +388,15 @@ $(function(){
          }
          //弹出框的登陆方法
          dl_btn.onclick = function(){  
-             $(message12).fadeOut();
-            //myAlert.style.display = "block";
-            $('#alert').fadeIn(400);
-            maskLayer.style.display = "block";
+            $(".zhuceAndDenglu").addClass('switching')
+         	setTimeout(function(){
+         		$(".denglu").toggle()
+         		$(".zhuce").toggle()
+         	}, 400);
+         	
+         	setTimeout(function(){
+         		$(".zhuceAndDenglu").removeClass('switching')
+         	}, 800);
          }
          findpas.onclick = function(){
             var resphone    = $("#res_phone").val();
