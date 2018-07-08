@@ -30,7 +30,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .con_left .left_rt .tx_left{float:left;width:500px;margin:30px 0 30px 15px;}
 .con_left .left_rt .tx_left .tx_img{float:left;margin-right:10px;}
 .con_left .left_rt .tx_left .title{font-size:23px;font-weight:500;}
-.con_left .left_rt .tx_left .hot{font-size:16px;font-weight:500;margin:10px 0;color:#369897;float:left;}
+.con_left .left_rt .tx_left .hot{font-size:16px;font-weight:500;margin:10px 0;color:#28b18a;float:left;}
 .con_left .left_rt .tx_left .jb_img{float:left;margin:10px 5px 10px 20px;position:relative;top:5px;}
 .con_left .left_rt .tx_left .jb_name{float:left;font-size:14px;color:#999999;margin:12px 0;}
 .con_left .left_rt .span_right{float:right;margin:70px 10px 0 0;}
@@ -84,7 +84,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .con_right .date{width:270px;background:#369998;margin:15px;}
 .con_right .date span{display:inline-block;width:107px;height:48px;text-align:center;line-height:52px;background:url(../images/shequ_img_05.png) no-repeat;margin:10px 20px;color:#242424;font-size:18px;font-weight:bold;}
 .con_right .date a{display:inline-block;color:#fff;font-size:22px;letter-spacing:5px;margin-left:30px;*position:relative;top:-5px;}
-.con_right .hot{font-size:20px;font-weight:500;margin:0 15px;color:#369897;float:left;}
+.con_right .hot{font-size:20px;font-weight:500;margin:0 15px;color:#28b18a;float:left;}
 .con_right .ft_span{float:right;color:#000;display:block;font-size:12px;margin:5px 15px;}
 .con_right .hot_con{margin:15px;border-top:solid 1px #dddddd;padding-top:15px;font-size:12px;font-family:宋体;}
 .con_right .hot_con p{line-height:30px;}

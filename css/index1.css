@@ -19,6 +19,10 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
     .slideBox .bd a{width:1190px;}
     .sort_body{left:0px;}
     .slideBox .bd img{width:100%;}
+    .content .con_left{
+        width: 100%;
+        float: none;
+    }
   }
 	@media screen and (min-width: 1200px) and (max-width: 1400px){
     .slideBox{width:1200px;margin:0 auto;}
@@ -57,34 +61,39 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .sort{width:208px;height:auto;z-index:20;font-family:\5FAE\8F6F\96C5\9ED1;}
 .sort .sort-ti{height:38px;font:14px/35px \5fae\8f6f\96c5\9ed1;color:#fff;padding-left:30px}
-.sort .sort-list{border-top:solid 3px #439d97;height:503px;padding:0;background:url(../images/index_img_01.png);}
+.sort .sort-list{border-top:solid 3px #28b18a;height:503px;padding:0;background:url(../images/index_img_01.png);}
 .sort .sort-list ul{height:auto;}
 .sort .sort-list li{padding:0;width:208px;height:38px;float:left}
-.sort .sort-list li a{display:block;color:#000;font-weight:600;height:37px;line-height:37px;font-size:14px;border-bottom:1px solid #439d97;padding-left:30px;position:relative;}
+.sort .sort-list li a{display:block;color:#000;font-weight:600;height:37px;line-height:37px;font-size:14px;border-bottom:1px solid #28b18a;padding-left:30px;position:relative;}
 .sort .sort-list li a img{float:right;margin:12px;position:absolute;right:0;top:0px;}
-.sort .sort-list li.hover{border-left:solid 3px #439d97;width:205px;background:url(../images/index_img_01.png) no-repeat;}
-.sort .sort-list li.hover a{color:#439d97}
+.sort .sort-list li.hover{border-left:solid 3px #28b18a;width:205px;background:url(../images/index_img_01.png) no-repeat;}
+.sort .sort-list li.hover a{color:#28b18a}
 
 
 .sort .sort-list ul ul{display:none;position:absolute;top:40px;left:210px;}
-.sort .sort-list ul li.hover ul{background:url(../images/index_img_02.png);border:1px solid #439d97;left:208px;margin-top:-39px;width:207px;z-index:19;position:absolute;height:476px;overflow:hidden}
+.sort .sort-list ul li.hover ul{background:url(../images/index_img_02.png);border:1px solid #28b18a;left:208px;margin-top:-39px;width:207px;z-index:19;position:absolute;height:476px;overflow:hidden}
 .sort .sort-list ul li.hover ul li{height:39px;float:left;width:100px;padding:0}
 .sort .sort-list ul li.hover ul{display:block}
 .sort .sort-list ul li.hover ul li a{height:39px;line-height:39px;font-size:14px;border-bottom:0;padding:0;text-align:center;color:#333;background-position:15px -154px}
-.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#439d97;}
+.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#28b18a;}
 
 
 /*内容部分*/
-.container .content{width:1190px;margin:0 auto;}
+.container .content{position: relative;top:58px; width:100%;margin:0 auto;margin-top:10px;overflow: hidden;text-align: center;}
 
 /*leftmenu*/
-.lib_Menubox{width:1190px;height:38px;border-bottom:solid 2px #f5f5f5;margin-top:10px;}
-.lib_Menubox ul li{display:block;cursor:pointer;float:left;margin-right:100px;color:#333333;font-size:15px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;height:40px;line-height:40px;}
-.lib_Menubox li.hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#439d97;}
-.lib_Menubox li:hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#439d97;}
+.lib_Menubox{width:100%;height:38px;border-bottom:solid 2px #f5f5f5;}
+.lib_Menubox ul {
+    overflow: hidden;
+        width: 800px;
+    margin: 0 auto;
+}
+.lib_Menubox ul li{display:block;cursor:pointer;float:left;margin:0 50px;color:#333333;font-size:15px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;height:40px;line-height:40px;}
+.lib_Menubox li.hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
+.lib_Menubox li:hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
 /*leftmenu*/
 
-.tab_content{width:1215px;margin:0 auto;float:left;}
+.tab_content{margin:0 auto;}
 .tab_content ul li{float:left;width:221px;border:solid 1px #eaeaea;margin:20px 20px 0 0;overflow:hidden;}
 .tab_content ul li a{display:block;color:#333333;*border:solid 1px #fff;*margin-bottom:10px;}
 .tab_content ul li a h4{margin:10px 0 20px 5px;font-size:14px;}
@@ -222,16 +231,26 @@ transform: scale(0.9);
 
 
 
-.content .con_left{width:652px;float:left;}
+.content .con_left{width:692px;float:left;text-align: center;}
+.content .con_left .con_left_top{
+    text-align: center;
+}
 .con_left_top{margin-bottom:15px;}
 
-.content .con_cpy{float:left;width:310px;height:175px;margin:10px 0;}
+.content .con_cpy{float:left;width:330px;margin:10px 0;}
 .content .con_cpy ul li{line-height:32px;font-size:14px;position:relative;}
 .content .con_cpy ul li img{position:relative;top:-2px;}
 .content .con_cpy ul li img.more{float:right;margin:10px 0;}
-.content .con_cpy ul li a{color:#3f3f3f;margin-left:5px;}
-.content .con_cpy ul li a:hover{color:#439d97}
-.content .con_cpy ul li span{display:inline-block;position:absolute;right:0;*top:-5px;}
+.content .con_cpy ul li a{color:#3f3f3f;margin-left:5px;display: inline-block;width: 220px;position: relative;}
+.content .con_cpy ul li a::before{
+    content: url(../images/li_img_03.png);
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.content .con_cpy ul li a:hover{color:#28b18a}
+.content .con_cpy ul li span{display:inline-block;}
 
 .content .con_right{float:right;}
 .sty_img2{width:188px;height:23px;}
@@ -246,17 +265,17 @@ transform: scale(0.9);
 #slide-box .JQ-slide-nav .corner{border-color:#4b4b4b;}
 #slide-box .JQ-slide-nav .prev{left:0px;}
 #slide-box .JQ-slide-nav .next{right:0px;}
-#slide-box .wrap{overflow:hidden;display:inline-block;width:415px;height:295px;background:#f6f6f6;position:relative;}
+#slide-box .wrap{overflow:hidden;display:inline-block;width:415px;height:295px;position:relative;}
 #slide-box ul{width:10000px;}
 #slide-box li{float:left;width:400px;margin:25px 14px 30px 14px;}
 #slide-box li a{margin-right:10px;}
-#slide-box li img{width:180px;height:68px;margin-top:15px;}
+#slide-box li img{width:180px;height:68px;}
 #slide-box .JQ-slide-nav a:hover,#slide-box .JQ-slide-nav a:hover span{color:#d7d7d7;}
 
-.content .news{background:#439d97;width:1190px;margin:10px 0 30px 0;}
+.content .news{background:#28b18a;width:1190px;margin: 0 auto;}
 .content .news .news_left{float:left;width:397px;text-align:center;}
 .a1{position:relative;float:left;}
-.b1 {width:121px;height:111px;background:#fff;float:left;margin:7px 0 0 7px;}
+.b1 {width:121px;height:111px;background:#fff;float:left;margin:10px 0 0 7px;}
 .b1 img{margin:1px;width:119px;} 
 .b2 {width:200px;height:111px;background:#83c9c9;float:left;position:absolute;display:none;text-align:left;z-index:1;top:7px;} 
 
@@ -265,7 +284,10 @@ transform: scale(0.9);
 .content .news .news_center{float:left;width:396px;}
 .content .news .news_center .news_cen_btm{background:#6bbbbb;width:396px;margin-top:-4px;text-align:center;}
 .content .news .news_center .news_cen_btm img{margin-top:5px;}
-.news_title{color:#fff;display:inline-block;margin:5px 0 0px 0;font-size:18px;}
+.news_title{color:#fff;display:inline-block;font-size:18px;}
+.news_left .news_title{
+    margin: 10px 0 10px 8px;
+}
 .news_cen_btm{min-height:205px;float:left;}
 .news_cen_btm ul{margin:0 0 0 30px;text-align:left;padding-bottom:20px;}
 .news_cen_btm ul li{line-height:30px;}
@@ -275,3 +297,46 @@ transform: scale(0.9);
 
 .content .news .news_right{float:left;width:397px;}
 .content .news .news_right .news_cen_btm{margin-top:5px;text-align:center;}
+  @media screen and (max-width: 1190px) {
+      .content .con_left_right{
+              width: 1100px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+      }
+   
+    .content .news{
+        width: 793px;
+        margin: 0 auto;
+    }
+    .content .con_left {
+        float: none;
+        margin: 0 auto;
+    }
+    .content .con_right {
+       float: none;
+    }
+    .content .con_right .con_left_top{
+            margin-bottom: -35px;
+    margin-top: 20px;
+    }
+    #slide-box .wrap,#slide-box li{
+        /* width: 560px; */
+    }
+  }
+    @media screen and (min-width: 1190px) {
+     .content .con_left_right{
+         overflow: hidden;
+         width: 1196px;
+         margin: 0 auto 20px;
+     }
+
+   .content .con_left{
+        float: left;
+            width: 692px;
+    margin: 0 auto;
+    }
+    .content .con_right{
+        float: right;
+        width: auto;
+    }
+  }

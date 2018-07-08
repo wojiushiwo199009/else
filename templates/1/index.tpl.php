@@ -139,7 +139,6 @@
 <style>
     .swiper-container {
         width: 100%;
-        min-width:1190px;
         height: 502px;
         position:relative;
 		max-width:1440px;
@@ -184,6 +183,38 @@ var _hmt = _hmt || [];
 <img src="images/zr.gif" style="display:none;"/>
 <?php TPL :: display("header");?>
     <div class="swiper-container">
+
+		<div class="sort" id="left_class" style="position:absolute;left:0;">
+	<div class="sort-list">
+		<ul>
+			<?
+			if($link_list){
+			foreach($link_list as $key => $val){
+			?>
+			<li>
+				<a href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><img src="images/index_img_03.png"/></a>
+				<ul>
+					<?
+					$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']);
+					if($c_list){
+						foreach($c_list as $ck => $cv){
+							?>
+							<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?=$cv['name']?></a></li>
+							<?
+						}
+					}
+					?>
+				</ul>
+			</li>
+			<?
+		}
+		}
+		?>
+		</ul>
+	</div>
+</div>
+
+
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="images/banner1.png"></div>
             <div class="swiper-slide"><img src="images/banner4.jpg"></div>
@@ -195,7 +226,11 @@ var _hmt = _hmt || [];
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination" style="width:100%;min-width:1190px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
-        
+		
+		
+		
+
+
     </div>
 	<script src="js/swiper.min.js"></script>
     <script>
@@ -237,10 +272,10 @@ var _hmt = _hmt || [];
 	</div>
 	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="width:1190px;height:580px;overflow:hidden;">
+	<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
 		<div id="con_one_1" class="hover n-index-course">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce1){
 						foreach($exce1 as $kex1 => $vex1){
@@ -250,14 +285,20 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank"><?php echo $vex1['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
-                           <!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
-                            <span>时长：<em><?php echo $vex1['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
+								<!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
+								<span>时长：<em><?php echo $vex1['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex1['id']?>,0,0,2,1)">购买</a></span>
@@ -273,7 +314,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_2" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce2){
 						foreach($exce2 as $kex2 => $vex2){
@@ -283,13 +324,19 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank"><?php echo $vex2['stitle']?></a></div>
-                        <div class="course-bot-info">
-                            <span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex2['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex2['id']?>,2)"></a>
-                            <span>时长：<em><?php echo $vex2['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex2['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex2['id']?>,2)"></a>
+								<span>时长：<em><?php echo $vex2['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex2['id']?>,0,0,2,1)">购买</a></span>
@@ -305,23 +352,29 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_3" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce3){
 						foreach($exce3 as $kex3 => $vex3){
 							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex3['id']." group by userID"); 
 				?>
 					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex3['thumb']?>" /><div class="n-pic-mask"></div>
-                    </div>
+					</div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank"><?php echo $vex3['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex3['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex3['id']?>,2)"></a>
-                            <span>时长：<em><?php echo $vex3['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex3['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex3['id']?>,2)"></a>
+								<span>时长：<em><?php echo $vex3['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex3['id']?>,0,0,2,1)">购买</a></span>
@@ -337,7 +390,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_4" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce4){
 						foreach($exce4 as $kex4 => $vex4){
@@ -347,13 +400,19 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank"><?php echo $vex4['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex4['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex4['id']?>,2)"></a>
-                            <span>时长：<em><?php echo $vex4['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex4['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex4['id']?>,2)"></a>
+								<span>时长：<em><?php echo $vex4['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex4['id']?>,0,0,2,1)">购买</a></span>
@@ -369,7 +428,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_5" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce5){
 						foreach($exce5 as $kex5 => $vex5){
@@ -379,13 +438,19 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank"><?php echo $vex5['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex5['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex5['id']?>,2)"></a>
-                            <span>时长：<em><?php echo $vex5['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex5['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex5['id']?>,2)"></a>
+								<span>时长：<em><?php echo $vex5['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex5['id']?>,0,0,2,1)">购买</a></span>
@@ -677,118 +742,121 @@ var _hmt = _hmt || [];
 
 <!-- -->
 <div class="content">
-	<div class="con_left">
-		<div class="con_left_top">
-<?
-	$zhaopin_pic	= DS('publics2._get','','ad',' id = 7');
-	$zp_pic1		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 0,6');//var_dump($zp_pic1);
-	$zp_pic2		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 7,6');//var_dump($zp_pic2);
-?>
+	<div class="con_left_right">
 		
-			<img src="images/xuea_img_28.png" class="sty_img1"/><span class="study_lc">企业招聘</span><img src="images/xuea_img_28.png" class="sty_img1"/>
-		</div> 
-		<img src="<?= $zhaopin_pic[0]['imgurl']?>" />
-<div class="clearfloat"></div>
-		<div class="con_cpy">
-			<ul>
-			<?php
-				if(!empty($zp_pic1)){
-					foreach($zp_pic1 as $zpk1 => $zpv1){
-			?>
-				<li><img src="images/li_img_03.png" /><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv1["id"])?>" title="<?= $zpv1['title']?>"><?= F("publics.substrByWidth",$zpv1['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv1['inputtime'])?></span></li>
-				<?php }}?>
-			</ul>
-		</div>
-		<div class="con_cpy" style="margin-left:30px">
-			<ul>
-		<?php
-				if(!empty($zp_pic2)){
-					foreach($zp_pic2 as $zpv2){
-			?>
-				<li><img src="images/li_img_03.png" /><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv2["id"])?>" title="<?= $zpv2['title']?>"><?= F("publics.substrByWidth",$zpv2['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv2['inputtime'])?></span></li>
-
- 
-				<?php }}?> 
-			</ul>
-		</div>
-		<a href="<?= URL('bottom.foot_link','&cid=16')?>" ><img src="images/xuea_img_64.png" class="more" style="float:right;" /></a>
-		<div class="clearfloat"></div>
-	</div>
-    
-
-
-   <!-- 合作院校-->
-	<div class="con_right">
-		<div class="con_left_top">
-			<img src="images/xuea_img_28.png" class="sty_img2"/><span class="study_lc">合作院校</span><img src="images/xuea_img_28.png" class="sty_img2"/>
-		</div>
-		<div id="slide-box">
-			<b class="corner"></b>
-			<div class="slide-content" id="temp4">  
-				<div class="wrap">
-					<ul class="JQ-slide-content">
-						<li>
-			<?php if(!empty($coop)){
-					$num	=	count($coop);
-                  	foreach($coop as $ck => $cv){
-						//院校简介（显示图片和标题）
-                        $desc = DS("publics2._get","","ad","bid=20 and orid1=".$cv['linkageid']);
-                             
-            ?>
-							<!--<a href="<?= URL('university.school','&unid='.$cv['linkageid'])?>" target="_blank"><img src="<?= $desc[0]['imgurl']?>" title="<?= $desc[0]['title']?>"/></a>-->
-                            <a href="javascript:;" onClick="inter(<?= $cv['linkageid']?>)"><img src="<?= $desc[0]['imgurl']?>" title="<?= $cv['name']?>"/></a>
-                       		<?php if(($ck%6 == 5 && $num != $ck+1)){?>
-                            </li><li>
-                            
-                           
-			<?php
-					}
-                		
-					}
-				  }
-            ?>
-						</li>
-					</ul>
-				</div>
-				<script>
-                function inter(schid){
-                    var uid = $("#huid").val();
-                    if(uid=='' || uid == 0){
-                        // jAlert('请先登录','温馨提示');
-                         $("#maskLayer").attr("style","display:block");
-                                $("#alert").slideDown();
-                    }else{
-                        $.ajax({  
-                            url:'<?= URL('university.checkinter')?>',                   
-                            type:'POST',
-                            data:{uid:uid,schid:schid},
-                            
-                            success:function(r){
-                                e = eval('(' + r + ')');
-                                if(e.status == '1'){
-                                    window.location.href = '<?= URL("university.school","&unid=")?>'+schid;
-                                }else{
-                                    jAlert(e.info,'温馨提示');	
-                                } 
-                            }
-                        });	
-                    }	
-                }
-                </script>
-				<div class="JQ-slide-nav">
-					<a class="prev" href="javascritpt:void(0);">
-						<b class="corner"></b>
-						<span><img src="images/xuea_img_44.png" /></span>
-						<b class="corner"></b>
-					</a>
-					<a class="next" href="javascritpt:void(0);">
-						<b class="corner"></b>
-						<span><img src="images/xuea_img_47.png" /></span>
-						<b class="corner"></b>
-					</a>
-				</div>
+		<div class="con_left">
+			<div class="con_left_top">
+				<?
+					$zhaopin_pic	= DS('publics2._get','','ad',' id = 7');
+					$zp_pic1		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 0,6');//var_dump($zp_pic1);
+					$zp_pic2		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 7,6');//var_dump($zp_pic2);
+				?>
+			
+				<img src="images/xuea_img_28.png" class="sty_img1"/><span class="study_lc">企业招聘</span><img src="images/xuea_img_28.png" class="sty_img1"/>
+			</div> 
+			<img src="<?= $zhaopin_pic[0]['imgurl']?>" />
+			<div class="clearfloat"></div>
+			<div class="con_cpy">
+				<ul>
+				<?php
+					if(!empty($zp_pic1)){
+						foreach($zp_pic1 as $zpk1 => $zpv1){
+				?>
+					<li><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv1["id"])?>" title="<?= $zpv1['title']?>"><?= F("publics.substrByWidth",$zpv1['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv1['inputtime'])?></span></li>
+					<?php }}?>
+				</ul>
 			</div>
-			<b class="corner"></b>
+			<div class="con_cpy" style="margin-left:30px">
+				<ul>
+			<?php
+					if(!empty($zp_pic2)){
+						foreach($zp_pic2 as $zpv2){
+				?>
+					<li><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv2["id"])?>" title="<?= $zpv2['title']?>"><?= F("publics.substrByWidth",$zpv2['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv2['inputtime'])?></span></li>
+
+	
+					<?php }}?> 
+				</ul>
+			</div>
+			<a href="<?= URL('bottom.foot_link','&cid=16')?>" ><img src="images/xuea_img_64.png" class="more" style="float:right;" /></a>
+			<div class="clearfloat"></div>
+		</div>
+		
+
+
+	<!-- 合作院校-->
+		<div class="con_right">
+			<div class="con_left_top">
+				<img src="images/xuea_img_28.png" class="sty_img2"/><span class="study_lc">合作院校</span><img src="images/xuea_img_28.png" class="sty_img2"/>
+			</div>
+			<div id="slide-box">
+				<b class="corner"></b>
+				<div class="slide-content" id="temp4">  
+					<div class="wrap">
+						<ul class="JQ-slide-content">
+							<li>
+				<?php if(!empty($coop)){
+						$num	=	count($coop);
+						foreach($coop as $ck => $cv){
+							//院校简介（显示图片和标题）
+							$desc = DS("publics2._get","","ad","bid=20 and orid1=".$cv['linkageid']);
+								
+				?>
+								<!--<a href="<?= URL('university.school','&unid='.$cv['linkageid'])?>" target="_blank"><img src="<?= $desc[0]['imgurl']?>" title="<?= $desc[0]['title']?>"/></a>-->
+								<a href="javascript:;" onClick="inter(<?= $cv['linkageid']?>)"><img src="<?= $desc[0]['imgurl']?>" title="<?= $cv['name']?>"/></a>
+								<?php if(($ck%6 == 5 && $num != $ck+1)){?>
+								</li><li>
+								
+							
+				<?php
+						}
+							
+						}
+					}
+				?>
+							</li>
+						</ul>
+					</div>
+					<script>
+					function inter(schid){
+						var uid = $("#huid").val();
+						if(uid=='' || uid == 0){
+							// jAlert('请先登录','温馨提示');
+							$("#maskLayer").attr("style","display:block");
+									$("#alert").slideDown();
+						}else{
+							$.ajax({  
+								url:'<?= URL('university.checkinter')?>',                   
+								type:'POST',
+								data:{uid:uid,schid:schid},
+								
+								success:function(r){
+									e = eval('(' + r + ')');
+									if(e.status == '1'){
+										window.location.href = '<?= URL("university.school","&unid=")?>'+schid;
+									}else{
+										jAlert(e.info,'温馨提示');	
+									} 
+								}
+							});	
+						}	
+					}
+					</script>
+					<div class="JQ-slide-nav">
+						<a class="prev" href="javascritpt:void(0);">
+							<b class="corner"></b>
+							<span><img src="images/xuea_img_44.png" /></span>
+							<b class="corner"></b>
+						</a>
+						<a class="next" href="javascritpt:void(0);">
+							<b class="corner"></b>
+							<span><img src="images/xuea_img_47.png" /></span>
+							<b class="corner"></b>
+						</a>
+					</div>
+				</div>
+				<b class="corner"></b>
+			</div>
 		</div>
 	</div>
 

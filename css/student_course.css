@@ -32,7 +32,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .lib_Menubox{width:235px;height:auto;z-index:20;font-family:\5FAE\8F6F\96C5\9ED1;float:left;background:#f2f2f2;}
 .lib_Menubox .my_course li{display:block;cursor:pointer;color:#333333;font-size:14px;height:40px;line-height:40px;background:url(../images/foot_img_03.png) no-repeat;background-position:170px center;padding-left:60px;}
-.lib_Menubox .my_course li.hover{cursor:pointer;background:url(../images/foot_img_04.png) no-repeat #e7e7e7;background-position:170px center;color:#439d97;padding-left:60px;border-left:solid 2px #369998;}
+.lib_Menubox .my_course li.hover{cursor:pointer;background:url(../images/foot_img_04.png) no-repeat #e7e7e7;background-position:170px center;color:#28b18a;padding-left:60px;border-left:solid 2px #369998;}
 .lib_Menubox .my_course li.li_title{background:#e7e7e7;color:#4d4d4d;font-size:15px;font-weight:bold;text-align:center;padding:0;}
 
 /*leftcontent*/
@@ -138,7 +138,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .shiti_submit{border:0;background:#369998;width:300px;height:35px;line-height:35px;color:#fff;font-size:14px;font-family:\5FAE\8F6F\96C5\9ED1;margin-bottom:20px;border-radius:5px;}
 
 /*弹出分数*/
-.score{ position:fixed;width:725px;height:270px;background:#439D97;border-radius:5px;top:50%;margin-top:-135px;left:50%;margin-left:-280px;}
+.score{ position:fixed;width:725px;height:270px;background:#28b18a;border-radius:5px;top:50%;margin-top:-135px;left:50%;margin-left:-280px;}
 .score .score_left{float:left;margin:50px 0 0 50px;}
 .score .score_left h1{color:#FFFAEF;font-size:35px;}
 .score .score_left h1 span{font-size:60px;font-style:italic;color:#D4166D;margin-right:5px;}

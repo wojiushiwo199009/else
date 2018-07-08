@@ -284,3 +284,50 @@
 ====================/index.php?m=courJob.index&cid=4 Start====================
 [2018-06-28 20:56:22]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Table 'study.xsmart_skins' doesn't exist. SQL:SELECT * FROM xsmart_skins ORDER BY `sort_num` , `skin_id`	
 ====================/index.php?m=courJob.index&cid=4 End====================
+
+====================/admin.php?m=mgr/admin.login Start====================
+[2018-06-28 22:57:48]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+[2018-06-28 22:57:48]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+====================/admin.php?m=mgr/admin.login End====================
+
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 Start====================
+[2018-06-28 22:57:53]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+[2018-06-28 22:57:53]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 End====================
+
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 Start====================
+[2018-06-28 22:58:02]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT count(*) as num FROM `xsmart_course` as a LEFT JOIN xsmart_course_data as b ON a.id = b.id  where 1=1 and a.catid in (1) 	
+[2018-06-28 22:58:02]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT * FROM xsmart_course as a LEFT JOIN xsmart_course_data as b ON a.id = b.id where 1=1 and a.catid in (1)  order by a.id desc limit 0,200	
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:09]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199629","1530199629")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:10]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199630","1530199630")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:34]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199654","1530199654")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:34]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199654","1530199654")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:34]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199654","1530199654")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:35]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199655","1530199655")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php?m=login.ajax_register Start====================
+[2018-06-28 23:27:35]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Duplicate entry '15081125326' for key 'user_name'. SQL:INSERT  INTO xsmart_users(`username`,`password`,`realname`,`type`,`addtime`,`uptime`) VALUES("15081125326","202cb962ac59075b964b07152d234b70","mmd","2","1530199655","1530199655")	
+====================/index.php?m=login.ajax_register End====================
+
+====================/index.php Start====================
+[2018-06-29 22:45:08]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Table 'study.xsmart_skins' doesn't exist. SQL:SELECT * FROM xsmart_skins ORDER BY `sort_num` , `skin_id`	
+====================/index.php End====================

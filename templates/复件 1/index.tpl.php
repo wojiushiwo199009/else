@@ -231,7 +231,7 @@ var _hmt = _hmt || [];
 	</div>
 	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="width:1190px;height:580px;overflow:hidden;">
+	<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
 		<div id="con_one_1" class="hover n-index-course">
 			<div class="tab_content n-course-box w-content">
 				<ul style="margin-left:-20px">
@@ -695,7 +695,7 @@ var _hmt = _hmt || [];
 				if(!empty($zp_pic2)){
 					foreach($zp_pic2 as $zpv2){
 			?>
-				<li><img src="images/li_img_03.png" /><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv2["id"])?>" title="<?= $zpv2['title']?>"><?= F("publics.substrByWidth",$zpv2['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv2['inputtime'])?></span></li>
+				<li><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv2["id"])?>" title="<?= $zpv2['title']?>"><?= F("publics.substrByWidth",$zpv2['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv2['inputtime'])?></span></li>
 
  
 				<?php }}?> 

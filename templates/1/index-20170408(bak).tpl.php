@@ -233,7 +233,7 @@ var _hmt = _hmt || [];
 	</div>
 	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="width:1190px;height:580px;overflow:hidden;">
+	<div class="lib_Contentbox lib_tabborder" style="width:1190px;overflow:hidden;">
 		<div id="con_one_1" class="hover n-index-course">
 			<div class="tab_content n-course-box w-content">
 				<ul style="margin-left:-20px">

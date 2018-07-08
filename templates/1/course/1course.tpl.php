@@ -205,13 +205,19 @@ $(document).ready(function(){
 						<li><div class="course-pic-txt"><img width="273" height="158" src="<?= !empty($sv['thumb'])?$sv['thumb']:'images/banner2.png'?>" /><div class="n-pic-mask"></div>
                     </div>
                     <div class="c-course-info">   
-                        <div class="c-course-name"><?php echo $sv['title']?></div>
-                        <div class="course-bot-info">
-                            <span class="c-details right"><em><?= count($buy_sys)?></em>人在学习</span>  
-                        </div>
-                        <div class="course-time">
-                            <!--<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" ></a>-->
-                            <span>时长：<em><?php echo $sv['kc_hours']?></em></span></div>
+						<div class="c-course-name"><?php echo $sv['title']?></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right"><em><?= count($buy_sys)?></em>人在学习</span>  
+							</div>
+							<div class="course-time">
+								<!--<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" ></a>-->
+								<span>时长：<em><?php echo $sv['kc_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                         	<?php if($sv['is_open'] == 1){?>
                             <span class="study-btn"><a href="<?= URL('courSystem.curriculumEver','classid='.$sv['couClass'].'&id='.$sv['id'].'&catid=2');?>" target="_blank">免费</a></span>

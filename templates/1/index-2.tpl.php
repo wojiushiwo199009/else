@@ -233,10 +233,10 @@ var _hmt = _hmt || [];
 	</div>
 	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="width:1190px;height:580px;overflow:hidden;">
+	<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
 		<div id="con_one_1" class="hover n-index-course">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce1){
 						foreach($exce1 as $kex1 => $vex1){
@@ -269,7 +269,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_2" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce2){
 						foreach($exce2 as $kex2 => $vex2){
@@ -301,7 +301,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_3" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce3){
 						foreach($exce3 as $kex3 => $vex3){
@@ -333,7 +333,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_4" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce4){
 						foreach($exce4 as $kex4 => $vex4){
@@ -365,7 +365,7 @@ var _hmt = _hmt || [];
 		</div>
 		<div id="con_one_5" class="hover n-index-course" style="display:none">
 			<div class="tab_content n-course-box w-content">
-				<ul style="margin-left:-20px">
+				<ul>
 				<?
 					if($exce5){
 						foreach($exce5 as $kex5 => $vex5){

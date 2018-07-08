@@ -60,21 +60,21 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .sort{width:208px;height:auto;z-index:20;font-family:\5FAE\8F6F\96C5\9ED1;}
 .sort .sort-ti{height:38px;font:14px/35px \5fae\8f6f\96c5\9ed1;color:#fff;padding-left:30px}
-.sort .sort-list{border-top:solid 3px #439d97;height:503px;padding:0;background:url(../images/index_img_01.png);}
+.sort .sort-list{border-top:solid 3px #28b18a;height:503px;padding:0;background:url(../images/index_img_01.png);}
 .sort .sort-list ul{height:auto;}
 .sort .sort-list li{padding:0;width:208px;height:38px;float:left}
-.sort .sort-list li a{display:block;color:#000;font-weight:600;height:37px;line-height:37px;font-size:14px;border-bottom:1px solid #439d97;padding-left:30px;position:relative;}
+.sort .sort-list li a{display:block;color:#000;font-weight:600;height:37px;line-height:37px;font-size:14px;border-bottom:1px solid #28b18a;padding-left:30px;position:relative;}
 .sort .sort-list li a img{float:right;margin:12px;position:absolute;right:0;top:0px;}
-.sort .sort-list li.hover{border-left:solid 3px #439d97;width:205px;background:url(../images/index_img_01.png) no-repeat;}
-.sort .sort-list li.hover a{color:#439d97}
+.sort .sort-list li.hover{border-left:solid 3px #28b18a;width:205px;background:url(../images/index_img_01.png) no-repeat;}
+.sort .sort-list li.hover a{color:#28b18a}
 
 
 .sort .sort-list ul ul{display:none;position:absolute;top:40px;left:210px;}
-.sort .sort-list ul li.hover ul{background:url(../images/index_img_02.png);border:1px solid #439d97;left:208px;margin-top:-39px;width:207px;z-index:19;position:absolute;height:476px;overflow:hidden}
+.sort .sort-list ul li.hover ul{background:url(../images/index_img_02.png);border:1px solid #28b18a;left:208px;margin-top:-39px;width:207px;z-index:19;position:absolute;height:476px;overflow:hidden}
 .sort .sort-list ul li.hover ul li{height:39px;float:left;width:100px;padding:0}
 .sort .sort-list ul li.hover ul{display:block}
 .sort .sort-list ul li.hover ul li a{height:39px;line-height:39px;font-size:14px;border-bottom:0;padding:0;text-align:center;color:#333;background-position:15px -154px}
-.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#439d97;}
+.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#28b18a;}
 
 
 /*内容部分*/
@@ -83,8 +83,8 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 /*leftmenu*/
 .lib_Menubox{width:1190px;height:38px;border-bottom:solid 2px #f5f5f5;margin-top:10px;}
 .lib_Menubox ul li{display:block;cursor:pointer;float:left;margin-right:100px;color:#333333;font-size:15px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;height:40px;line-height:40px;}
-.lib_Menubox li.hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#439d97;}
-.lib_Menubox li:hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#439d97;}
+.lib_Menubox li.hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
+.lib_Menubox li:hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
 /*leftmenu*/
 
 .tab_content{width:1215px;margin:0 auto;float:left;}
@@ -233,7 +233,7 @@ transform: scale(0.9);
 .content .con_cpy ul li img{position:relative;top:-2px;}
 .content .con_cpy ul li img.more{float:right;margin:10px 0;}
 .content .con_cpy ul li a{color:#3f3f3f;margin-left:5px;}
-.content .con_cpy ul li a:hover{color:#439d97}
+.content .con_cpy ul li a:hover{color:#28b18a}
 .content .con_cpy ul li span{display:inline-block;position:absolute;right:0;*top:-5px;}
 
 .content .con_right{float:right;}
@@ -256,7 +256,7 @@ transform: scale(0.9);
 #slide-box li img{width:180px;height:68px;margin-top:15px;}
 #slide-box .JQ-slide-nav a:hover,#slide-box .JQ-slide-nav a:hover span{color:#d7d7d7;}
 
-.content .news{background:#439d97;width:1190px;margin:10px 0 30px 0;}
+.content .news{background:#28b18a;width:1190px;margin:10px 0 30px 0;}
 .content .news .news_left{float:left;width:397px;text-align:center;}
 .a1{position:relative;float:left;}
 .b1 {width:121px;height:111px;background:#fff;float:left;margin:7px 0 0 7px;}
