@@ -19,7 +19,7 @@ outline:medium;
 .container{width:100%;margin:-17px auto;}
 
 /*top*/
-.top{position: fixed;top:0;width:100%;margin:0 auto;height:58px;background:#000;z-index:9999;}
+.top{position: fixed;top:0;width:100%;margin:0 auto;height:58px;background:#000;z-index:3000;}
 .top .top_con{width:1190px;min-width:1024px;margin:0 auto;height:52px;position:relative;}
 
 .top .logo{float:left;margin:15px 0px 0 0;}
