@@ -158,7 +158,7 @@ $(document).ready(function(){
     </div>
     <div class="bd">
         <ul>
-        	<a href=""><li style="background:url(images/banner1.png) no-repeat;background-size:100% 100%;height:502px;"></li></a>
+        	<a href=""><li style="background:url(images/banner1.jpg) no-repeat;background-size:100% 100%;height:502px;"></li></a>
             <a href=""><li style="background:url(images/banner4.jpg) no-repeat;background-size:100% 100%;height:502px;"></li></a>
             <a href=""><li style="background:url(images/banner6.jpg) no-repeat;background-size:100% 100%;height:502px;"></li></a>
         </ul>
@@ -237,14 +237,21 @@ $(document).ready(function(){
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank"><?php echo $vex1['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
-                           <!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
-                            <span>时长：<em><?php echo $vex1['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
+							<!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
+								<span>时长：<em><?php echo $vex1['sys_hours']?></em></span>
+							</div>
+						</div>
+						
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex1['id']?>,0,0,2,1)">购买</a></span>
@@ -272,7 +279,7 @@ $(document).ready(function(){
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank"><?php echo $vex2['stitle']?></a></div>
                         <div class="course-bot-info">
                             <span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex2['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex2['id']?>,2)"></a>
@@ -304,7 +311,7 @@ $(document).ready(function(){
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank"><?php echo $vex3['stitle']?></a></div>
                         <div class="course-bot-info">
                         	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex3['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex3['id']?>,2)"></a>
@@ -336,7 +343,7 @@ $(document).ready(function(){
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank"><?php echo $vex4['stitle']?></a></div>
                         <div class="course-bot-info">
                         	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex4['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex4['id']?>,2)"></a>
@@ -368,7 +375,7 @@ $(document).ready(function(){
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank"><?php echo $vex5['stitle']?></a></div>
                         <div class="course-bot-info">
                         	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex5['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex5['id']?>,2)"></a>

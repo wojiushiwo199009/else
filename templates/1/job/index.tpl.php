@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/head.css" /> 
 <link rel="stylesheet" type="text/css" href="css/foot.css" /> 
 <link href="css/jquery.alerts.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
 <!-- 滚动图片 -->
 <!--  <script type="text/javascript" src="js/jQuery.v1.8.3-min.js"></script>-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -164,43 +165,45 @@ var _hmt = _hmt || [];
 <div class="container">
 <?php TPL :: display("header1")?>
 <div class="zong">
-	<div class="content">
-    	
-        <!--分类导航-->
-		<div class="sort">
-			<div class="sort-list"> 
-				<ul>
-					<li class="hover2"> <span class="li_title">全部分类</span> </li>
-		<?
-        $link_list = DS('publics._get','','linkage',' parentid = 0 and keyid = 1');
-            if($link_list){
-                foreach($link_list as $key => $val){
-        ?>
-					<li><a href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>">
-						<?= $val['name']?>
-						<img src="images/index_img_03.png"/><!--<span>IOS/iPhone/AndroidARM</span>--></a>
-						<ul>
-					<?
-                    $c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']);
-                    if($c_list){
-                        foreach($c_list as $ck => $cv){
-                    ?>
-							<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?= $cv['name']?></a></li>
-					<?
-                        }
-                    }
+
+	<div class="menuHolder">
+		<div class="menuWindow">
+			<ul class="p1">
+				<li class="s1"><a href="javascript:;">菜单</a>
+					<ul class="p2">
+						<?
+					$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+					if ($link_list) {
+						foreach ($link_list as $key => $val) {
+							?>
+								<li class='s2'>
+									<a href="<?= URL('courSystem.index', '&couClass=' . $val['linkageid']) ?>"><?= $val['name'] ?></a>
+									<?
+								$c_list = DS('publics._get', '', 'linkage', ' parentid = ' . $val['linkageid']) ?>
+									<ul class="p3 <?= 'a' . count($c_list) ?>">
+										<?
+
+									if ($c_list) {
+										foreach ($c_list as $ck => $cv) {
+											?>
+												<li><a href="<?= URL('courSystem.index', '&couClass=' . $cv['linkageid']) ?>"><?= $cv['name'] ?></a></li>
+												<?
+										}
+									}
+									?>
+									</ul>
+								</li>
+								<?
+						}
+					}
 					?>
-						</ul>
-					</li>
-		<?
-				}
-			}
-		?>
-				</ul>
-			</div>
+					</ul>
+				</li>
+			</ul>
 		</div>
-        <!--分类导航-->
-        
+	</div>
+
+	<div class="content">
         <!--video-->
 		<div class="content_right n-course-box w-content">
 			<ul>

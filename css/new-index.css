@@ -65,7 +65,13 @@
 .leftnav-box ul dl.n-course-play dd em i.now-play{color:#ff6400}
 
 .n-icon-live{padding:1px 5px;background:#ff0000;color:#fff;}
-
+.con-title{
+	margin: 20px 20px 0 0px;
+    text-align: left;
+    border-top: 1px solid #dedede;
+	padding-top: 20px;
+	color: #303332;
+}
 /*** 学习流程图 ***/
 .n-index-flowchart{background:#fff;padding:20px 0 30px;}
 .n-screen-tit1{height:46px;border-bottom:1px solid #ebebeb;}
@@ -142,18 +148,22 @@
 
 .n-course-box{padding-top:0px;} 
 .n-course-box ul{overflow:hidden;margin: 0 auto;padding-bottom:30px;}
-.n-course-box ul li{transition: all 1s;float:left;margin:40px 0 0 24px;border-bottom:2px solid #e6e6e6;background:#fff;position:relative;overflow:hidden;border-radius: 10px;}
+.n-course-box ul li{height:210px;width:280px;transition: all 1s;float:left;margin:30px 0 0 24px;border:1px solid #e6e6e6;background:#fff;position:relative;overflow:hidden;border-radius: 10px;}
+.n-course-box ul li img{
+	width: 100%;
+}
 .n-course-box .c-course-detail{
 	line-height: 20px;
 }
 .n-course-box ul li .course-pic-txt{position:relative}
 .n-course-box ul li .course-pic-txt .n-pic-mask{position:absolute;top:0;left:0;z-index:3;background:#000;filter:alpha(opacity=0);opacity:0;transition: all .4s ease;overflow:hidden}
 .n-course-box ul li.active .course-pic-txt .n-pic-mask,.n-course-box ul li:hover .course-pic-txt .n-pic-mask{filter:alpha(opacity=60);opacity:0.6;}
-.n-course-box ul li .c-course-info{position:absolute;left:50%;padding:0 10px;background:#fff;z-index:5;transition: all .4s ease;filter:alpha(opacity=70);text-align:left;    transform: translateX(-50%);}
+.n-course-box ul li .c-course-info{box-sizing: border-box;position:absolute;left:50%;padding:0 10px;background:#fff;z-index:5;transition: all .4s ease;filter:alpha(opacity=70);text-align:left;    transform: translateX(-50%);}
 .n-course-box ul li .course-info {
 	position: absolute;
 	bottom: 50px;
-	width: 230px;
+	right: 10px;
+	left: 10px;
 }
 .n-course-box ul li .c-course-name{height:50px;line-height:50px;overflow:hidden;text-align: center;color: #fff;}
 .n-course-box ul li .c-course-name a{font-size:20px;color:#333;}
@@ -169,7 +179,7 @@
 .n-course-box ul li .course-hover-btn{padding:10px 0;height:32px;overflow:hidden;width: calc(100% - 20px);position: absolute;bottom: 0;}
 .n-course-box ul li .course-hover-btn .study-btn{float:left;width:90px;}
 .n-course-box ul li .course-hover-btn .det-btn{float:right;width:90px;}
-.n-course-box ul li .course-hover-btn span a{display:block;height:30px;line-height:30px;background:#2e8bff;text-align:center;font-size:14px;color:#fff;transition:all 0.2s ease;}
+.n-course-box ul li .course-hover-btn span a{display:block;height:30px;line-height:30px;background:#1eaee3;text-align:center;font-size:14px;color:#fff;transition:all 0.2s ease;}
 .n-course-box ul li .course-hover-btn span.det-btn a{background:#ff3e2e;color:#fff;}
 
 /*** 首页app模块 ***/
@@ -220,7 +230,23 @@
 .n-join-con a{float: left;height: 40px;line-height: 40px;text-align: center;margin: 0 10px;display: inline;border: 1px solid #e6e6e6;border-radius: 4px;font-size: 14px;color: #fff;transition: all .2s ease;}
 .n-join-con a:hover{text-decoration: none;border: 1px solid #64c2f3;background: #64c2f3;color: #fff}
 
-@media screen and (max-width: 1199px) {
+
+
+.n-course-box ul li .course-pic-txt .n-pic-mask{width:100%;height:210px;}
+.n-course-box ul li .c-course-info{width:100%;top:158px;height: 210px;}
+.n-course-box ul li.active .c-course-info,.n-course-box ul li:hover .c-course-info{
+	top:0px;bottom: 0;
+	color: #fff;
+	background: #000;
+}
+.n-course-box ul li:hover a{
+	color: #fff;
+}
+.n-course-box ul li:nth-child(4n+1){
+	margin-left: 0;
+}
+
+/* @media screen and (max-width: 992px) {
 	.scrollbox{width:705px;}
 	.scrollcon{width:705px;}
 	.n-course-box ul{
@@ -329,7 +355,10 @@
 	.c-searchbox a{width:75px;}
 	
 	
-	.n-course-box ul li{width: 265px;height:210px;transition: all 1s;border-radius: 10px;}
+	.n-course-box ul li{width: 278px;height:210px;transition: all 1s;border-radius: 10px;}
+	.n-course-box ul li:nth-child(4n+1){
+		margin-left: 0px;
+	}
 	.n-course-box ul li .course-pic-txt img{width:100%;height:158px;}
 	.n-course-box ul li .course-pic-txt .n-pic-mask{width:100%;height:210px;}
 	.n-course-box ul li .c-course-info{width: 100%;
@@ -358,7 +387,7 @@
 		.zong .n-course-box ul,.lib_Menubox ul{
 			width: auto;
 		}
-	}
+	} */
 	.n-course-box ul li.active ,.n-course-box ul li:hover{
 		box-shadow:0 10px 30px rgba(0,0,0,.3);
 	}

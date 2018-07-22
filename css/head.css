@@ -20,7 +20,7 @@ outline:medium;
 
 /*top*/
 .top{position: fixed;top:0;width:100%;margin:0 auto;height:58px;background:#000;z-index:3000;}
-.top .top_con{width:1190px;min-width:1024px;margin:0 auto;height:52px;position:relative;}
+.top .top_con{width:1190px;min-width:1024px;margin:0 auto;position:relative;}
 
 .top .logo{float:left;margin:15px 0px 0 0;}
 
@@ -36,7 +36,7 @@ outline:medium;
 
 .top_con .search{float:right;position:relative;margin:14px 0;width:172px;}
 .top_con .search input{border:0;}
-.top_con .search .search_text{float:left;height:29px;line-height:29px;width:172px;background:#9ACCCB;border-radius:15px;text-indent:2.5em;color:#fff;}
+.top_con .search .search_text{float:left;height:29px;line-height:29px;width:172px;border-radius:15px;text-indent:1.5em;color:#fff;}
 .top_con .search .search_btn{position:absolute;left:11px;top:7px;}
 
 .top_con .dengluqian{float:right;height: 58px;line-height: 58px; width:132px;}
@@ -44,7 +44,7 @@ outline:medium;
 .top_con .dengluqian .zc{color:#fff;background:none;border-right: 1px solid #fff;}
 .top_con .dengluqian .dl{color:#fff;background:none;}
 .top_con .dengluqian .zc:hover,.top_con .dengluqian .dl:hover{
-    color: #2e8bff;
+    color: #1eaee3;
 }
 .top_con .dengluhou{float:right;margin-top:15px;width:180px;height:50px;position:absolute;right:-50px;}
 .top_con .dengluhou .name{float:right;color:#fff;font-size:14px;}

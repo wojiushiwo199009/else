@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 <?php TPL :: display("header");?>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/banner1.png"></div>
+            <div class="swiper-slide"><img src="images/banner1.jpg"></div>
             <div class="swiper-slide"><img src="images/banner4.jpg"></div>
             <div class="swiper-slide"><img src="images/banner6.jpg"></div>
            	<?php if(!empty($banner)){
@@ -246,9 +246,12 @@ var _hmt = _hmt || [];
                     </div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank"><?php echo $vex1['stitle']?></a></div>
-                        <div class="course-bot-info">
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-bot-info">
                         	<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>

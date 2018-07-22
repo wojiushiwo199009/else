@@ -2,21 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 
 
-<meta property="qc:admins" content="254647636026375" />
-<meta http-equiv="X-UA-Compatible" content="IE=7;IE=9;IE=10;IE=Edge;IE=8">
-<title><?php $site_name = DS('publics.get_index','','site_name'); echo $site_name[0]['value']?></title>    
-<meta name="keywords" content="<?php $site_keyword = DS('publics.get_index','','site_keyword'); echo $site_keyword[0]['value']?>" />  
-<meta name="description" content="<?php $site_meat = DS('publics.get_index','','site_meat'); echo $site_meat[0]['value']?>" /> 
+	<meta property="qc:admins" content="254647636026375" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7;IE=9;IE=10;IE=Edge;IE=8">
+	<title><?php $site_name = DS('publics.get_index','','site_name'); echo $site_name[0]['value']?></title>    
+	<meta name="keywords" content="<?php $site_keyword = DS('publics.get_index','','site_keyword'); echo $site_keyword[0]['value']?>" />  
+	<meta name="description" content="<?php $site_meat = DS('publics.get_index','','site_meat'); echo $site_meat[0]['value']?>" /> 
 
 
-<link rel="stylesheet" type="text/css" href="css/head.css?2017040823" /> 
-<link rel="stylesheet" type="text/css" href="css/foot.css?2017040822" /> 
-<link href="/css/jquery.alerts.css" rel="stylesheet" />
-<meta name="baidu-tc-verification" content="bbf97a97d2668dce1ed093cba54014e6" />
+	<link rel="stylesheet" type="text/css" href="css/head.css?2017040823" /> 
+	<link rel="stylesheet" type="text/css" href="css/foot.css?2017040822" /> 
+	<link href="/css/jquery.alerts.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
+	<meta name="baidu-tc-verification" content="bbf97a97d2668dce1ed093cba54014e6" />
 
 <!--  20170408 yinzj4
 <script src="http://siteapp.baidu.com/static/webappservice/uaredirect.js" type="text/javascript"></script><script type="text/javascript">uaredirect("http://m.bigdata001.com","http://www.bigdata001.com");</script> 
@@ -74,8 +75,8 @@
 		} 
 	} 
 			//timer处理函数 
-	function SetRemainTime() { 
-		if (curCount == 0) { 
+			function SetRemainTime() { 
+				if (curCount == 0) { 
 			window.clearInterval(InterValObj);//停止计时器 
 			$("#btnSendCode").removeAttr("disabled");//启用按钮 
 			$("#btnSendCode").val("重新发送"); 
@@ -87,32 +88,32 @@
 </script>	
 <!-- 选项卡 -->
 <script>
-    function setTab(name,cursel,n){
-		for(i=1;i<=n;i++){
-			var menu=document.getElementById(name+i);
-			var con=document.getElementById("con_"+name+"_"+i);
-			menu.className=i==cursel ? "hover" : "";
-			//con.style.display=i==cursel ? "block" : "none";
-			if(con.style.display=i==cursel){
-				$(con).fadeIn();
-			}else{
-				con.style.display = "none";
-			}
-		}
-    }
+	// function setTab(name,cursel,n){
+	// 	for(i=1;i<=n;i++){
+	// 		var menu=document.getElementById(name+i);
+	// 		var con=document.getElementById("con_"+name+"_"+i);
+	// 		menu.className=i==cursel ? "hover" : "";
+	// 		//con.style.display=i==cursel ? "block" : "none";
+	// 		if(con.style.display=i==cursel){
+	// 			$(con).fadeIn();
+	// 		}else{
+	// 			con.style.display = "none";
+	// 		}
+	// 	}
+	// }
 </script>
 <!-- 点击左右滑动 -->
 <script type="text/javascript" src="js/jq.Slide.js"></script>
 <script type="text/javascript">
-    $(function(){
-        $("#temp4").Slide({
-            effect : "scroolLoop",
-            autoPlay:true,
-            speed : "normal",
-            timer : 3000,
-            steps : 1
-        });
-    });
+	$(function(){
+		$("#temp4").Slide({
+			effect : "scroolLoop",
+			autoPlay:true,
+			speed : "normal",
+			timer : 3000,
+			steps : 1
+		});
+	});
 </script>
 <!-- 图片显示div -->
 <script type="text/javascript" src="js/tc.min.js"></script>
@@ -137,33 +138,37 @@
 <link rel="stylesheet" media="screen" type="text/css" href="css/new-index.css"/>
 <link rel="stylesheet" href="css/swiper.min.css">
 <style>
-    .swiper-container {
-        width: 100%;
-        height: 502px;
-        position:relative;
-		max-width:1440px;
-		top:58px;
-        /*background:url(images/zr.gif) no-repeat center center;*/
-    }
-    .swiper-slide {
-        text-align: center;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet{width: 11px;height: 11px;text-align: center;margin:9px 10px;background:url(images/img_20.png) no-repeat;}
-    .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet-active{position: relative;background:url(images/img_21.png) no-repeat;}
- </style>
+	.swiper-container {
+		width: 100%;
+		position:relative;
+		top:57px;
+		/*background:url(images/zr.gif) no-repeat center center;*/
+	}
+	.swiper-wrapper{
+		height:auto;
+	}
+	.swiper-slide {
+		text-align: center;
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	.swiper-container img{
+		width:100%;
+	}
+	.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet{width: 11px;height: 11px;text-align: center;margin:9px 10px;background:url(images/img_20.png) no-repeat;}
+	.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet-active{position: relative;background:url(images/img_21.png) no-repeat;}
+</style>
 
  <!--百度异步统计代码
  <script>
@@ -179,297 +184,311 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
-<div class="container">
-<img src="images/zr.gif" style="display:none;"/>
-<?php TPL :: display("header");?>
-    <div class="swiper-container">
+	<div class="container">
+		<img src="images/zr.gif" style="display:none;"/>
+		<?php TPL :: display("header");?>
+		<div class="swiper-container">
 
-		<div class="sort" id="left_class" style="position:absolute;left:0;">
-	<div class="sort-list">
-		<ul>
-			<?
-			if($link_list){
-			foreach($link_list as $key => $val){
-			?>
-			<li>
-				<a href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><img src="images/index_img_03.png"/></a>
-				<ul>
-					<?
-					$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']);
-					if($c_list){
-						foreach($c_list as $ck => $cv){
-							?>
-							<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?=$cv['name']?></a></li>
-							<?
-						}
-					}
-					?>
-				</ul>
-			</li>
-			<?
-		}
-		}
-		?>
-		</ul>
-	</div>
-</div>
-
-
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/banner1.png"></div>
-            <div class="swiper-slide"><img src="images/banner4.jpg"></div>
-            <div class="swiper-slide"><img src="images/banner6.jpg"></div>
-           	<?php if(!empty($banner)){
-				foreach($banner as $bk => $bv){?>
-            <div class="swiper-slide"><img src="<?= $bv['imgurl']?>"></div>
-            <?php }}?>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination" style="width:100%;min-width:1190px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
-		
-		
-		
-
-
-    </div>
-	<script src="js/swiper.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            effect : 'fade',
-            loop: true,
-            autoplay : 3000,
-			autoplayDisableOnInteraction: false
-        });
-    </script>
-    <!-- 纵向导航 -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".sort-list>ul>li").hover(function(){
-                $(this).addClass("hover")
-            },function(){
-                $(this).removeClass("hover")
-            });
-           
-        });
-    </script>
-<script>
-  function setTabb($class,$id){
-  $("."+$class).fadeOut();
-    $("#"+$id).fadeIn();
-  }
-</script>
-<div class="content">
-	<div class="lib_Menubox lib_tabborder">
-		<ul>
-		   <li id="one1" onClick="setTab('one',1,5)" class="hover">热门推荐</li>
-		   <li id="one2" onClick="setTab('one',2,5)" >人气最高</li> 
-		   <li id="one3" onClick="setTab('one',3,5)">项目实战</li>   
-		   <li id="one4" onClick="setTab('one',4,5)">仙人指路</li>
-		   <li id="one5" onClick="setTab('one',5,5)">企业之声</li>
-		</ul>
-	</div>
-	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
-	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
-		<div id="con_one_1" class="hover n-index-course">
-			<div class="tab_content n-course-box w-content">
-				<ul>
-				<?
-					if($exce1){
-						foreach($exce1 as $kex1 => $vex1){
-							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex1['id']." group by userID"); 
-				?>
-					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex1['thumb']?>" /><div class="n-pic-mask"></div>
-                    </div>
-                    <div class="c-course-info">
-                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank"><?php echo $vex1['stitle']?></a></div>
-						<div class="c-course-detail">
-							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
-						</div>
-						<div class="course-info">
-							<div class="course-bot-info">
-								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
-								<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
-							</div>
-							<div class="course-time">
-								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
-								<!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
-								<span>时长：<em><?php echo $vex1['sys_hours']?></em></span>
-							</div>
-						</div>
-                        <div class="course-hover-btn">
-                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
-                            <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex1['id']?>,0,0,2,1)">购买</a></span>
-                        </div>
-                    </div></li>
-				<?
-						}
-					}
-				?>
-				</ul>
-				<div class="clearfloat"></div>
+			<div class="sort" id="left_class" style="">
 			</div>
-		</div>
-		<div id="con_one_2" class="hover n-index-course" style="display:none">
-			<div class="tab_content n-course-box w-content">
-				<ul>
-				<?
-					if($exce2){
-						foreach($exce2 as $kex2 => $vex2){
-							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex2['id']." group by userID"); 
-				?>
-					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex2['thumb']?>" /><div class="n-pic-mask"></div>
-                    </div>
-                    <div class="c-course-info">
-                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank"><?php echo $vex2['stitle']?></a></div>
-						<div class="c-course-detail">
-							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
-						</div>
-						<div class="course-info">
-							<div class="course-bot-info">
-								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex2['inputtime'])?></em></span>
-								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-							</div>
-							<div class="course-time">
-								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex2['id']?>,2)"></a>
-								<span>时长：<em><?php echo $vex2['sys_hours']?></em></span>
-							</div>
-						</div>
-                        <div class="course-hover-btn">
-                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
-                            <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex2['id']?>,0,0,2,1)">购买</a></span>
-                        </div>
-                    </div></li>
-				<?
-						}
-					}
-				?>
-				</ul>
-				<div class="clearfloat"></div>
+			<div class="menuHolder">
+				<div class="menuWindow">
+					<ul class="p1">
+						<li class="s1"><a href="javascript:;">菜单</a>
+							<ul class="p2">
+								<?
+								if($link_list){
+									foreach($link_list as $key => $val){
+										?>
+										<li class='s2'>
+											<a href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?></a>
+											<?
+											$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']) ?>
+											<ul class="p3 <?='a'.count($c_list)?>">
+												<?
+
+												if($c_list){
+													foreach($c_list as $ck => $cv){
+														?>
+														<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?=$cv['name']?></a></li>
+														<?
+													}
+												}
+												?>
+											</ul>
+										</li>
+										<?
+									}
+								}
+								?>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div id="con_one_3" class="hover n-index-course" style="display:none">
-			<div class="tab_content n-course-box w-content">
-				<ul>
-				<?
-					if($exce3){
-						foreach($exce3 as $kex3 => $vex3){
-							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex3['id']." group by userID"); 
-				?>
-					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex3['thumb']?>" /><div class="n-pic-mask"></div>
+
+
+			<div class="swiper-wrapper" style="width:1920px;">
+				<div class="swiper-slide"><img src="images/banner1.jpg"></div>
+				<div class="swiper-slide"><img src="images/banner4.jpg"></div>
+				<div class="swiper-slide"><img src="images/banner6.jpg"></div>
+				<?php if(!empty($banner)){
+					foreach($banner as $bk => $bv){?>
+					<div class="swiper-slide"><img src="<?= $bv['imgurl']?>"></div>
+					<?php }}?>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination" style="width:100%;min-width:1190px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
+				
+				
+				
+
+
+			</div>
+			<script src="js/swiper.min.js"></script>
+			<script>
+				var swiper = new Swiper('.swiper-container', {
+					pagination: '.swiper-pagination',
+					paginationClickable: true,
+					effect : 'fade',
+					loop: true,
+					autoplay : 3000,
+					autoplayDisableOnInteraction: false
+				});
+			</script>
+			<!-- 纵向导航 -->
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(".sort-list>ul>li").hover(function(){
+						$(this).addClass("hover")
+					},function(){
+						$(this).removeClass("hover")
+					});
+					
+				});
+			</script>
+			<script>
+				function setTabb($class,$id){
+					$("."+$class).fadeOut();
+					$("#"+$id).fadeIn();
+				}
+			</script>
+			<div class="content">
+				<!-- <div class="lib_Menubox lib_tabborder">
+					<ul>
+						<li id="one1" onClick="setTab('one',1,5)" class="hover">热门推荐</li>
+						<li id="one2" onClick="setTab('one',2,5)" >人气最高</li> 
+						<li id="one3" onClick="setTab('one',3,5)">项目实战</li>   
+						<li id="one4" onClick="setTab('one',4,5)">仙人指路</li>
+						<li id="one5" onClick="setTab('one',5,5)">企业之声</li>
+					</ul>
+				</div> -->
+				<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
+				<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
+				<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
+					<div id="con_one_1" class="hover n-index-course">
+						<h3 class='con-title'>热门推荐</h3>
+						<div class="tab_content n-course-box w-content">
+							<ul>
+								<?
+								if($exce1){
+									foreach($exce1 as $kex1 => $vex1){
+										$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex1['id']." group by userID"); 
+										?>
+										<li><div class="course-pic-txt"><img src="<?=$vex1['thumb']?>" /><div class="n-pic-mask"></div>
+										</div>
+										<div class="c-course-info">
+											<div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank"><?php echo $vex1['stitle']?></a></div>
+											<div class="c-course-detail">
+												简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+											</div>
+											<div class="course-info">
+												<div class="course-bot-info">
+													<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex1['inputtime'])?></em></span>
+													<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+												</div>
+												<div class="course-time">
+													<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex1['id']?>,2)"></a>
+													<!-- <a  href="javascript:void(0);"><img src="images/course_conimg_09.png" title="分享"/></a>-->
+													<span>时长：<em><?php echo $vex1['sys_hours']?></em></span>
+												</div>
+											</div>
+											<div class="course-hover-btn">
+												<span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex1['couClass'].'&sid='.$vex1['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
+												<span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex1['id']?>,0,0,2,1)">购买</a></span>
+											</div>
+										</div></li>
+										<?
+									}
+								}
+								?>
+							</ul>
+							<div class="clearfloat"></div>
+						</div>
 					</div>
-                    <div class="c-course-info">
-                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank"><?php echo $vex3['stitle']?></a></div>
-						<div class="c-course-detail">
-							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+					<div id="con_one_2" class="hover n-index-course">
+						<h3 class='con-title'>人气最高</h3>
+						<div class="tab_content n-course-box w-content">
+							<ul>
+								<?
+								if($exce2){
+									foreach($exce2 as $kex2 => $vex2){
+										$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex2['id']." group by userID"); 
+										?>
+										<li><div class="course-pic-txt"><img src="<?=$vex2['thumb']?>" /><div class="n-pic-mask"></div>
+										</div>
+										<div class="c-course-info">
+											<div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank"><?php echo $vex2['stitle']?></a></div>
+											<div class="c-course-detail">
+												简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+											</div>
+											<div class="course-info">
+												<div class="course-bot-info">
+													<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex2['inputtime'])?></em></span>
+													<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+												</div>
+												<div class="course-time">
+													<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex2['id']?>,2)"></a>
+													<span>时长：<em><?php echo $vex2['sys_hours']?></em></span>
+												</div>
+											</div>
+											<div class="course-hover-btn">
+												<span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex2['couClass'].'&sid='.$vex2['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
+												<span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex2['id']?>,0,0,2,1)">购买</a></span>
+											</div>
+										</div></li>
+										<?
+									}
+								}
+								?>
+							</ul>
+							<div class="clearfloat"></div>
 						</div>
-						<div class="course-info">
-							<div class="course-bot-info">
-								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex3['inputtime'])?></em></span>
-								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-							</div>
-							<div class="course-time">
-								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex3['id']?>,2)"></a>
-								<span>时长：<em><?php echo $vex3['sys_hours']?></em></span>
-							</div>
+					</div>
+					<div id="con_one_3" class="hover n-index-course">
+						<h3 class='con-title'>项目实战</h3>
+						<div class="tab_content n-course-box w-content">
+							<ul>
+								<?
+								if($exce3){
+									foreach($exce3 as $kex3 => $vex3){
+										$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex3['id']." group by userID"); 
+										?>
+										<li><div class="course-pic-txt"><img src="<?=$vex3['thumb']?>" /><div class="n-pic-mask"></div>
+										</div>
+										<div class="c-course-info">
+											<div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank"><?php echo $vex3['stitle']?></a></div>
+											<div class="c-course-detail">
+												简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+											</div>
+											<div class="course-info">
+												<div class="course-bot-info">
+													<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex3['inputtime'])?></em></span>
+													<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+												</div>
+												<div class="course-time">
+													<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex3['id']?>,2)"></a>
+													<span>时长：<em><?php echo $vex3['sys_hours']?></em></span>
+												</div>
+											</div>
+											<div class="course-hover-btn">
+												<span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
+												<span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex3['id']?>,0,0,2,1)">购买</a></span>
+											</div>
+										</div></li>
+										<?
+									}
+								}
+								?>
+							</ul>
+							<div class="clearfloat"></div>
 						</div>
-                        <div class="course-hover-btn">
-                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex3['couClass'].'&sid='.$vex3['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
-                            <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex3['id']?>,0,0,2,1)">购买</a></span>
-                        </div>
-                    </div></li>
-				<?
-						}
-					}
-				?>
-				</ul>
-				<div class="clearfloat"></div>
-			</div>
-		</div>
-		<div id="con_one_4" class="hover n-index-course" style="display:none">
-			<div class="tab_content n-course-box w-content">
-				<ul>
-				<?
-					if($exce4){
-						foreach($exce4 as $kex4 => $vex4){
-							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex4['id']." group by userID"); 
-				?>
-					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex4['thumb']?>" /><div class="n-pic-mask"></div>
-                    </div>
-                    <div class="c-course-info">
-                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank"><?php echo $vex4['stitle']?></a></div>
-						<div class="c-course-detail">
-							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+					</div>
+					<div id="con_one_4" class="hover n-index-course">
+						<h3 class='con-title'>仙人指路</h3>
+						<div class="tab_content n-course-box w-content">
+							<ul>
+								<?
+								if($exce4){
+									foreach($exce4 as $kex4 => $vex4){
+										$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex4['id']." group by userID"); 
+										?>
+										<li><div class="course-pic-txt"><img src="<?=$vex4['thumb']?>" /><div class="n-pic-mask"></div>
+										</div>
+										<div class="c-course-info">
+											<div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank"><?php echo $vex4['stitle']?></a></div>
+											<div class="c-course-detail">
+												简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+											</div>
+											<div class="course-info">
+												<div class="course-bot-info">
+													<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex4['inputtime'])?></em></span>
+													<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+												</div>
+												<div class="course-time">
+													<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex4['id']?>,2)"></a>
+													<span>时长：<em><?php echo $vex4['sys_hours']?></em></span>
+												</div>
+											</div>
+											<div class="course-hover-btn">
+												<span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
+												<span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex4['id']?>,0,0,2,1)">购买</a></span>
+											</div>
+										</div></li>
+										<?
+									}
+								}
+								?>
+							</ul>
+							<div class="clearfloat"></div>
 						</div>
-						<div class="course-info">
-							<div class="course-bot-info">
-								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex4['inputtime'])?></em></span>
-								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-							</div>
-							<div class="course-time">
-								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex4['id']?>,2)"></a>
-								<span>时长：<em><?php echo $vex4['sys_hours']?></em></span>
-							</div>
+					</div>
+					<div id="con_one_5" class="hover n-index-course">
+						<h3  class='con-title'>企业之声</h3>
+						<div class="tab_content n-course-box w-content">
+							<ul>
+								<?
+								if($exce5){
+									foreach($exce5 as $kex5 => $vex5){
+										$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex5['id']." group by userID"); 
+										?>
+										<li><div class="course-pic-txt"><img src="<?=$vex5['thumb']?>" /><div class="n-pic-mask"></div>
+										</div>
+										<div class="c-course-info">
+											<div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank"><?php echo $vex5['stitle']?></a></div>
+											<div class="c-course-detail">
+												简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+											</div>
+											<div class="course-info">
+												<div class="course-bot-info">
+													<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex5['inputtime'])?></em></span>
+													<span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
+												</div>
+												<div class="course-time">
+													<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex5['id']?>,2)"></a>
+													<span>时长：<em><?php echo $vex5['sys_hours']?></em></span>
+												</div>
+											</div>
+											<div class="course-hover-btn">
+												<span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
+												<span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex5['id']?>,0,0,2,1)">购买</a></span>
+											</div>
+										</div></li>
+										<?
+									}
+								}
+								?>
+							</ul>
+							<div class="clearfloat"></div>
 						</div>
-                        <div class="course-hover-btn">
-                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex4['couClass'].'&sid='.$vex4['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
-                            <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex4['id']?>,0,0,2,1)">购买</a></span>
-                        </div>
-                    </div></li>
-				<?
-						}
-					}
-				?>
-				</ul>
-				<div class="clearfloat"></div>
-			</div>
-		</div>
-		<div id="con_one_5" class="hover n-index-course" style="display:none">
-			<div class="tab_content n-course-box w-content">
-				<ul>
-				<?
-					if($exce5){
-						foreach($exce5 as $kex5 => $vex5){
-							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vex5['id']." group by userID"); 
-				?>
-					<li><div class="course-pic-txt"><img width="273" height="158" src="<?=$vex5['thumb']?>" /><div class="n-pic-mask"></div>
-                    </div>
-                    <div class="c-course-info">
-                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank"><?php echo $vex5['stitle']?></a></div>
-						<div class="c-course-detail">
-							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
-						</div>
-						<div class="course-info">
-							<div class="course-bot-info">
-								<span class="c-details right">更新时间：<em><?= date("Y-m-d", $vex5['inputtime'])?></em></span>
-								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
-							</div>
-							<div class="course-time">
-								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $vex5['id']?>,2)"></a>
-								<span>时长：<em><?php echo $vex5['sys_hours']?></em></span>
-							</div>
-						</div>
-                        <div class="course-hover-btn">
-                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$vex5['couClass'].'&sid='.$vex5['id'].'&cid=2')?>" target="_blank">开始学习</a></span>
-                            <span class="det-btn"><a title="购买" href="javascript:;" onClick="checkBuy(<?= $vex5['id']?>,0,0,2,1)">购买</a></span>
-                        </div>
-                    </div></li>
-				<?
-						}
-					}
-				?>
-				</ul>
-				<div class="clearfloat"></div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--video-->
+					</div>
 
-<div class="tanchu2">
-<script>
+				</div>
+			</div>
+			<!--video-->
+
+			<div class="tanchu2">
+				<script>
 	//收藏   
 	function collect(systemid,catid){     
 		var uid = $('#huid').val();            
@@ -495,8 +514,8 @@ var _hmt = _hmt || [];
 			});
 		}else{
 			//jAlert('请先登录','温馨提示');
-			 $("#alert").css("display","block");
-			 $("#maskLayer").css("display","block");		
+			$("#alert").css("display","block");
+			$("#maskLayer").css("display","block");		
 		}
 	} 
 	//分享   
@@ -528,8 +547,8 @@ var _hmt = _hmt || [];
 			});
 		}else{
 			//jAlert('请先登录','温馨提示');
-			 $("#alert").css("display","block");
-			 $("#maskLayer").css("display","block");		
+			$("#alert").css("display","block");
+			$("#maskLayer").css("display","block");		
 		}
 	}
 	//验证购买信息
@@ -537,8 +556,8 @@ var _hmt = _hmt || [];
 		var uid = $("#huid").val();												//alert(uid); 
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-			$("#maskLayer").css("display","block");
+		   $("#alert").css("display","block");
+		   $("#maskLayer").css("display","block");
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.checkBuy')?>',                   
@@ -583,14 +602,14 @@ var _hmt = _hmt || [];
 	})
 	
 	function buy(t){
-	
+		
 		var uid  	= $("#buyuid1").val();
 		var type 	= $("#type1").val();
 		var systemid	= $("#systemid1").val()
 		var pid		= $("#pid1").val();
 		var coid	= $("#coid1").val();
 		var catid	= $("#catid1").val();	
-										
+		
 		$.ajax({  
 			url:'<?= URL('courSystem.buy')?>',
 			type:'POST',
@@ -601,7 +620,7 @@ var _hmt = _hmt || [];
 				pid		:	pid,
 				coid	:	coid,
 				catid	:	catid, 
-					
+				
 			},
 			success:function(r){
 				//alert(r)
@@ -626,19 +645,19 @@ var _hmt = _hmt || [];
 		});	
 	}
 </script>
-    <div class="tanchu_one" id="a1" style="display:none">
-        <h3>购买本体系课程<img src="images/one_img_03.png" id="b1" /></h3>
-        <div class="clearfloat"></div>
-        <div class="xiangxi" id="xiangxi"></div>
-        <p id="pricess1"></p>
-        <input type="hidden" name="buyuid1" id="buyuid1" value="" />
-        <input type="hidden" name="type1" id="type1" 	value="1" />
-        <input type="hidden" name="systemid1" id="systemid1" value="" />
-        <input type="hidden" name="pid1" id="pid1" value="" />
-        <input type="hidden" name="coid1" id="coid1" value="" />
-        <input type="hidden" name="catid1" id="catid1" value="" />
-        <a href="javascript:;" onClick="buy(1)">立即购买</a>
-    </div>
+<div class="tanchu_one" id="a1" style="display:none">
+	<h3>购买本体系课程<img src="images/one_img_03.png" id="b1" /></h3>
+	<div class="clearfloat"></div>
+	<div class="xiangxi" id="xiangxi"></div>
+	<p id="pricess1"></p>
+	<input type="hidden" name="buyuid1" id="buyuid1" value="" />
+	<input type="hidden" name="type1" id="type1" 	value="1" />
+	<input type="hidden" name="systemid1" id="systemid1" value="" />
+	<input type="hidden" name="pid1" id="pid1" value="" />
+	<input type="hidden" name="coid1" id="coid1" value="" />
+	<input type="hidden" name="catid1" id="catid1" value="" />
+	<a href="javascript:;" onClick="buy(1)">立即购买</a>
+</div>
 </div>
 
 <div id="qwww" style="width:100%; position: fixed; top:0; left:0; z-index:111; height:100%; background:#000; opacity:0.4;filter:alpha(opacity=40); display:none; "></div>
@@ -741,287 +760,35 @@ var _hmt = _hmt || [];
 -->
 
 <!-- -->
-<div class="content">
-	<div class="con_left_right">
-		
-		<div class="con_left">
-			<div class="con_left_top">
-				<?
-					$zhaopin_pic	= DS('publics2._get','','ad',' id = 7');
-					$zp_pic1		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 0,6');//var_dump($zp_pic1);
-					$zp_pic2		= DS('publics2._get','','news',' catid = 16 and audit=1 order by ontop desc,recommend desc,listorder asc limit 7,6');//var_dump($zp_pic2);
-				?>
-			
-				<img src="images/xuea_img_28.png" class="sty_img1"/><span class="study_lc">企业招聘</span><img src="images/xuea_img_28.png" class="sty_img1"/>
-			</div> 
-			<img src="<?= $zhaopin_pic[0]['imgurl']?>" />
-			<div class="clearfloat"></div>
-			<div class="con_cpy">
-				<ul>
-				<?php
-					if(!empty($zp_pic1)){
-						foreach($zp_pic1 as $zpk1 => $zpv1){
-				?>
-					<li><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv1["id"])?>" title="<?= $zpv1['title']?>"><?= F("publics.substrByWidth",$zpv1['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv1['inputtime'])?></span></li>
-					<?php }}?>
-				</ul>
-			</div>
-			<div class="con_cpy" style="margin-left:30px">
-				<ul>
-			<?php
-					if(!empty($zp_pic2)){
-						foreach($zp_pic2 as $zpv2){
-				?>
-					<li><a href="<?= URL('bottom.foot_linkCon','&catid=16&id='.$zpv2["id"])?>" title="<?= $zpv2['title']?>"><?= F("publics.substrByWidth",$zpv2['title'],26);?></a><span class="cpy_right"><?= date("Y-m-d",$zpv2['inputtime'])?></span></li>
 
+
+<div class="clearfloat"></div>
+<div class="news">
+	<!--明星学员-->
 	
-					<?php }}?> 
-				</ul>
-			</div>
-			<a href="<?= URL('bottom.foot_link','&cid=16')?>" ><img src="images/xuea_img_64.png" class="more" style="float:right;" /></a>
-			<div class="clearfloat"></div>
-		</div>
-		
-
-
-	<!-- 合作院校-->
-		<div class="con_right">
-			<div class="con_left_top">
-				<img src="images/xuea_img_28.png" class="sty_img2"/><span class="study_lc">合作院校</span><img src="images/xuea_img_28.png" class="sty_img2"/>
-			</div>
-			<div id="slide-box">
-				<b class="corner"></b>
-				<div class="slide-content" id="temp4">  
-					<div class="wrap">
-						<ul class="JQ-slide-content">
-							<li>
-				<?php if(!empty($coop)){
-						$num	=	count($coop);
-						foreach($coop as $ck => $cv){
-							//院校简介（显示图片和标题）
-							$desc = DS("publics2._get","","ad","bid=20 and orid1=".$cv['linkageid']);
-								
-				?>
-								<!--<a href="<?= URL('university.school','&unid='.$cv['linkageid'])?>" target="_blank"><img src="<?= $desc[0]['imgurl']?>" title="<?= $desc[0]['title']?>"/></a>-->
-								<a href="javascript:;" onClick="inter(<?= $cv['linkageid']?>)"><img src="<?= $desc[0]['imgurl']?>" title="<?= $cv['name']?>"/></a>
-								<?php if(($ck%6 == 5 && $num != $ck+1)){?>
-								</li><li>
-								
-							
-				<?php
-						}
-							
-						}
-					}
-				?>
-							</li>
-						</ul>
-					</div>
-					<script>
-					function inter(schid){
-						var uid = $("#huid").val();
-						if(uid=='' || uid == 0){
-							// jAlert('请先登录','温馨提示');
-							$("#maskLayer").attr("style","display:block");
-									$("#alert").slideDown();
-						}else{
-							$.ajax({  
-								url:'<?= URL('university.checkinter')?>',                   
-								type:'POST',
-								data:{uid:uid,schid:schid},
-								
-								success:function(r){
-									e = eval('(' + r + ')');
-									if(e.status == '1'){
-										window.location.href = '<?= URL("university.school","&unid=")?>'+schid;
-									}else{
-										jAlert(e.info,'温馨提示');	
-									} 
-								}
-							});	
-						}	
-					}
-					</script>
-					<div class="JQ-slide-nav">
-						<a class="prev" href="javascritpt:void(0);">
-							<b class="corner"></b>
-							<span><img src="images/xuea_img_44.png" /></span>
-							<b class="corner"></b>
-						</a>
-						<a class="next" href="javascritpt:void(0);">
-							<b class="corner"></b>
-							<span><img src="images/xuea_img_47.png" /></span>
-							<b class="corner"></b>
-						</a>
-					</div>
-				</div>
-				<b class="corner"></b>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="clearfloat"></div>
-	<div class="news">
-    	<!--明星学员-->
-		<div class="news_left">
-			<h3 class="news_title" style="text-align:left;display:block;margin:10px 0 5px 20px;"><a href="<?= URL('star')?>" style="color:#FFFFFF">明星学员</a><a href="<?= URL('star')?>" ><img src="images/xuea_img_64.png" class="more" style="margin-left: 10px;position: relative;top: 3px" /></a></h3>
-			<img src="images/xuea_img_70.png"/>
-			<script>
-				$(function(){ 
-					$(".b1").hover(function(){
-						$(this).siblings(".b2").fadeIn();
-						
-						},function(){$(this).siblings(".b2").fadeOut();})
-				})
-			</script>
-            <script type="text/javascript" src="/js/lhgdialogsc/lhgdialog.min.js?self=true&skin=discuz"></script>
-		 <?php  
-			if(!empty($star)){
-				foreach($star as $sk=>$sv){
-					if($sk==0){
-		?> 
-			<div class="a1"> 
-				<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:250px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:250px;height:111px;"/></a>
-				</div>
-				<div class="b2" style="left:258px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
+				<!--官方活动-->
+				
+				
+				<!-- 新闻喜讯-->
+			
 				<div class="clearfloat"></div>
 			</div>
-        <?php }else if($sk==1){?>
-            <div class="a1">
-            	<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:121px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:121px;height:111px;" /></a>
-				</div>
-				<div class="b2" style="left:129px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
-            </div>
-        <?php }else if($sk ==2){?>
-            <div class="a1">
-            	<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:121px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:121px;height:111px;" /></a>
-				</div>
-				<div class="b2" style="left:129px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
-            </div>
-        <?php }else if($sk==3){?>
-            <div class="a1"> 
-				<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:250px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:250px;height:111px;" /></a>
-				</div>
-				<div class="b2" style="left:258px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
-				<div class="clearfloat"></div>
-			</div>
-       	<?php }else if($sk==4){?>
-            <div class="a1"> 
-				<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:250px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:250px;height:111px;" /></a>
-				</div>
-				<div class="b2" style="left:258px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
-				<div class="clearfloat"></div>
-			</div>
-        <?php }else if($sk==5){?>
-            <div class="a1">
-            	<div class="b1" onMouseOver="setTimeout('tab( )', 500)" onMouseOut="ta()" style="width:121px;">
-					<a href="javascript:;" onclick="dialog('<?= URL('star.videos','&stuId='.$sv['id']);?>','感人视频',545,525)"><img src="<?= $sv['thumb']?>" style="width:121px;height:111px;" /></a>
-				</div>
-				<div class="b2" style="left:129px;">
-					<span style="color:#fff;font-size:15px;font-weight:bold;display:block;margin:10px 15px;"><?= $sv['username']?></span>
-					<span style="color:#beebf0;display:block;margin:0 15px;"><?= $sv['student_type']?></span>
-					<span style="display:block;color:#beebf0;float:left;margin:10px 15px;">学习<span style="color:#fff;display:block;"><?= $sv['study_time']?>天</span></span>
-					<span style="display:block;color:#beebf0;float:right;margin:10px 15px;">报名<span style="color:#fff;display:block;"><?= $sv['course_num']?>门课程</span></span>
-				</div>
-            </div>
-        <?php } }}?>
-
-			<div class="clearfloat"></div>
 		</div>
-		
-        <!--官方活动-->
-		<div class="news_center">
-			<a href="<?= URL('bottom.foot_linkcon','&catid='.$cial_activity[0]['catid'].'&id='.$cial_activity[0]['id'])?>" title="<?= $cial_activity[0]['title']?>" ><img src="<?= $cial_activity[0]['thumb']?>" style="float:left;display:inline-block;width:395px;height:205px;"/></a>
-			<div class="news_cen_btm">
-				<h3 class="news_title"> <a href="<?= URL('bottom.foot_link','&cid=14')?>" style="color:#FFFFFF"><?= $cial_activity1[0]['classname'];?></a></h3>
-                <a href="<?= URL('bottom.foot_link','&cid=14')?>" ><img src="images/xuea_img2_64.png" class="more" style="margin-left: 10px;position: relative;top: 3px" /></a>   
-				<img src="images/xuea_img_70.png" />
-				<ul>
-				<?         
-					if($cial_activity){
-						foreach($cial_activity as $kca => $vca){
-				?>
-					<li><img src="images/li_img_04.png" /><a href="<?= URL('bottom.foot_linkCon','&catid='.$vca['catid'].'&id='.$vca['id'])?>" title="<?= $vca['title']?>"><?= F("publics.substrByWidth",$vca['title'],48);?></a></li>      
-				<?
-						}
-					}
-				?>
-				</ul>
-			</div>
-			<div class="clearfloat"></div>
-		</div>
-        
-       <!-- 新闻喜讯-->
-		<div class="news_right">
-			<div class="news_cen_btm">
-				<h3 class="news_title"><a href="<?= URL('bottom.foot_link','&cid=15')?>" style="color:#FFFFFF"><?= $news_activity1[0]['classname'];?></a></h3>
-                <a href="<?= URL('bottom.foot_link','&cid=15')?>" ><img src="images/xuea_img_64.png" class="more" style="margin-left: 10px;position: relative;top: 3px" /></a>   
-				<img src="images/xuea_img_70.png"/>
-				<ul>
-				<?
-					if($news_activity){
-						foreach($news_activity as $kca => $vca){
-				?>  
-					<li><img src="images/li_img_07.png" /><a href="<?= URL('bottom.foot_linkCon','&catid='.$vca['catid'].'&id='.$vca['id'])?>" title="<?= $vca['title']?>"><?= F("publics.substrByWidth",$vca['title'],48);?></a></li>
-				<?
-						}
-					}          
-				?>  
-				</ul> 
-			</div>
-			<a href="<?= URL('bottom.foot_linkcon','&catid='.$news_activity[0]['catid'].'&id='.$news_activity[0]['id'])?>" title="<?= $news_activity[0]['title']?>"><img src="<?= $news_activity[0]['thumb']?>" style="float:left;display:inline-block;width:397px;height:196px;"/></a>
-			<div class="clearfloat"></div>
-		</div>
-		<div class="clearfloat"></div>
-	</div>
-</div>
-<script>
-	function dialog(url,title,width,height){
-		$.dialog({
-			title:title,
-			id: 'dialsg',
-			width: width,
-			height: height,
-			fixed: true,
-			lock: true,
-			background: '#000',
-			opacity: 0.5,
-			content: 'url:'+url
-		});
-	}
-</script>
+		<script>
+			function dialog(url,title,width,height){
+				$.dialog({
+					title:title,
+					id: 'dialsg',
+					width: width,
+					height: height,
+					fixed: true,
+					lock: true,
+					background: '#000',
+					opacity: 0.5,
+					content: 'url:'+url
+				});
+			}
+		</script>
 <!--<script>
 $(document).ready(function () {
 	var event = arguments.callee.caller.arguments[0]||window.event;//消除浏览器差异  

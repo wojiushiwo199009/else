@@ -205,7 +205,7 @@ $(document).ready(function(){
                         <div class="c-course-name"><a href="<?= URL('courJob.jobCon','classid='.$sv['couClass'].'&sid='.$sv['id'].'&catid=4');?>" target="_blank"><?php echo $sv['stitle']?></a></div>
                         <div class="course-bot-info">
                         	<span class="c-details right">更新时间：<em><?= date("Y-m-d",$sv['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>
+                            <span class="c-details right" style="float:right;"><em><?= count($buy_sys)?></em>人在学习</span>
                         </div>
                         <div class="course-time">
                             <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $sv['id']?>,4)"></a>

@@ -11,69 +11,69 @@
 				<?php 
 				$article_list = DS('publics._get','','article_class',' parentid = 0 order by lmorder asc limit 5');
 				if($article_list){    
-				foreach($article_list as $key => $val){
-				if($val['classname'] == '测评'){
-				?> 
-				<li><a href="javascript:;" onclick="test1()">测评</a></li>
-				<?php		
+					foreach($article_list as $key => $val){
+						if($val['classname'] == '测评'){
+							?> 
+							<li><a href="javascript:;" onclick="test1()">测评</a></li>
+							<?php		
+						}else{
+							?>
+							<li><a href="/<?= $val['classurl']?>"><?= $val['classname']?></a></li>
+							<?php			}
+						}
+					}
+					?>
+
+				</ul>       
+				<div class="clearfloat"></div>
+			</div>
+			<input type="hidden" name="xr_uid" id="xr_uid" value="<?= $_SESSION['xr_id']?>">
+
+			<?php				
+			if(empty($_SESSION['xr_id'])){
+				?>
+				<div class="dengluqian">
+					<input type="button" value="注册" id="zhucee" class="zc_btn zc"/>
+					<input type="button" value="登录" id="zc" class="zc_btn dl"/>
+				</div>
+				<?php
 			}else{
-			?>
-			<li><a href="/<?= $val['classurl']?>"><?= $val['classname']?></a></li>
-			<?php			}
-		}
-	}
-	?>
-
-</ul>       
-<div class="clearfloat"></div>
-</div>
-<input type="hidden" name="xr_uid" id="xr_uid" value="<?= $_SESSION['xr_id']?>">
-
-<?php				
-if(empty($_SESSION['xr_id'])){
-?>
-<div class="dengluqian">
-	<input type="button" value="注册" id="zhucee" class="zc_btn zc"/>
-	<input type="button" value="登录" id="zc" class="zc_btn dl"/>
-</div>
-<?php
-}else{
-$info = DS('publics._get','','users',' id='.$_SESSION['xr_id']);
-?> 
-<script type="text/javascript">
-	$(function(){
-		$(".dengluhou").hover(function(){$("#b").slideToggle()});
-	});       
-</script>
-<?php
-$_SESSION['u_uidss'] = $_SESSION['xr_id'];
-?>
-<div class="dengluhou" >
-	<p class="name" style="float:left" id="a" onMouseOver="tabb()"><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
-	<div class="list" id="b" style="display:none;">
-		<?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?> 
-		<p style="margin-top:15px;">正使用手机账号登录</p>
-		<p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
-		<?php if($info[0]['type']==1){?>
-		<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">提问我的</a></p>
-		<p><a href="<?= URL('member.xmember','&tid=3');?>" style="color:black">安全中心</a></p>
-		<p><a href="<?= URL('member.xmember','&tid=4');?>" style="color:black">个人资料</a></p>
-		<?php }else{?>
-		<p><a href="<?= URL('member.xmember','&tid=1');?>" style="color:black">我的课程</a></p>
-		<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">我的问答</a></p>
-		<p><a href="<?= URL('member.xmember','&tid=7');?>" style="color:black">个人资料</a></p>
-		<?php }?>
-		<p style="border:0;"><a href="javascript:;" onClick="logOut()">退出</a></p>
-	</div>
-</div>
-<script>
-	function logOut(){
-		$.ajax({
-			url:'<?= URL('login.loginOut')?>',
-			type:'POST',
-			success:function(r){
-				e = eval('(' + r + ')');
-				if(e.status == '1'){
+				$info = DS('publics._get','','users',' id='.$_SESSION['xr_id']);
+				?> 
+				<script type="text/javascript">
+					$(function(){
+						$(".dengluhou").hover(function(){$("#b").slideToggle()});
+					});       
+				</script>
+				<?php
+				$_SESSION['u_uidss'] = $_SESSION['xr_id'];
+				?>
+				<div class="dengluhou" >
+					<p class="name" style="float:left" id="a" onMouseOver="tabb()"><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
+					<div class="list" id="b" style="display:none;">
+						<?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?> 
+						<p style="margin-top:15px;">正使用手机账号登录</p>
+						<p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
+						<?php if($info[0]['type']==1){?>
+						<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">提问我的</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=3');?>" style="color:black">安全中心</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=4');?>" style="color:black">个人资料</a></p>
+						<?php }else{?>
+						<p><a href="<?= URL('member.xmember','&tid=1');?>" style="color:black">我的课程</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">我的问答</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=7');?>" style="color:black">个人资料</a></p>
+						<?php }?>
+						<p style="border:0;"><a href="javascript:;" onClick="logOut()">退出</a></p>
+					</div>
+				</div>
+				<script>
+					function logOut(){
+						$.ajax({
+							url:'<?= URL('login.loginOut')?>',
+							type:'POST',
+							success:function(r){
+								e = eval('(' + r + ')');
+								if(e.status == '1'){
 					//alert(1);
 					location.reload(true); 
 				}else{
@@ -81,20 +81,20 @@ $_SESSION['u_uidss'] = $_SESSION['xr_id'];
 				}	
 			}
 		});		
-	}
-</script>
-<?php
-}
-?>
-<div class="search">
-	<input type="text" placeholder="搜索您感兴趣的课程" class="search_text" onFocus="if(this.value=='搜索您感兴趣的课程'){this.value='';this.style.color='#333'}" onBlur="if(this.value==''){this.value='搜索您感兴趣的课程';this.style.color='#666'}" name="searchQuery" id="ya" value="<?= V('g:c','搜索您感兴趣的课程');?>" onkeypress="if(event.keyCode==13) {$('#sosuo').click();}"/> 
-	<a href="javascript:;" id="sosuo" onclick="sousuo()"><img src="images/search.png" class="search_btn"/></a>
-</div>
-<script type="text/javascript">
-	function test1(){
-		var uid = $("#xr_uid").val();
-		
-		if(uid=='' || uid == 0){
+					}
+				</script>
+				<?php
+			}
+			?>
+			<div class="search">
+				<input type="text" placeholder="搜索您感兴趣的课程" class="search_text" onFocus="if(this.value=='搜索您感兴趣的课程'){this.value='';this.style.color='#333'}" onBlur="if(this.value==''){this.value='搜索您感兴趣的课程';this.style.color='#666'}" name="searchQuery" id="ya" value="<?= V('g:c','搜索您感兴趣的课程');?>" onkeypress="if(event.keyCode==13) {$('#sosuo').click();}"/> 
+				<a href="javascript:;" id="sosuo" onclick="sousuo()"><img src="images/search.png" class="search_btn"/></a>
+			</div>
+			<script type="text/javascript">
+				function test1(){
+					var uid = $("#xr_uid").val();
+					
+					if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 		   $("#maskLayer").attr("style","display:block");
 		   $("#alert").slideDown();

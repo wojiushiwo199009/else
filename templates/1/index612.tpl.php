@@ -160,7 +160,7 @@
 <?php TPL :: display("header1");?>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="images/banner1.png"></div>
+            <div class="swiper-slide"><img src="images/banner1.jpg"></div>
             <div class="swiper-slide"><img src="images/banner4.jpg"></div>
             <div class="swiper-slide"><img src="images/banner6.jpg"></div>
            	<?php if(!empty($banner)){

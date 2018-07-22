@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/head.css" /> 
 <link rel="stylesheet" type="text/css" href="css/foot.css" /> 
 <link href="css/jquery.alerts.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
 <!-- 滚动图片 -->
 <!--  <script type="text/javascript" src="js/jQuery.v1.8.3-min.js"></script>-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -161,44 +162,44 @@ var _hmt = _hmt || [];
 <body>
 <div class="container">
     <?php TPL :: display("header1")?>
-<div style="background:#f2f2f2;width:100%;margin:0 auto;">
-	<!--<div class="banner" style="text-align:center;">
-		<img src="images/wenda_img_02.png" />
-		<div class="clearfloat"></div>
-	</div>--> 
-	<!--content-->
-	<div class="content">    
-		<div class="sort">
-			<div class="sort-list">
-				<ul>
-				 	<li class="hover2"><span class="li_title">全部分类</span></li>
-		<?
-            $link_list = DS('publics._get','','linkage',' parentid = 0 and keyid = 1');
-            if($link_list){
-                foreach($link_list as $key => $val){
-        ?>
-					<li>
-						<a href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><img src="images/index_img_03.png"/></a>
-						<ul>
-				<?
-                $c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']);
-                    if($c_list){
-                        foreach($c_list as $ck => $cv){ 
-                ?>
-							<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?=$cv['name']?></a></li>
-				<?
-                        }
-                    }
-                ?>
+<div class="zong">
+	<div class="menuHolder">
+			<div class="menuWindow">
+				<ul class="p1">
+					<li class="s1"><a href="javascript:;">菜单</a>
+						<ul class="p2">
+							<?
+						$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+						if ($link_list) {
+							foreach ($link_list as $key => $val) {
+								?>
+									<li class='s2'>
+										<a href="<?= URL('courSystem.index', '&couClass=' . $val['linkageid']) ?>"><?= $val['name'] ?></a>
+										<?
+									$c_list = DS('publics._get', '', 'linkage', ' parentid = ' . $val['linkageid']) ?>
+										<ul class="p3 <?= 'a' . count($c_list) ?>">
+											<?
+
+										if ($c_list) {
+											foreach ($c_list as $ck => $cv) {
+												?>
+													<li><a href="<?= URL('courSystem.index', '&couClass=' . $cv['linkageid']) ?>"><?= $cv['name'] ?></a></li>
+													<?
+											}
+										}
+										?>
+										</ul>
+									</li>
+									<?
+							}
+						}
+						?>
 						</ul>
 					</li>
-		<?
-                }
-            }
-        ?>                             
 				</ul>
 			</div>
 		</div>
+	<div class="content">    
 		<link rel="stylesheet" type="text/css" href="css/interlocution.css" />
 		<div class="content_right">
             <div class="right_top"> 

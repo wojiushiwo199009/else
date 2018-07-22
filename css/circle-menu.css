@@ -1,0 +1,739 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+*{margin:0px;padding:0px;}
+body{margin:0px;padding:0px;font-size:14px;color:#000;}
+.tips{width:702px;margin:0 auto;line-height:24px;padding-top:10px;}
+.bredcolor{color:#fff;}
+.menuHolder {width:100px; height:100px; margin:0px 0 250px 0px; position: fixed;z-index:3000;}
+.menuHolder ul {padding:0; margin:0; list-style:none; position:absolute; left:0; top:0; width:0; height:0;}
+.menuHolder ul li {border-radius:0 0 300px 0; width:0; height:0;}
+.menuHolder ul li a {color:#fdfdfd; text-decoration:none; font:bold 13px/30px arial, sans-serif; text-align:center; box-shadow:-5px 5px 5px rgba(0,0,0,0.4);
+-webkit-transform-origin:0 0;
+-moz-transform-origin:0 0;
+-ms-transform-origin:0 0;
+-o-transform-origin:0 0;
+transform-origin:0 0;
+
+}
+.menuHolder ul.p1 li {position:absolute; left:0; top:0;}
+.menuHolder ul.p2 {z-index:-1;}
+.menuHolder ul.p3 {z-index:-1;}
+.menuHolder li.s1 > a {position:absolute; display:block; width:100px; height:100px; background:#1eaee3;line-height: 82px;font-size: 16px;
+    text-indent: -1em;border-radius:0 0 100px 0;}
+.menuHolder li.s2 > a {font-weight: normal; position:absolute; display:block; width:100px; padding-left:100px; height:200px; background:#1eaee3; border-radius:0 0 200px 0;}
+.menuHolder ul.p3 li a {position:absolute; display:block; width:100px; padding-left:200px; height:300px; background:#1eaee3; border-radius:0 0 300px 0;}
+.menuHolder ul ul {
+-webkit-transform-origin:0 0;
+-moz-transform-origin:0 0;
+-ms-transform-origin:0 0;
+-o-transform-origin:0 0;
+transform-origin:0 0;
+-webkit-transform:rotate(90deg);
+-moz-transform:rotateZ(90deg);
+-ms-transform:rotate(90deg);
+-o-transform:rotate(90deg);
+transform:rotate(90deg);
+-webkit-transition:1s;
+-moz-transition:1s;
+-ms-transition:1s;
+-o-transition:1s;
+transition:1s;
+}
+.menuHolder li.s2:nth-child(13) > a {background:#1eaee3;
+-webkit-transform:rotate(83.076deg);
+-moz-transform:rotateZ(83.076deg);
+-ms-transform:rotate(83.076deg);
+-o-transform:rotate(83.076deg);
+transform:rotate(83.076deg);
+}
+.menuHolder li.s2:nth-child(12) > a {background:#1eaee3;
+-webkit-transform:rotate(76.153deg);
+-moz-transform:rotateZ(76.153deg);
+-ms-transform:rotate(76.153deg);
+-o-transform:rotate(76.153deg);
+transform:rotate(76.153deg);
+}
+.menuHolder li.s2:nth-child(11) > a {background:#1eaee3;
+-webkit-transform:rotate(69.23deg);
+-moz-transform:rotateZ(69.23deg);
+-ms-transform:rotate(69.23deg);
+-o-transform:rotate(69.23deg);
+transform:rotate(69.23deg);
+}
+.menuHolder li.s2:nth-child(10) > a {background:#1eaee3;
+-webkit-transform:rotate(62.307deg);
+-moz-transform:rotateZ(62.307deg);
+-ms-transform:rotate(62.307deg);
+-o-transform:rotate(62.307deg);
+transform:rotate(62.307deg);
+}
+.menuHolder li.s2:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(55.384deg);
+-moz-transform:rotateZ(55.384deg);
+-ms-transform:rotate(55.384deg);
+-o-transform:rotate(55.384deg);
+transform:rotate(55.384deg);
+}
+.menuHolder li.s2:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(48.461deg);
+-moz-transform:rotateZ(48.461deg);
+-ms-transform:rotate(48.461deg);
+-o-transform:rotate(48.461deg);
+transform:rotate(48.461deg);
+}
+.menuHolder li.s2:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(41.538deg);
+-moz-transform:rotateZ(41.538deg);
+-ms-transform:rotate(41.538deg);
+-o-transform:rotate(41.538deg);
+transform:rotate(41.538deg);
+}
+.menuHolder li.s2:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(34.615deg);
+-moz-transform:rotateZ(34.615deg);
+-ms-transform:rotate(34.615deg);
+-o-transform:rotate(34.615deg);
+transform:rotate(34.615deg);
+}
+.menuHolder li.s2:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(27.692deg);
+-moz-transform:rotateZ(27.692deg);
+-ms-transform:rotate(27.692deg);
+-o-transform:rotate(27.692deg);
+transform:rotate(27.692deg);
+}
+.menuHolder li.s2:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(20.769deg);
+-moz-transform:rotateZ(20.769deg);
+-ms-transform:rotate(20.769deg);
+-o-transform:rotate(20.769deg);
+transform:rotate(20.769deg);
+}
+.menuHolder li.s2:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(13.846deg);
+-moz-transform:rotateZ(13.846deg);
+-ms-transform:rotate(13.846deg);
+-o-transform:rotate(13.846deg);
+transform:rotate(13.846deg);
+}
+.menuHolder li.s2:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(6.923deg);
+-moz-transform:rotateZ(6.923deg);
+-ms-transform:rotate(6.923deg);
+-o-transform:rotate(6.923deg);
+transform:rotate(6.923deg);
+}
+
+.menuHolder .a2 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+.menuHolder .a3 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuHolder .a3 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+
+.menuHolder .a4 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(67.5deg);
+-moz-transform:rotateZ(67.5deg);
+-ms-transform:rotate(67.5deg);
+-o-transform:rotate(67.5deg);
+transform:rotate(67.5deg);
+}
+.menuHolder .a4 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuHolder .a4 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(22.5deg);
+-moz-transform:rotateZ(22.5deg);
+-ms-transform:rotate(22.5deg);
+-o-transform:rotate(22.5deg);
+transform:rotate(22.5deg);
+}
+
+.menuHolder .a5 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(72deg);
+-moz-transform:rotateZ(72deg);
+-ms-transform:rotate(72deg);
+-o-transform:rotate(72deg);
+transform:rotate(72deg);
+}
+.menuHolder .a5 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(54deg);
+-moz-transform:rotateZ(54deg);
+-ms-transform:rotate(54deg);
+-o-transform:rotate(54deg);
+transform:rotate(54deg);
+}
+.menuHolder .a5 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(36deg);
+-moz-transform:rotateZ(36deg);
+-ms-transform:rotate(36deg);
+-o-transform:rotate(36deg);
+transform:rotate(36deg);
+}
+.menuHolder .a5 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(18deg);
+-moz-transform:rotateZ(18deg);
+-ms-transform:rotate(18deg);
+-o-transform:rotate(18deg);
+transform:rotate(18deg);
+}
+
+.menuHolder .a6 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(75deg);
+-moz-transform:rotateZ(75deg);
+-ms-transform:rotate(75deg);
+-o-transform:rotate(75deg);
+transform:rotate(75deg);
+}
+.menuHolder .a6 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuHolder .a6 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuHolder .a6 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+.menuHolder .a6 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(15deg);
+-moz-transform:rotateZ(15deg);
+-ms-transform:rotate(15deg);
+-o-transform:rotate(15deg);
+transform:rotate(15deg);
+}
+.menuHolder .a7 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(77.1426deg);
+-moz-transform:rotateZ(77.1426deg);
+-ms-transform:rotate(77.1426deg);
+-o-transform:rotate(77.1426deg);
+transform:rotate(77.1426deg);
+}
+.menuHolder .a7 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(64.2855deg);
+-moz-transform:rotateZ(64.2855deg);
+-ms-transform:rotate(64.2855deg);
+-o-transform:rotate(64.2855deg);
+transform:rotate(64.2855deg);
+}
+.menuHolder .a7 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(51.4284deg);
+-moz-transform:rotateZ(51.4284deg);
+-ms-transform:rotate(51.4284deg);
+-o-transform:rotate(51.4284deg);
+transform:rotate(51.4284deg);
+}
+.menuHolder .a7 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(38.5713deg);
+-moz-transform:rotateZ(38.5713deg);
+-ms-transform:rotate(38.5713deg);
+-o-transform:rotate(38.5713deg);
+transform:rotate(38.5713deg);
+}
+.menuHolder .a7 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(25.7142deg);
+-moz-transform:rotateZ(25.7142deg);
+-ms-transform:rotate(25.7142deg);
+-o-transform:rotate(25.7142deg);
+transform:rotate(25.7142deg);
+}
+.menuHolder .a7 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(12.8571deg);
+-moz-transform:rotateZ(12.8571deg);
+-ms-transform:rotate(12.8571deg);
+-o-transform:rotate(12.8571deg);
+transform:rotate(12.8571deg);
+}
+
+.menuHolder .a8 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(78.75deg);
+-moz-transform:rotateZ(78.75deg);
+-ms-transform:rotate(78.75deg);
+-o-transform:rotate(78.75deg);
+transform:rotate(78.75deg);
+}
+.menuHolder .a8 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(67.5deg);
+-moz-transform:rotateZ(67.5deg);
+-ms-transform:rotate(67.5deg);
+-o-transform:rotate(67.5deg);
+transform:rotate(67.5deg);
+}
+.menuHolder .a8 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(56.25deg);
+-moz-transform:rotateZ(56.25deg);
+-ms-transform:rotate(56.25deg);
+-o-transform:rotate(56.25deg);
+transform:rotate(56.25deg);
+}
+.menuHolder .a8 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuHolder .a8 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(33.75deg);
+-moz-transform:rotateZ(33.75deg);
+-ms-transform:rotate(33.75deg);
+-o-transform:rotate(33.75deg);
+transform:rotate(33.75deg);
+}
+.menuHolder .a8 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(22.5deg);
+-moz-transform:rotateZ(22.5deg);
+-ms-transform:rotate(22.5deg);
+-o-transform:rotate(22.5deg);
+transform:rotate(22.5deg);
+}
+.menuHolder .a8 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(11.25deg);
+-moz-transform:rotateZ(11.25deg);
+-ms-transform:rotate(11.25deg);
+-o-transform:rotate(11.25deg);
+transform:rotate(11.25deg);
+}
+
+.menuHolder .a9 li:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(80deg);
+-moz-transform:rotateZ(80deg);
+-ms-transform:rotate(80deg);
+-o-transform:rotate(80deg);
+transform:rotate(80deg);
+}
+.menuHolder .a9 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(70deg);
+-moz-transform:rotateZ(70deg);
+-ms-transform:rotate(70deg);
+-o-transform:rotate(70deg);
+transform:rotate(70deg);
+}
+.menuHolder .a9 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuHolder .a9 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(50deg);
+-moz-transform:rotateZ(50deg);
+-ms-transform:rotate(50deg);
+-o-transform:rotate(50deg);
+transform:rotate(50deg);
+}
+.menuHolder .a9 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(40deg);
+-moz-transform:rotateZ(40deg);
+-ms-transform:rotate(40deg);
+-o-transform:rotate(40deg);
+transform:rotate(40deg);
+}
+.menuHolder .a9 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+.menuHolder .a9 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(20deg);
+-moz-transform:rotateZ(20deg);
+-ms-transform:rotate(20deg);
+-o-transform:rotate(20deg);
+transform:rotate(20deg);
+}
+.menuHolder .a9 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(10deg);
+-moz-transform:rotateZ(10deg);
+-ms-transform:rotate(10deg);
+-o-transform:rotate(10deg);
+transform:rotate(10deg);
+}
+
+.menuHolder .a10 li:nth-child(10) > a {background:#1eaee3;
+-webkit-transform:rotate(81deg);
+-moz-transform:rotateZ(81deg);
+-ms-transform:rotate(81deg);
+-o-transform:rotate(81deg);
+transform:rotate(81deg);
+}
+.menuHolder .a10 li:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(72deg);
+-moz-transform:rotateZ(72deg);
+-ms-transform:rotate(72deg);
+-o-transform:rotate(72deg);
+transform:rotate(72deg);
+}
+.menuHolder .a10 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(63deg);
+-moz-transform:rotateZ(63deg);
+-ms-transform:rotate(63deg);
+-o-transform:rotate(63deg);
+transform:rotate(63deg);
+}
+.menuHolder .a10 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(54deg);
+-moz-transform:rotateZ(54deg);
+-ms-transform:rotate(54deg);
+-o-transform:rotate(54deg);
+transform:rotate(54deg);
+}
+.menuHolder .a10 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuHolder .a10 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(36deg);
+-moz-transform:rotateZ(36deg);
+-ms-transform:rotate(36deg);
+-o-transform:rotate(36deg);
+transform:rotate(36deg);
+}
+.menuHolder .a10 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(27deg);
+-moz-transform:rotateZ(27deg);
+-ms-transform:rotate(27deg);
+-o-transform:rotate(27deg);
+transform:rotate(27deg);
+}
+.menuHolder .a10 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(18deg);
+-moz-transform:rotateZ(18deg);
+-ms-transform:rotate(18deg);
+-o-transform:rotate(18deg);
+transform:rotate(18deg);
+}
+.menuHolder .a10 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(9deg);
+-moz-transform:rotateZ(9deg);
+-ms-transform:rotate(9deg);
+-o-transform:rotate(9deg);
+transform:rotate(9deg);
+}
+
+.menuHolder .a11 li:nth-child(11) > a {background:#1eaee3;
+-webkit-transform:rotate(81.818deg);
+-moz-transform:rotateZ(81.818deg);
+-ms-transform:rotate(81.818deg);
+-o-transform:rotate(81.818deg);
+transform:rotate(81.818deg);
+}
+.menuHolder .a11 li:nth-child(10) > a {background:#1eaee3;
+-webkit-transform:rotate(73.63621deg);
+-moz-transform:rotateZ(73.63621deg);
+-ms-transform:rotate(73.63621deg);
+-o-transform:rotate(73.63621deg);
+transform:rotate(73.63621deg);
+}
+.menuHolder .a11 li:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(65.4544deg);
+-moz-transform:rotateZ(65.4544deg);
+-ms-transform:rotate(65.4544deg);
+-o-transform:rotate(65.4544deg);
+transform:rotate(65.4544deg);
+}
+.menuHolder .a11 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(57.2726deg);
+-moz-transform:rotateZ(57.2726deg);
+-ms-transform:rotate(57.2726deg);
+-o-transform:rotate(57.2726deg);
+transform:rotate(57.2726deg);
+}
+.menuHolder .a11 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(49.0908deg);
+-moz-transform:rotateZ(49.0908deg);
+-ms-transform:rotate(49.0908deg);
+-o-transform:rotate(49.0908deg);
+transform:rotate(49.0908deg);
+}
+.menuHolder .a11 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(40.909deg);
+-moz-transform:rotateZ(40.909deg);
+-ms-transform:rotate(40.909deg);
+-o-transform:rotate(40.909deg);
+transform:rotate(40.909deg);
+}
+.menuHolder .a11 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(32.7272deg);
+-moz-transform:rotateZ(32.7272deg);
+-ms-transform:rotate(32.7272deg);
+-o-transform:rotate(32.7272deg);
+transform:rotate(32.7272deg);
+}
+.menuHolder .a11 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(24.5454deg);
+-moz-transform:rotateZ(24.5454deg);
+-ms-transform:rotate(24.5454deg);
+-o-transform:rotate(24.5454deg);
+transform:rotate(24.5454deg);
+}
+.menuHolder .a11 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(16.3636deg);
+-moz-transform:rotateZ(16.3636deg);
+-ms-transform:rotate(16.3636deg);
+-o-transform:rotate(16.3636deg);
+transform:rotate(16.3636deg);
+}
+.menuHolder .a11 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(8.1818deg);
+-moz-transform:rotateZ(8.1818deg);
+-ms-transform:rotate(8.1818deg);
+-o-transform:rotate(8.1818deg);
+transform:rotate(8.1818deg);
+}
+
+.menuHolder .a12 li:nth-child(12) > a {background:#1eaee3;
+-webkit-transform:rotate(82.5deg);
+-moz-transform:rotateZ(82.5deg);
+-ms-transform:rotate(82.5deg);
+-o-transform:rotate(82.5deg);
+transform:rotate(82.5deg);
+}
+.menuHolder .a12 li:nth-child(11) > a {background:#1eaee3;
+-webkit-transform:rotate(75deg);
+-moz-transform:rotateZ(75deg);
+-ms-transform:rotate(75deg);
+-o-transform:rotate(75deg);
+transform:rotate(75deg);
+}
+.menuHolder .a12 li:nth-child(10) > a {background:#1eaee3;
+-webkit-transform:rotate(67.5deg);
+-moz-transform:rotateZ(67.5deg);
+-ms-transform:rotate(67.5deg);
+-o-transform:rotate(67.5deg);
+transform:rotate(67.5deg);
+}
+.menuHolder .a12 li:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuHolder .a12 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(52.5deg);
+-moz-transform:rotateZ(52.5deg);
+-ms-transform:rotate(52.5deg);
+-o-transform:rotate(52.5deg);
+transform:rotate(52.5deg);
+}
+.menuHolder .a12 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuHolder .a12 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(37.5deg);
+-moz-transform:rotateZ(37.5deg);
+-ms-transform:rotate(37.5deg);
+-o-transform:rotate(37.5deg);
+transform:rotate(37.5deg);
+}
+.menuHolder .a12 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+.menuHolder .a12 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(22.5deg);
+-moz-transform:rotateZ(22.5deg);
+-ms-transform:rotate(22.5deg);
+-o-transform:rotate(22.5deg);
+transform:rotate(22.5deg);
+}
+.menuHolder .a12 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(15deg);
+-moz-transform:rotateZ(15deg);
+-ms-transform:rotate(15deg);
+-o-transform:rotate(15deg);
+transform:rotate(15deg);
+}
+.menuHolder .a12 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(7.5deg);
+-moz-transform:rotateZ(7.5deg);
+-ms-transform:rotate(7.5deg);
+-o-transform:rotate(7.5deg);
+transform:rotate(7.5deg);
+}
+
+.menuHolder .a13 li:nth-child(13) > a {background:#1eaee3;
+-webkit-transform:rotate(83.076deg);
+-moz-transform:rotateZ(83.076deg);
+-ms-transform:rotate(83.076deg);
+-o-transform:rotate(83.076deg);
+transform:rotate(83.076deg);
+}
+.menuHolder .a13 li:nth-child(12) > a {background:#1eaee3;
+-webkit-transform:rotate(76.153deg);
+-moz-transform:rotateZ(76.153deg);
+-ms-transform:rotate(76.153deg);
+-o-transform:rotate(76.153deg);
+transform:rotate(76.153deg);
+}
+.menuHolder .a13 li:nth-child(11) > a {background:#1eaee3;
+-webkit-transform:rotate(69.23deg);
+-moz-transform:rotateZ(69.23deg);
+-ms-transform:rotate(69.23deg);
+-o-transform:rotate(69.23deg);
+transform:rotate(69.23deg);
+}
+.menuHolder .a13 li:nth-child(10) > a {background:#1eaee3;
+-webkit-transform:rotate(62.307deg);
+-moz-transform:rotateZ(62.307deg);
+-ms-transform:rotate(62.307deg);
+-o-transform:rotate(62.307deg);
+transform:rotate(62.307deg);
+}
+.menuHolder .a13 li:nth-child(9) > a {background:#1eaee3;
+-webkit-transform:rotate(55.384deg);
+-moz-transform:rotateZ(55.384deg);
+-ms-transform:rotate(55.384deg);
+-o-transform:rotate(55.384deg);
+transform:rotate(55.384deg);
+}
+.menuHolder .a13 li:nth-child(8) > a {background:#1eaee3;
+-webkit-transform:rotate(48.461deg);
+-moz-transform:rotateZ(48.461deg);
+-ms-transform:rotate(48.461deg);
+-o-transform:rotate(48.461deg);
+transform:rotate(48.461deg);
+}
+.menuHolder .a13 li:nth-child(7) > a {background:#1eaee3;
+-webkit-transform:rotate(41.538deg);
+-moz-transform:rotateZ(41.538deg);
+-ms-transform:rotate(41.538deg);
+-o-transform:rotate(41.538deg);
+transform:rotate(41.538deg);
+}
+.menuHolder .a13 li:nth-child(6) > a {background:#1eaee3;
+-webkit-transform:rotate(34.615deg);
+-moz-transform:rotateZ(34.615deg);
+-ms-transform:rotate(34.615deg);
+-o-transform:rotate(34.615deg);
+transform:rotate(34.615deg);
+}
+.menuHolder .a13 li:nth-child(5) > a {background:#1eaee3;
+-webkit-transform:rotate(27.692deg);
+-moz-transform:rotateZ(27.692deg);
+-ms-transform:rotate(27.692deg);
+-o-transform:rotate(27.692deg);
+transform:rotate(27.692deg);
+}
+.menuHolder .a13 li:nth-child(4) > a {background:#1eaee3;
+-webkit-transform:rotate(20.769deg);
+-moz-transform:rotateZ(20.769deg);
+-ms-transform:rotate(20.769deg);
+-o-transform:rotate(20.769deg);
+transform:rotate(20.769deg);
+}
+.menuHolder .a13 li:nth-child(3) > a {background:#1eaee3;
+-webkit-transform:rotate(13.846deg);
+-moz-transform:rotateZ(13.846deg);
+-ms-transform:rotate(13.846deg);
+-o-transform:rotate(13.846deg);
+transform:rotate(13.846deg);
+}
+.menuHolder .a13 li:nth-child(2) > a {background:#1eaee3;
+-webkit-transform:rotate(6.923deg);
+-moz-transform:rotateZ(6.923deg);
+-ms-transform:rotate(6.923deg);
+-o-transform:rotate(6.923deg);
+transform:rotate(6.923deg);
+}
+
+
+.menuHolder li.s1:hover ul.p2 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuHolder li.s2:hover ul.p3 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuHolder ul li:hover > a {color:#111;}
+.menuHolder li.s2:hover > a {color:#111;}
+.menuHolder .a2 li:hover > a {color:#111;}
+.menuHolder .a3 li:hover > a { color:#111;}
+.menuHolder .a4 li:hover > a { color:#111;}
+.menuHolder .a5 li:hover > a { color:#111;}
+.menuHolder .a6 li:hover > a { color:#111;}
+.menuHolder .a7 li:hover > a { color:#111;}
+.menuHolder .a8 li:hover > a { color:#111;}
+.menuHolder .a9 li:hover > a { color:#111;}
+.menuHolder .a10 li:hover > a { color:#111;}
+.menuHolder .a11 li:hover > a { color:#111;}
+.menuHolder .a12 li:hover > a { color:#111;}
+.menuHolder .a13 li:hover > a { color:#111;}
+
+
+
+.menuWindow {width:110px; height:110px; overflow:hidden; position:absolute; left:0; top:0; z-index:100;
+-webkit-transition:0s 1s;
+-moz-transition:0s 1s;
+-ms-transition:0s 1s;
+-o-transition:0s 1s;
+transition:0s 1s;
+}
+.menuHolder:hover .menuWindow {width:310px; height:310px;
+-webkit-transition:0s 0s;
+-moz-transition:0s 0s;
+-ms-transition:0s 0s;
+-o-transition:0s 0s;
+transition:0s 0s;
+}
+.menuHolder span {display:block; 
+-webkit-transform:rotate(5deg);
+-moz-transform:rotateZ(5deg);
+-ms-transform:rotate(5deg);
+-o-transform:rotate(5deg);
+transform:rotate(5deg);
+}
+.menuHolder ~ img.close {width:0; height:0; position:fixed; z-index:-1; left:0; top:0;}
+.menuHolder:hover ~ img.close {width:100%; height:100%;}
+
