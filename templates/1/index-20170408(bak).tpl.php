@@ -139,7 +139,7 @@
 <style>
     .swiper-container {
         width: 100%;
-        min-width:1190px;
+        min-width:1200px;
         height: 502px;
         position:relative;
         max-width:1440px;
@@ -190,7 +190,7 @@ var _hmt = _hmt || [];
             <?php }}?>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination" style="width:100%;min-width:1190px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
+        <div class="swiper-pagination" style="width:100%;min-width:1200px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
         
     </div>
 	<script src="js/swiper.min.js"></script>
@@ -233,7 +233,7 @@ var _hmt = _hmt || [];
 	</div>
 	<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 	<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-	<div class="lib_Contentbox lib_tabborder" style="width:1190px;overflow:hidden;">
+	<div class="lib_Contentbox lib_tabborder" style="width:1200px;overflow:hidden;">
 		<div id="con_one_1" class="hover n-index-course">
 			<div class="tab_content n-course-box w-content">
 				<ul style="margin-left:-20px">

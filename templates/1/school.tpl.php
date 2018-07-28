@@ -106,17 +106,17 @@ function formatStr(str) {
                     <a href="<?= URL('member.xmember')?>" title="<?= $uinfo[0]['realname']?>"><?php if(empty($uinfo[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $uinfo[0]['logo']?>"><?php }?><span title="<?= $uinfo[0]['realname']?>"><?= F("publics.substrByWidth",$uinfo[0]['realname'],8);?></span></a><?php if($uinfo[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $uinfo[0]['frozen_money']?></span></a><?php }?>
                 </p>
                 <div class="list" id="b" style="display:none;">
-                    <?php if(empty($uinfo[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $uinfo[0]['logo']?>"><?php }?> 
+                    <div class="triangle"></div>
                     <p style="margin-top:15px;">正使用手机账号登录</p>
                     <p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
                     <?php if($uinfo[0]['type']==1){?>
-                    <p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">提问我的</a></p>
-                    <p><a href="<?= URL('member.xmember','&tid=3');?>" style="color:black">安全中心</a></p>
-                    <p><a href="<?= URL('member.xmember','&tid=4');?>" style="color:black">个人资料</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=2');?>">提问我的</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=3');?>">安全中心</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=4');?>">个人资料</a></p>
                     <?php }else{?>
-                    <p><a href="<?= URL('member.xmember','&tid=1');?>" style="color:black">我的课程</a></p>
-                    <p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">我的问答</a></p>
-                    <p><a href="<?= URL('member.xmember','&tid=7');?>" style="color:black">个人资料</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=1');?>">我的课程</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=2');?>">我的问答</a></p>
+                    <p><a href="<?= URL('member.xmember','&tid=7');?>">个人资料</a></p>
                     <?php }?>
                     <p style="border:0;"><a href="javascript:;" onClick="logOut()">退出</a></p>
                 </div>
@@ -172,7 +172,7 @@ function formatStr(str) {
         </div>
         <div class="lib_Menubox lib_tabborder">
             <ul>
-            	<li class="hover" style="background:#369998;"><a name="2F" style="color:#FFFFFF">学啊精品课程</a></li>
+            	<li class="hover" style="background:#27b28b;"><a name="2F" style="color:#FFFFFF">学啊精品课程</a></li>
                 <li id="one1" onClick="setTab('one',1,5)" class="hover">热门推荐</li>
                 <li id="one2" onClick="setTab('one',2,5)" >人气最高</li> 
                 <li id="one3" onClick="setTab('one',3,5)">项目实战</li>   
@@ -346,7 +346,7 @@ function formatStr(str) {
         </div>
         <div class="lib_Menubox lib_tabborder">
             <ul> 
-            	<li class="hover" style="background:#369998;"><a name="3F" style="color:#FFFFFF">mooc课程</a></li>
+            	<li class="hover" style="background:#27b28b;"><a name="3F" style="color:#FFFFFF">mooc课程</a></li>
                <li id="two1" onclick="setTab('two',1,5)" class="hover">商学院</li>
                <li id="two2" onclick="setTab('two',2,5)" >计算机学院</li>
                <li id="two3" onclick="setTab('two',3,5)">土木工程</li>   

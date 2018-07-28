@@ -50,13 +50,13 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
     outline: none;
 }
 .right_top .top_a{display:inline-block;width:100px;height:41px;text-align:center;line-height:35px;font-size:15px;color:#fff;font-weight:bold;margin-left:10px;*position:relative;top:-10px;cursor:pointer;text-indent:0;}
-.right_top .sac{background:#369998;}
+.right_top .sac{background:#27b28b;}
 .right_top .ans{background:#fc8131;}
 
 .lib_Menubox{height:40px;margin:10px 15px;border-bottom:dotted 1px #d2d2d2;}
 .lib_Menubox ul li{display:block;cursor:pointer;float:left;font-size:16px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;width:95px;height:38px;line-height:38px;}
 .lib_Menubox ul li a{color:#0c0405;}
-.lib_Menubox li.hover{cursor:pointer;border-bottom:solid 2px #369998;color:#0c0405;}
+.lib_Menubox li.hover{cursor:pointer;border-bottom:solid 2px #27b28b;color:#0c0405;}
 
 .pl_bottom{margin:10px 15px 25px 15px;}
 .pl_bottom2{margin:10px 15px 25px 15px;border-bottom:dotted 1px #d2d2d2;}
@@ -70,7 +70,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
     }
     .pl_left .tx_img{margin:0 10px 0 0;border:solid 1px #d2d2d2;width:48px;height:48px;}
     .pl_left .title{font-size:23px;font-weight:500;}
-    .pl_left .hot{display:inline-block;font-size:12px;width:55px;height:20px;background:#369998;color:#fff;text-align:center;line-height:20px;float:left;margin:0 5px;}
+    .pl_left .hot{display:inline-block;font-size:12px;width:55px;height:20px;background:#27b28b;color:#fff;text-align:center;line-height:20px;float:left;margin:0 5px;}
     .pl_left .hot_d{display:inline-block;font-size:12px;width:55px;height:20px;background:#f6a843;color:#fff;text-align:center;line-height:20px;float:left;margin:0 5px;}
     .pl_left .jb_name{float:left;font-size:12px;color:#999999;margin:0 10px 12px 20px;}
     .pl_left .jb_name img{position:relative;top:2px;margin-right:5px;}
@@ -84,6 +84,6 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .fenye{margin:30px 0 10px 0;text-align:center;}
 .fenye a{display:inline-block;padding:2px 8px;margin:0 10px;font-size:14px;color:#787d82;}
-.fenye a:hover{background:#369998;color:#fff;}
-.fenye a.avtive{background:#369998;color:#fff;}
+.fenye a:hover{background:#27b28b;color:#fff;}
+.fenye a.avtive{background:#27b28b;color:#fff;}
 /*rightcontent*/

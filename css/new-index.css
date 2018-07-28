@@ -349,7 +349,7 @@
 	.n-join-con a{width: 223px}
 }
 
-@media screen and (min-width: 1190px) {
+@media screen and (min-width: 1200px) {
 	.c-searchbox{width:375px}
 	.c-searchbox input{width:290px;}
 	.c-searchbox a{width:75px;}

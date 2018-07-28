@@ -20,7 +20,7 @@ outline:medium;
 
 /*top*/
 .top{position: fixed;top:0;width:100%;margin:0 auto;height:58px;background:#000;z-index:3000;}
-.top .top_con{width:1190px;min-width:1024px;margin:0 auto;position:relative;}
+.top .top_con{width:1200px;min-width:1024px;margin:0 auto;position:relative;}
 
 .top .logo{float:left;margin:15px 0px 0 0;}
 
@@ -39,22 +39,45 @@ outline:medium;
 .top_con .search .search_text{float:left;height:29px;line-height:29px;width:172px;border-radius:15px;text-indent:1.5em;color:#fff;}
 .top_con .search .search_btn{position:absolute;left:11px;top:7px;}
 
-.top_con .dengluqian{float:right;height: 58px;line-height: 58px; width:132px;}
+.top_con .dengluqian{float:right;height: 58px;line-height: 58px; width:160px;}
 .top_con .dengluqian .zc_btn{text-indent:0;height:22px;width:62px;font-size:16px;border:0;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;cursor:pointer;}
 .top_con .dengluqian .zc{color:#fff;background:none;border-right: 1px solid #fff;}
 .top_con .dengluqian .dl{color:#fff;background:none;}
 .top_con .dengluqian .zc:hover,.top_con .dengluqian .dl:hover{
     color: #1eaee3;
 }
-.top_con .dengluhou{float:right;margin-top:15px;width:180px;height:50px;position:absolute;right:-50px;}
-.top_con .dengluhou .name{float:right;color:#fff;font-size:14px;}
-.top_con .dengluhou .name span{float:left;margin-top:5px;overflow:hidden;white-space:nowrap;color:#fff;}
-.top_con .dengluhou .name img{float:left;width:28px;height:28px;margin-right:2px;border-radius:50%;}
+.top_con .dengluhou{margin-left: 10px;float:right;height: 58px;line-height: 58px; width:160px;}
+.top_con .dengluhou .name{height:100%;color:#fff;font-size:14px;overflow: hidden;}
+.top_con .dengluhou .name a{
+    display: inline-block;
+    height: 100%;
+    float: left;
+}
+.top_con .dengluhou .name span{margin-top:5px;overflow:hidden;white-space:nowrap;color:#fff;}
+.top_con .dengluhou .name img{position: relative;top: 9px;width:28px;height:28px;margin-right:2px;border-radius:50%;}
 
-.top_con .dengluhou .list{background:url(../images/indexhou_img1.png) no-repeat #fff;position:absolute;z-index:1000;width:270px;top:35px;right:0px;}
-.top_con .dengluhou .list img{float:left;height:70px;width:70px;margin:20px 10px;border-radius:50%;border:solid 3px #369998;}
-.top_con .dengluhou .list p{float:right;color:#999;font-size:12px;border-bottom:solid 1px #eaeaea;width:150px;height:32px;line-height:32px;margin:0 5px;}
+.top_con .dengluhou .list{text-align: center ;position:absolute;z-index:1000;width:150px;top:42px;right:0px;}
+.top_con .dengluhou .list img{float:left;height:70px;width:70px;margin:20px 10px;border-radius:50%;border:solid 3px #27b28b;}
+.top_con .dengluhou .list p{background:#fff;float:right;color:#999;font-size:12px;width:150px;height:32px;line-height:32px;padding:0 5px;box-sizing: border-box;}
 .top_con .dengluhou .list p a{color:#666;}
+.top_con .dengluhou .list p:hover{
+    background: #27b28b;
+    color: #fff;
+}
+.top_con .dengluhou .list .triangle{
+    width:0;
+    height:0;
+    border:8px solid #000;
+    border-bottom:8px solid #fff;
+    margin: 0 auto;
+}
+.top_con .dengluhou .list p:hover a{
+    color: #fff;
+}
+.top_con .dengluhou .list p:nth-child(2):hover{
+    background: #fff;
+    color: #999;
+}
 
 /*tanchu*/
 .tanchu{position:relative; z-index: 4599;}
@@ -189,10 +212,41 @@ border-radius: 4px;
 background: #31c79c;
 border: 1px solid #32b48a;
 }
+.sign-dsf{
+    text-align: center;
+}
+.sign-dsf a{
+    background: #ddd;
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    display: inline-block;
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    text-align: center;
+}
+.sign-dsf a img{
+    padding-top: 10px;
+}
+.zhuce_left .dl_ttl{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.sign-dsf a:nth-child(3):hover{
+    background: #3caae3;
+}
+.sign-dsf a:nth-child(2):hover{
+    background: #e90e24;
+}
+.sign-dsf a:nth-child(1):hover{
+    background: #58bc46;
+}
 .zhuce_right{
 display:none;
 float:right;padding:50px 90px;}
-.zhuce_right .dl_ttl{display:block;font-size:16px;color:#666666;}
+/* .zhuce_right .dl_ttl{display:block;font-size:16px;color:#666666;} */
 .zhuce_right .dl_btn{border:0;width:172px;height:45px;color:#28b18a;background:url(../images/zc_img_06.png);font-size:20px;font-family:\5FAE\8F6F\96C5\9ED1;margin:10px 0 50px 0; cursor:pointer;}
 .zhuce_right a{display:block;margin-top:10px;}
 .switching{
@@ -285,5 +339,5 @@ border-radius: 4px;
 
 .fenye{margin:20px 0 10px 0;text-align:center;color:#666;}
 .fenye a{display:inline-block;padding:2px 8px;margin:0 10px;font-size:14px;color:#787d82;}
-.fenye a:hover{background:#369998;color:#fff;}
-.fenye a.avtive{background:#369998;color:#fff;}
+.fenye a:hover{background:#27b28b;color:#fff;}
+.fenye a.avtive{background:#27b28b;color:#fff;}

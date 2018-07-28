@@ -103,9 +103,11 @@ $(document).ready(function(){
                 });       
             </script>
             <div class="dengluhou" >
-                <p class="name" id="a" onMouseOver="tabb()"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>">Hi!<?= $info[0]['realname']?></span></p>
+                <p class="name" id="a" onMouseOver="tabb()">
+                    <span title="<?= $info[0]['realname']?>">Hi!<?= $info[0]['realname']?></span></p>
                 <div class="list" id="b" style="display:none;">
-                	<img src="images/course_conimg_27.png" style="float:left;height:75px;width:75px;margin:20px 10px;" />
+                    <div class="triangle"></div>
+                	<!-- <img src="images/course_conimg_27.png" style="float:left;height:75px;width:75px;margin:20px 10px;" /> -->
                     <p style="margin-top:15px;">正使用手机账号登录</p>
                     <p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
                     <p style="border:0;"><a href="<?= URL('login.loginOut')?>">退出</a></p>

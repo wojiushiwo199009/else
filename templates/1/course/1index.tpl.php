@@ -202,13 +202,19 @@ $(document).ready(function(){
                 	<div class="course-pic-txt"><img width="273" height="158" src="<?=$sv['thumb']?>" /><div class="n-pic-mask"></div></div>
                     <div class="c-course-info">
                         <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$sv['couClass'].'&sid='.$sv['id'].'&catid=2');?>" target="_blank"><?php echo $sv['stitle']?></a></div>
-                        <div class="course-bot-info">
-                        	<span class="c-details right">更新时间：<em><?= date('Y-m-d',$sv['inputtime'])?></em></span>
-                            <span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>  
-                        </div>
-                        <div class="course-time">
-                            <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $sv['id']?>,2)"></a>
-                            <span>时长：<em><?php echo $sv['sys_hours']?></em></span></div>
+						<div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+							<div class="course-bot-info">
+								<span class="c-details right">更新时间：<em><?= date('Y-m-d',$sv['inputtime'])?></em></span>
+								<span class="c-details right" style="float:right;margin-right:10px;"><em><?= count($buy_sys)?></em>人在学习</span>  
+							</div>
+							<div class="course-time">
+								<a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" onclick="collect(<?= $sv['id']?>,2)"></a>
+								<span>时长：<em><?php echo $sv['sys_hours']?></em></span>
+							</div>
+						</div>
                         <div class="course-hover-btn">
                             <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$sv['couClass'].'&sid='.$sv['id'].'&catid=2');?>" target="_blank">开始学习</a></span>
                             <span class="det-btn"><a title="购买" href="javascript:;" onclick="checkBuy(<?= $sv['id']?>,0,0,2,1)">购买</a></span>

@@ -26,16 +26,16 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 
 /*内容部分*/
-.container .content{width:1190px;margin:0 auto;}
+.container .content{width:1200px;margin:0 auto;}
 
 /*leftmenu*/
-.lib_Menubox{width:1190px;height:38px;border-bottom:solid 2px #f5f5f5;margin-top:10px;}
+.lib_Menubox{width:1200px;height:38px;border-bottom:solid 2px #f5f5f5;margin-top:10px;}
 .lib_Menubox ul li{display:block;cursor:pointer;float:left;margin-right:100px;color:#333333;font-size:15px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;height:40px;line-height:40px;}
 .lib_Menubox li.hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
 .lib_Menubox li:hover{cursor:pointer;background:url(../images/xuea_img_13.png) no-repeat;background-position:bottom;color:#28b18a;}
 .lib_Menubox li a{color:#333333;}
-.lib_Menubox li.hover a{color:#369998;}
-.lib_Menubox li a:hover{color:#369998;}
+.lib_Menubox li.hover a{color:#27b28b;}
+.lib_Menubox li a:hover{color:#27b28b;}
 
 .lib_Contentbox{margin-bottom:20px;}
 /*leftmenu*/
@@ -57,7 +57,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .content_top .con_top_right p{color:#4d4d4d;line-height:25px;font-size:14px;}
 
 .news_back{background:#f0f2f4;width:100%;}
-.content_news{background:#f0f2f4;width:1190px;margin:0 auto;}
+.content_news{background:#f0f2f4;width:1200px;margin:0 auto;}
 .content_news .school_news{font-size:20px;font-weight:500;float:left;margin-top:30px;}
 .content_news .all{float:left;color:#909192;font-size:14px;margin:35px 0 0 10px;}
 
@@ -70,9 +70,9 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .content_news .schoolnews_right{float:right;width:535px;height:172px;border-left:solid 2px #dcdedf;margin:5px 0 20px 0;}
 .content_news .schoolnews_right .news_img{width:271px;height:172px;margin:0px 15px 0 30px;float:left;}
 .content_news .schoolnews_right .newsright_content{float:left;width:200px;}
-.content_news .schoolnews_right .newsright_content h3{color:#369998;margin:10px 0;}
+.content_news .schoolnews_right .newsright_content h3{color:#27b28b;margin:10px 0;}
 .content_news .schoolnews_right .newsright_content p{line-height:25px;text-indent:2em;font-family:宋体;color:#323232;}
-.content_news .schoolnews_right .newsright_content a{float:right;font-size:12px;font-family:宋体;color:#369998;}
+.content_news .schoolnews_right .newsright_content a{float:right;font-size:12px;font-family:宋体;color:#27b28b;}
 
 
 .container .friend_line{overflow:hidden;border-top:dashed 1px #bbbbbb;border-bottom:dashed 1px #bbbbbb;height:40px;line-height:40px;margin:40px auto;}
@@ -81,5 +81,5 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 
 
-.footer{width:100%;min-width:1190px;height:50px;line-height:50px;background:url(../images/foot_img_02.png);}
-.footer .foot_con{width:1190px;margin:0 auto;text-align:center;}
+.footer{width:100%;min-width:1200px;height:50px;line-height:50px;background:url(../images/foot_img_02.png);}
+.footer .foot_con{width:1200px;margin:0 auto;text-align:center;}

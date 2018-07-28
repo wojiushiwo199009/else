@@ -128,7 +128,7 @@
 <style>
     .swiper-container {
         width: 100%;
-        min-width:1190px;
+        min-width:1200px;
         height: 502px;
         position:relative;
         max-width:1440px;
@@ -169,7 +169,7 @@
             <?php }}?>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination" style="width:100%;min-width:1190px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
+        <div class="swiper-pagination" style="width:100%;min-width:1200px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
         <div class="sort_body">
             <div style="position:relative;width:208px;left:0;top:0;background:transparent;">
                 <div class="sort" id="left_class">

@@ -17,7 +17,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .banner img{margin:0;float:left;}
 
 /*内容部分*/
-.container .content{width:1190px;margin:0 auto;position:relative;}
+.container .content{width:1200px;margin:0 auto;position:relative;}
 
 /*topcontent*/
 .content .con_top{background:#fff;box-shadow:0px 2px 2px 0px #ccc;margin:20px 0;}
@@ -29,8 +29,8 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .content .con_top .top_right .fenxiang a img{margin:0;height:20px;width:20px;}
 .content .con_top .top_right p{line-height:25px;font-size:14px;color:#666666;text-indent:2em;}
 .content .con_top .top_right .buy{text-align:center;margin:30px 0;}
-.content .con_top .top_right .buy a{display:inline-block;background:#f0f0f0;font-size:16px;font-weight:bold;color:#369998;width:155px;height:40px;line-height:40px;}
-.content .con_top .top_right .buy a:hover{background:#369998;color:#fff;}
+.content .con_top .top_right .buy a{display:inline-block;background:#f0f0f0;font-size:16px;font-weight:bold;color:#27b28b;width:155px;height:40px;line-height:40px;}
+.content .con_top .top_right .buy a:hover{background:#27b28b;color:#fff;}
 
 
 /*topcontent*/
@@ -45,13 +45,13 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 }
 .menu_list .current{background:#f0f0f0 url(../images/kaohe_img_03.png) 35px center no-repeat;}
 .menu_body{height:auto;}
-.buy_zj{position:absolute; right:9px;top:3px;display:inline-block;width:106px;height:25px;text-align:center;line-height:25px;border:solid 1px #369998;color:#369998;font-size:14px;}
-.buy_zj:hover{background:#369998;color:#fff;}
+.buy_zj{position:absolute; right:9px;top:3px;display:inline-block;width:106px;height:25px;text-align:center;line-height:25px;border:solid 1px #27b28b;color:#27b28b;font-size:14px;}
+.buy_zj:hover{background:#27b28b;color:#fff;}
 .menu_body ul li{width:760px;height:25px;line-height:25px;font-size:14px;background:url(../images/kaohe_img_05.png) 45px center no-repeat;padding-left:80px;margin:17px 0;position:relative;}
 .menu_body ul li:hover{background:url(../images/kaohe_img_05.png) 45px center no-repeat #9acccb;}
 .menu_body ul li:hover span.buy{border:solid 1px #fff;color:#fff;}
-/*.menu_body ul li a.buy_xj{float:right;margin:2px 20px 0 0;display:inline-block;width:48px;height:20px;text-align:center;line-height:20px;border:solid 1px #369998;color:#369998;cursor:pointer;}*/
-.menu_body ul li a.buy_xj{float:right;margin:2px 8px 0 0;display:inline-block;width:48px;height:20px;text-align:center;line-height:20px;border:solid 1px #369998;color:#369998;}
+/*.menu_body ul li a.buy_xj{float:right;margin:2px 20px 0 0;display:inline-block;width:48px;height:20px;text-align:center;line-height:20px;border:solid 1px #27b28b;color:#27b28b;cursor:pointer;}*/
+.menu_body ul li a.buy_xj{float:right;margin:2px 8px 0 0;display:inline-block;width:48px;height:20px;text-align:center;line-height:20px;border:solid 1px #27b28b;color:#27b28b;}
 .menu_body ul li a.buy_xj:hover{border:solid 1px #fff;color:#fff;}
 .menu_body ul li .buy_title{float:left;color:#333;position:relative;}
 .menu_body ul li img{position:relative;top:4px;margin-right:7px;}
@@ -69,7 +69,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .fenye{margin:20px 0 10px 0;}
 .fenye a{display:inline-block;padding:2px 8px;margin:0 10px;font-size:14px;color:#787d82;}
-.fenye a:hover{background:#369998;color:#fff;}
-.fenye a.avtive{background:#369998;color:#fff;}
+.fenye a:hover{background:#27b28b;color:#fff;}
+.fenye a.avtive{background:#27b28b;color:#fff;}
 
 /*bottomcontent*/

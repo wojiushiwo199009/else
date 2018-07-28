@@ -129,7 +129,7 @@
             </div> 
             <div class="person_right" style="margin-left:90px">
                 <p><span>昵称</span><input type="text" name="realname" id="realname" value="<?= $info['realname']?>"/></p>
-                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#369998;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#369998;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#369998;color:#fff;"':''?>>保密</a></p>
+                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#27b28b;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#27b28b;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#27b28b;color:#fff;"':''?>>保密</a></p>
                 <input type="hidden" id="sex" name="sex" value="<?= $info['sex']?>">
                  <p><span>年龄</span><input type="text" name="age" id="age"  value="<?= $info['age']?>" style="width:30px"/> 岁</p>
                 <p><span>联系电话</span><input type="text" name="phone" id="phone"  value="<?= $info['phone']?>"/></p>
@@ -152,7 +152,7 @@
                     //alert(type);
                     $("#sex").val(type);
                     $("#gender a").css({"background":"#EEEEEE","color":"black"});
-                    $("#sex_"+type).css({"background":"#369998","color":"#fff"});
+                    $("#sex_"+type).css({"background":"#27b28b","color":"#fff"});
                 }
 
                 function check(){

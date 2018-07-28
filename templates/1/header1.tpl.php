@@ -52,17 +52,17 @@
         <div class="dengluhou" >
             <p class="name" style="float:left" id="a" onMouseOver="tabb()"><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
             <div class="list" id="b" style="display:none;">
-                <?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?> 
+                <div class="triangle"></div>
                 <p style="margin-top:15px;">正使用手机账号登录</p>
                 <p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
                 <?php if($info[0]['type']==1){?>
-                <p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">提问我的</a></p>
-                <p><a href="<?= URL('member.xmember','&tid=3');?>" style="color:black">安全中心</a></p>
-                <p><a href="<?= URL('member.xmember','&tid=4');?>" style="color:black">个人资料</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=2');?>">提问我的</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=3');?>">安全中心</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=4');?>">个人资料</a></p>
                 <?php }else{?>
-                <p><a href="<?= URL('member.xmember','&tid=1');?>" style="color:black">我的课程</a></p>
-                <p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">我的问答</a></p>
-                <p><a href="<?= URL('member.xmember','&tid=7');?>" style="color:black">个人资料</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=1');?>">我的课程</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=2');?>">我的问答</a></p>
+                <p><a href="<?= URL('member.xmember','&tid=7');?>">个人资料</a></p>
                 <?php }?>
                 <p style="border:0;"><a href="javascript:;" onClick="logOut()">退出</a></p>
             </div>

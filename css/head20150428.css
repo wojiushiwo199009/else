@@ -13,8 +13,8 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .container{width:100%;margin:0 auto;}
 
 /*top*/
-.top{width:100%;min-width:1190px;margin:0 auto;height:55px;overflow:hidden;background:#000;}
-.top .top_con{width:1190px;margin:0 auto;height:52px;}
+.top{width:100%;min-width:1200px;margin:0 auto;height:55px;overflow:hidden;background:#000;}
+.top .top_con{width:1200px;margin:0 auto;height:52px;}
 
 .top .logo{display:block;width:101px;float:left;margin:15px 0;}
 
@@ -30,7 +30,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .top_con .search .search_text{height:29px;line-height:29px;width:174px;background:url(../images/xuea_img_03.png);background-size:100% 100%;padding-left:45px;color:#fff;margin-right:20px;}
 .top_con .search .search_btn{position:absolute;left:11px;top:8px;}
 .top_con .search .zc_btn{height:30px;width:62px;font-size:16px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;border-radius:5px;cursor:pointer;}
-.top_con .search .zc{color:#fff;background:#369998;}
+.top_con .search .zc{color:#fff;background:#27b28b;}
 .top_con .search .dl{color:#000;background:#e5e5e5;}
 
 /*tanchu*/

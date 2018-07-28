@@ -49,18 +49,24 @@
                     ?>
                     <li style="width:280px">
                         <div class="course-pic-txt">
-                        <img src="<?= empty($bv['thumb'])?'images/teacher_img_06.png':$bv['thumb']?>" style="width:294px;height:202px"/><div class="n-pic-mask"></div></div>
+                        <img src="<?= empty($bv['thumb'])?'images/teacher_img_06.png':$bv['thumb']?>" style="width:100%;"/><div class="n-pic-mask"></div></div>
                         <div class="c-course-info">
-                    <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$bv['couClass'].'&sid='.$bv['id'].'&catid=2');?>" target="_blank"><?= $bv['stitle']?></a></div>
-                    <div class="course-bot-info">
-                        <span class="c-details right"><em><?= count($buy_sys)?></em>人在学习</span>  
-                    </div>
-                    <div class="course-time">
-                       <!-- <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" ></a>-->
-                        <span>时长：<em><?= $bv['sys_hours']?></em></span></div>
-                    <div class="course-hover-btn">
-                        <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$bv['couClass'].'&sid='.$bv['id'].'&catid=2');?>">开始学习</a></span>
-                    </div> 
+                        <div class="c-course-name"><a href="<?= URL('courSystem.courseCon','classid='.$bv['couClass'].'&sid='.$bv['id'].'&catid=2');?>" target="_blank"><?= $bv['stitle']?></a></div>
+                        <div class="c-course-detail">
+							简介：简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介简介
+						</div>
+						<div class="course-info">
+                            <div class="course-bot-info">
+                                <span class="c-details right"><em><?= count($buy_sys)?></em>人在学习</span>  
+                            </div>
+                            <div class="course-time">
+                            <!-- <a  class="n-collect" status="0"  href="javascript:void(0);" treeid="9094" ></a>-->
+                                <span>时长：<em><?= $bv['sys_hours']?></em></span>
+                            </div>
+                        </div>
+                        <div class="course-hover-btn">
+                            <span class="study-btn"><a href="<?= URL('courSystem.courseCon','classid='.$bv['couClass'].'&sid='.$bv['id'].'&catid=2');?>">开始学习</a></span>
+                        </div> 
                 </div> 
                     </li>
                     <?php }}}else{
@@ -267,7 +273,7 @@
             <style>
                 .tanchu_content{position:fixed;top:50%;margin-top:-137px;left:50%;margin-left:-217px;width:435px;height:275px;background:#fff;text-align:center;z-index:1000;box-shadow:0px 0px 1px 2px #ccc;}
                 .tanchu_content .tit{height:30px;line-height:30px;text-align:center;}
-                .tanchu_content .tit span{float:none;display:inline-block;color:#369998;font-size:16px;font-weight:bold;}
+                .tanchu_content .tit span{float:none;display:inline-block;color:#27b28b;font-size:16px;font-weight:bold;}
                 .tanchu_content .tit img{float:right;margin:10px 15px; cursor:pointer;}
                 .tanchu_content p{margin:10px 0;text-align:left;font-size:14px;color:#404040;margin:0 15px;line-height:30px;}
                 .tanchu_content p span{float:left;font-weight:bold;text-align:right;font-size:14px;color:#666666;display:block;}
@@ -715,7 +721,7 @@
 				#img1Btn{display:none}
 			</style>
                 <p><span>昵称</span><input type="text" name="realname" id="realname" value="<?= $info['realname']?>"/></p>
-                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#369998;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#369998;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#369998;color:#fff;"':''?>>保密</a></p>
+                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#27b28b;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#27b28b;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#27b28b;color:#fff;"':''?>>保密</a></p>
                 <input type="hidden" id="sex" name="sex" value="<?= $info['sex']?>">
                 <p><span>年龄</span><input type="text" name="age" id="age"  value="<?= $info['age']?>" style="width:30px"/> 岁</p>
                 <p><span>联系电话</span><input type="text" name="phone" id="phone"  value="<?= $info['username']?>"/></p>
@@ -738,7 +744,7 @@
                         //alert(type);
                         $("#sex").val(type);
                         $("#gender a").css({"background":"#EEEEEE","color":"black"}); 
-                        $("#sex_"+type).css({"background":"#369998","color":"#fff"});
+                        $("#sex_"+type).css({"background":"#27b28b","color":"#fff"});
                     }
     
                     function check(){

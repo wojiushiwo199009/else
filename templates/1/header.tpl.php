@@ -42,26 +42,46 @@
 				?> 
 				<script type="text/javascript">
 					$(function(){
-						$(".dengluhou").hover(function(){$("#b").slideToggle()});
+						$(".dengluhou").hover(function(){
+							if($("#b").css("display","none")){
+								$("#b").css("display","block")
+							}else{
+								$("#b").css("display","none")
+							}
+						},function (params) {
+								$("#b").css("display","none")
+						});
 					});       
 				</script>
 				<?php
 				$_SESSION['u_uidss'] = $_SESSION['xr_id'];
 				?>
 				<div class="dengluhou" >
-					<p class="name" style="float:left" id="a" onMouseOver="tabb()"><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
+					<p class="name" style="float:left" id="a" onMouseOver="tabb()">
+						<a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>">
+							<?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?>
+							<img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>">
+							<?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?>
+						<a href="<?= URL('member.xmember','&tid=6');?>">
+							<span style="margin-left:10px;">
+								<img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" />
+								<?= $info[0]['frozen_money']?>
+							</span>
+						</a>
+						<?php }?>
+					</p>
 					<div class="list" id="b" style="display:none;">
-						<?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?> 
-						<p style="margin-top:15px;">正使用手机账号登录</p>
+						<div class="triangle"></div>
+						<p>正使用手机账号登录</p>
 						<p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
 						<?php if($info[0]['type']==1){?>
-						<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">提问我的</a></p>
-						<p><a href="<?= URL('member.xmember','&tid=3');?>" style="color:black">安全中心</a></p>
-						<p><a href="<?= URL('member.xmember','&tid=4');?>" style="color:black">个人资料</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=2');?>">提问我的</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=3');?>">安全中心</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=4');?>">个人资料</a></p>
 						<?php }else{?>
-						<p><a href="<?= URL('member.xmember','&tid=1');?>" style="color:black">我的课程</a></p>
-						<p><a href="<?= URL('member.xmember','&tid=2');?>" style="color:black">我的问答</a></p>
-						<p><a href="<?= URL('member.xmember','&tid=7');?>" style="color:black">个人资料</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=1');?>">我的课程</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=2');?>">我的问答</a></p>
+						<p><a href="<?= URL('member.xmember','&tid=7');?>">个人资料</a></p>
 						<?php }?>
 						<p style="border:0;"><a href="javascript:;" onClick="logOut()">退出</a></p>
 					</div>
@@ -182,6 +202,12 @@
 					<p id="register1"><input type="button" name="" id="registerr" onClick="checkRegister()" value="注册" class="zc_btn" />
 						<span class='dl_btnnn' >已有账号？<span id="dl_btnnn">登陆</span></span>
 					</p>
+					<div class="dl_ttl">第三方账号登陆</div>
+					<p class='sign-dsf'>
+            			<a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
+            			<a href=""><img src="images/weibo.png" /></a>
+            			<a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+					</p>
 					<p style="display:none"><input type="reset" name="button" id="res" value="重置" /></p>
 				</div>
 			</div>
@@ -204,6 +230,12 @@
 				<p> <span class="xing">*</span> <input type="password" name="password" id="password" class="pwd" placeholder="请输入密码" onkeypress="if(event.keyCode==13) {$('#log').click();}"/></p>
 				<p><input type="checkbox" name="remandEmail" class="rmb_me" value="1" id="remandEmail" checked/><span class="jizhu_me">记住我</span><a href="#" class="wjmm" id="dl_rr">忘记密码</a></p>
 				<p><input type="button" name="" id="log"  onclick="return checkLogin()" value="登录" class="zc_btn" /><span class="no_zh">还没有账号？<a href="javascript:void(0);" class="now_zc" id="zcc">马上注册</a></span></p>
+				<div class="dl_ttl">第三方账号登陆</div>
+				<p class='sign-dsf'>
+					<a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
+					<a href=""><img src="images/weibo.png" /></a>
+					<a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+				</p>
 			</div>
 			
 		</div>
