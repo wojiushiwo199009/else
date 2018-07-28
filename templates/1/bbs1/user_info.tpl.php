@@ -14,7 +14,7 @@
 	$user= DS('publics._get','','users',"id='".V('r:id')."'");
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?= $user[0]['username']?>的个人资料  魅族社区 </title>
+<title><?= $user[0]['username']?>的个人资料  大数据 </title>
 
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_common.css" />
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_home_space.css" />

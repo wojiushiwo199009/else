@@ -186,6 +186,12 @@ function formatStr(str) {
             <p id="register1"><input type="button" name="" id="registerr" onClick="checkRegister()" value="注册" class="zc_btn" />
                 <span class='dl_btnnn' >已有账号？<span id="dl_btnnn">登陆</span></span>
             </p>
+            <div class="dl_ttl">第三方账号登陆</div>
+            <p class='sign-dsf'>
+                <a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
+                <a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+                <!-- <a href=""><img src="images/weibo.png" /></a> -->
+            </p>
             <p style="display:none"><input type="reset" name="button" id="res" value="重置" /></p>
         </div>
     </div>
@@ -208,6 +214,12 @@ function formatStr(str) {
         <p> <span class="xing">*</span> <input type="password" name="password" id="password" class="pwd" placeholder="请输入密码" onkeypress="if(event.keyCode==13) {$('#log').click();}"/></p>
         <p><input type="checkbox" name="remandEmail" class="rmb_me" value="1" id="remandEmail" checked/><span class="jizhu_me">记住我</span><a href="#" class="wjmm" id="dl_rr">忘记密码</a></p>
         <p><input type="button" name="" id="log"  onclick="return checkLogin()" value="登录" class="zc_btn" /><span class="no_zh">还没有账号？<a href="javascript:void(0);" class="now_zc" id="zcc">马上注册</a></span></p>
+        <div class="dl_ttl">第三方账号登陆</div>
+        <p class='sign-dsf'>
+            <a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
+            <a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+            <!-- <a href=""><img src="images/weibo.png" /></a> -->
+        </p>
     </div>
     
 </div>

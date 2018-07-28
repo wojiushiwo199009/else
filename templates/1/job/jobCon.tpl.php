@@ -174,7 +174,7 @@ var _hmt = _hmt || [];
 <style>
 .fenxiang_con .close {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid #27b28b;
+    border: 1px solid #1890ff;
     border-radius: 50%;
     cursor: pointer;
     float: right;
@@ -185,7 +185,7 @@ var _hmt = _hmt || [];
     transition: -moz-transform 1s ease 0s;
     width: 20px;
 }
-.fenxiang_con .close:hover{background:#27b28b;transform:rotate(360deg);}
+.fenxiang_con .close:hover{background:#1890ff;transform:rotate(360deg);}
 .fenxiang_con .close img {
     height: 13px;
     margin-left: 0;
@@ -195,7 +195,7 @@ var _hmt = _hmt || [];
 	.fenxiang_con p{color:#666666;font-weight:bold;margin:0 30px;font-size:18px;}
 	.fenxiang_con span{display:block;color:#666666;font-weight:500;line-height:30px;font-size:14px;word-break: break-all;word-wrap: break-word;}
 	.demo-area{text-align:center;}
-	.demo-area .my_clip_button{border: 0;background:#27b28b;color:#fff;height:30px;width:72px;border-radius:5px;font-family:微软雅黑;margin-top:25px;}
+	.demo-area .my_clip_button{border: 0;background:#1890ff;color:#fff;height:30px;width:72px;border-radius:5px;font-family:微软雅黑;margin-top:25px;}
 </style>
 <div id="fenxiang_con" class="fenxiang_con">
     <div class="tit"><i class="close" id="closea"><img src="images/one_img_03.png"></i><div class="clearfloat"></div></div>

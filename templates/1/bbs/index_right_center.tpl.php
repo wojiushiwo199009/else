@@ -1,4 +1,4 @@
-<div class="titletext2" style="margin-top:30px">推荐阅读</div>
+<div class="titletext2">推荐阅读</div>
 
 <div class="bread_line">
     				<div class="line" style="border: 0px solid #ccc;"></div>

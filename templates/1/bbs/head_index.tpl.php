@@ -15,9 +15,9 @@
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_forum_index.css">
 <meta property="wb:webmaster" content="f1284c3017204ff7">
 <meta property="qc:admins" content="1300463313655125636">
-<meta name="application-name" content="魅族社区">
+<meta name="application-name" content="大数据">
 <meta name="msapplication-tap-highlight" content="no">
-<meta name="msapplication-tooltip" content="魅族社区">
+<meta name="msapplication-tooltip" content="大数据">
 <meta name="msapplication-task" content="icon-uri=/images/portal.ico">
 <meta name="msapplication-task" content="icon-uri=/images/bbs.ico">
 <meta name="msapplication-task" content="name=;action-uri=/group.php;icon-uri=/images/group.ico"> 

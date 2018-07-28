@@ -23,12 +23,12 @@
 <script src="http://bbs.res.meizu.com/resources/php/bbs/static/js/common.js?Y2F" type="text/javascript"></script>
 <meta property="wb:webmaster" content="f1284c3017204ff7" />
 <meta property="qc:admins" content="1300463313655125636" />
-<meta name="application-name" content="魅族社区" />
+<meta name="application-name" content="大数据" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="msapplication-tooltip" content="魅族社区" />
+<meta name="msapplication-tooltip" content="大数据" />
 <meta name="msapplication-task" content="name=;action-uri=http://127.0.0.1:8004/portal.php;icon-uri=http://127.0.0.1:8004/images/portal.ico" /><meta name="msapplication-task" content="name=版块;action-uri=http://127.0.0.1:8004/forum.php;icon-uri=http://127.0.0.1:8004/images/bbs.ico" />
 <meta name="msapplication-task" content="name=;action-uri=http://127.0.0.1:8004/group.php;icon-uri=http://127.0.0.1:8004/images/group.ico" />
-<link rel="archives" title="魅族社区" href="http://127.0.0.1:8004" />
+<link rel="archives" title="大数据" href="http://127.0.0.1:8004" />
 <script src="js/bbsjs/jquery-1.7.1.min.js" type="text/javascript"></script>
 
 
@@ -608,12 +608,12 @@ var aimgfid = 0;
 			<? if($_SESSION['u_uidss'] == NULL){?>
 			<div align="center" class="ui-mask" data-widget-cid="widget-0" style=" line-height:135px;position: absolute; width: 594px; height: 135px; margin-left:1px;margin-top:2px;z-index: 998; display: block; opacity: 1; background-color: rgb(249,249 ,249);">
     		 您需要登录后才能回复&nbsp;&nbsp;&nbsp;&nbsp;   
-				<a href="<?=URL('login')?>" class="xi2" style="color:#32A5E7">登录</a>
+				<a href="<?=URL('login')?>" class="xi2" style="color:#1890ff">登录</a>
         <a class="separator"></a>&nbsp;
    
    		 <img src="images/shug.png" style="margin-left:-9px" height='10px'>
     
-				<a href="<?=URL('login.register')?>" class="xi2" style="color:#32A5E7">立刻注册</a>
+				<a href="<?=URL('login.register')?>" class="xi2" style="color:#1890ff">立刻注册</a>
 </div>
 <? }?>
 

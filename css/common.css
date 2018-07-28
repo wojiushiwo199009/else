@@ -115,7 +115,7 @@ div.separation{ background-color:#e6e6e6; height:1px; width:100px; overflow:hidd
 
 .index_right .column_r7 .tagbox .tag_tags{background-color:#FFFFFF; margin-bottom:15px;}
 .index_right .column_r7 .tagbox .tag_tags .tg{ float:left; width:133px; height:40px; line-height:40px; text-align:center; font-size:16px; color:#222222; cursor:pointer; border-bottom:#e6e6e6 1px solid;}
-.index_right .column_r7 .tagbox .tag_tags .activity{ border-bottom:#ffffff 1px solid; border-top:#e6e6e6 1px solid; border-left:#e6e6e6 1px solid; border-right:#e6e6e6 1px solid; color:#32a5e7;}
+.index_right .column_r7 .tagbox .tag_tags .activity{ border-bottom:#ffffff 1px solid; border-top:#e6e6e6 1px solid; border-left:#e6e6e6 1px solid; border-right:#e6e6e6 1px solid; color:#1890ff;}
 .index_right .column_r7 .tagbox li.firmware_li{ float:left;font-size: 14px;margin-right:20px;}
 .index_right .column_r7 .tagbox li.firmware_li_2{font-size: 14px; padding:10px 0; border-bottom:1px dashed #cccccc;}
 .index_right .column_r7 .tagbox .tag_main{background-color:#FFFFFF;}
@@ -123,7 +123,7 @@ div.separation{ background-color:#e6e6e6; height:1px; width:100px; overflow:hidd
 
 .tagbox2 .tag_tags{background-color:#FFFFFF; margin-bottom:15px;}
 .tagbox2 .tag_tags .tg{ float:left; width:133px; height:40px; line-height:40px; text-align:center; font-size:16px; color:#222222; cursor:pointer; border-bottom:#e6e6e6 1px solid;}
-.tagbox2 .tag_tags .activity{ border-bottom:#ffffff 1px solid; border-top:#e6e6e6 1px solid; border-left:#e6e6e6 1px solid; border-right:#e6e6e6 1px solid; color:#32a5e7;}
+.tagbox2 .tag_tags .activity{ border-bottom:#ffffff 1px solid; border-top:#e6e6e6 1px solid; border-left:#e6e6e6 1px solid; border-right:#e6e6e6 1px solid; color:#1890ff;}
 .tagbox2 li.firmware_li{ float:left;font-size: 14px;margin-right:20px;}
 .tagbox2 li.firmware_li_2{font-size: 14px; padding:10px 0; border-bottom:1px dashed #cccccc;}
 .tagbox2 .tag_main{background-color:#FFFFFF;}
@@ -161,7 +161,7 @@ div.separation{ background-color:#e6e6e6; height:1px; width:100px; overflow:hidd
 .index_left .iright_k{ float:left; padding: 0 19px; width:350px; display:block; }
 .index_left .iright_k .spfont{ font-size:12px; line-height:16px; display:block; height:16px; float:left;color:#9b9b9b;}
 .index_left .iright_k .spfont a{ color:#9b9b9b;}
-.index_left .iright_k .alte a.alink{color:#32A5E7;}
+.index_left .iright_k .alte a.alink{color:#1890ff;}
 .index_left .iright_k .alte a.alink:hover{color:#0082ad;}
 .index_left .iimage img{ border-bottom:1px solid #e6e6e6;}
 .index_left .iimage a.is_image{display:inline-block;}
@@ -177,11 +177,11 @@ a.is_video:hover .backmask_video{ opacity:0.30;filter:alpha(opacity=30);}
 .index_left .index_forum{ background-color:#0DAAEA; font-size:16px; color:#FFFFFF;height:34px;line-height:34px; padding:0px 9px; float:left;}
 .index_left .index_title, .index_left .index_title a{ color:#333333; font-size:16px;line-height:30px; font-weight:bold;}
 .index_left .icontent{ padding:0;line-height:24px; text-align:justify;text-justify:inter-ideograph; font-size:16x;}
-.index_left .icontent a.alink{ color:#32a5e7; margin-left:20px;}
+.index_left .icontent a.alink{ color:#1890ff; margin-left:20px;}
 .index_left .icontent a.alink:hover{color:#0082ad;}
 .index_left .itail{height:20px; margin-top:10px;}
 .index_left .itail .ireply{ float:right;color:#999999;}
-.index_left .itail a.alink{ color:#32a5e7; float:right;}
+.index_left .itail a.alink{ color:#1890ff; float:right;}
 .index_left .itail a.alink:hover{color:#0082ad;}
 .index_left .index_list .is_video{display:block; position:absolute; top:0px; left:0px; width:740px; height:248px;}
 .is_video .play_start{background: url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/play_start.png") no-repeat 0 0px; _background: url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/play_start.gif") no-repeat 0 0px; position:absolute; width:88px; height:88px; left:326px; top:86px;}
@@ -223,7 +223,7 @@ a.is_video:hover .play_start{background: url("http://bbs.res.meizu.com/resources
 .index_frame li.firmware_li{ float:left;font-size: 14px;margin-right:20px;}
 .index_frame li.firmware_li_2{font-size: 14px; padding:9px 0; border-bottom:1px dashed #cccccc;}
 .index_frame li.firmli_3{margin-right:0 !important;}
-.index_frame li.firmware_li a{ color:#32a5e7 !important; cursor:pointer;}
+.index_frame li.firmware_li a{ color:#1890ff !important; cursor:pointer;}
 
 .index_frame .column_2_3{margin:15px 20px 0 20px;}
 .index_frame .column_2_3 li.head_li{ height:64px; line-height:64px; *height:60px; *line-height:60px; overflow:hidden; font-size:14px; }
@@ -244,7 +244,7 @@ a.is_video:hover .play_start{background: url("http://bbs.res.meizu.com/resources
 .index_frame .column_3_4 .tagbox .tag_tags{border-top:#e6e6e6 1px solid;background-color:#FFFFFF;}
 .index_frame .column_3_4 .tagbox .tag_tags .tg{ float:left; width:119px; height:58px; line-height:58px; text-align:center; font-size:18px; color:#81aab8; cursor:default; border-bottom:#e6e6e6 1px solid;background-color:#f7f7f7; }
 .index_frame .column_3_4 .tagbox .tag_tags .tgreght{width:1px; background-color:#f7f7f7; float:right; height:40px;}
-.index_frame .column_3_4 .tagbox .tag_tags .activity{ background-color:#FFFFFF; border-bottom:#FFFFFF 1px solid;color:#32a5e7;}
+.index_frame .column_3_4 .tagbox .tag_tags .activity{ background-color:#FFFFFF; border-bottom:#FFFFFF 1px solid;color:#1890ff;}
 .index_frame .column_3_4 .tagbox .tag_tags	#bbs_system_course_get{border-left:#e6e6e6 1px solid;}
 .index_frame .column_3_4 .tagbox .tag_main{ height:197px;background-color:#FFFFFF;}
 .index_frame .column_3_4 .tagbox .tag_main .ctag{ padding:20px;width:197px; overflow:hidden;}
@@ -278,7 +278,7 @@ a.is_video:hover .play_start{background: url("http://bbs.res.meizu.com/resources
 
 
 .split_line{ width:2px; background-color:#e6e6e6; height:12px;float:left; margin:10px 10px 0 0;}
-.firmware_download{border-radius:1px; background-color:#32a5e7; height:46px; line-height:46px; text-align:center; color:#FFFFFF; font-size:18px; margin:8px 0 0 0;}
+.firmware_download{border-radius:1px; background-color:#1890ff; height:46px; line-height:46px; text-align:center; color:#FFFFFF; font-size:18px; margin:8px 0 0 0;}
 
 
 .titletext2, .titletext2 a{color:#333 !important; font-size:16px;font-weight:normal;display:inline-block;height:25px;line-height:25px; font-weight:bold;}
@@ -297,7 +297,7 @@ a.is_video:hover .play_start{background: url("http://bbs.res.meizu.com/resources
     .titletext2 .arrow{margin-top:6px;}
 }
 
-li.firmware_li em{padding:0px;margin:0px;float:left;color:#32a5e7 !important;}
+li.firmware_li em{padding:0px;margin:0px;float:left;color:#1890ff !important;}
 li.firmware_li a:hover em{color:#0082ad !important;}
 li.firmware_li .arrow_2{display:inline-block;margin:6px 0px 0px 5px;*margin-top:6px;width:10px;height:9px;background:url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/main_icon.png") no-repeat 0px -88px;_background-image:url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/main_icon.gif")}
 .firmware_li a em{ cursor:pointer;}

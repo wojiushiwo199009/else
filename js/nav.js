@@ -60,35 +60,39 @@ function findSame(arr,n){
 	return false;	
 };
 function getByClass(oParent,sClass){
-	if(oParent.getElementsByClassName){
+	if (oParent && oParent.getAttribute('class')) {
 		return oParent.getElementsByClassName(sClass);
-	}else{
-		var aEle=oParent.getElementsByTagName('*');
-	
-		var arr=[];
-		for(var i=0; i<aEle.length; i++){
-			var tmp=aEle[i].className.split(' ');
-			if(findSame(tmp,sClass)){
-				arr.push(aEle[i]);	
+	} else {
+		if (oParent) {
+			var aEle = oParent.getElementsByTagName('*');
+			var arr = [];
+			for (var i = 0; i < aEle.length; i++) {
+				var tmp = aEle[i].className.split(' ');
+				if (findSame(tmp, sClass)) {
+					arr.push(aEle[i]);
+				}
 			}
+			return arr;
 		}
-		return arr;
 	}
 };
 
 //关注
 function atten(){
 	var oAtten = document.getElementById('head_atten');
-	var name = 'head-atten';
-	var oAttenBox = getByClass(oAtten, 'atten-box')[0];
+	if (oAtten){
+		var name = 'head-atten';
+		var oAttenBox = getByClass(oAtten, 'atten-box')[0];
+
+		oAtten.onmouseover = function () {
+			this.className = name + ' atten-show';
+			oAttenBox.style.display = 'block';
+		};
+
+		oAtten.onmouseout = function () {
+			this.className = name;
+			oAttenBox.style.display = 'none';
+		};
+	}
 	
-	oAtten.onmouseover = function(){
-		this.className = name+' atten-show';
-		oAttenBox.style.display = 'block';	
-	};
-	
-	oAtten.onmouseout = function(){
-		this.className = name;
-		oAttenBox.style.display = 'none';
-	};
 };

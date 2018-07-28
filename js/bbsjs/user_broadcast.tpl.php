@@ -7,10 +7,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?=$nam[0]['username']?>的广播  魅族社区 </title>
+<title><?=$nam[0]['username']?>的广播  大数据 </title>
 
 <meta name="keywords" content="<?=$nam[0]['username']?>的广播" />
-<meta name="description" content="<?=$nam[0]['username']?>的广播 ,魅族社区" />
+<meta name="description" content="<?=$nam[0]['username']?>的广播 ,大数据" />
 <meta name="generator" content="MEIZU 2013" />
 <meta name="author" content="MEIZU" />
 <meta name="copyright" content="2003-2013 Comsenz Inc." />
@@ -28,9 +28,9 @@
 <script src="js/common.js" type="text/javascript"></script>
 <meta property="wb:webmaster" content="f1284c3017204ff7" />
 <meta property="qc:admins" content="1300463313655125636" />
-<meta name="application-name" content="魅族社区" />
+<meta name="application-name" content="大数据" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="msapplication-tooltip" content="魅族社区" />
+<meta name="msapplication-tooltip" content="大数据" />
 <meta name="msapplication-task" content="name=;action-uri=http://bbs.meizu.cn/portal.php;icon-uri=http://127.0.0.1/resources/images/portal.ico" /><meta name="msapplication-task" content="name=版块;action-uri=http://127.0.0.1:8004/forum.php;icon-uri=http://127.0.0.1/images/bbs.ico" />
 <meta name="msapplication-task" content="name=;action-uri=http://127.0.0.1/group.php;icon-uri=http://127.0.0.1/images/group.ico" />
 <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>

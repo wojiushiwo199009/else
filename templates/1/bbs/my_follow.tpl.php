@@ -57,6 +57,10 @@ body{
 </head>
 
 <body id="nv_home" class="pg_follow" onkeydown="if(event.keyCode==27) return false;">
+	<div class="container">
+
+	<div>
+
 <div id="ajaxwaitid"></div>
 <div id="hd"><!--导航-->
 
@@ -627,9 +631,11 @@ fObj.href = 'home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=411141f6&amp
 		xmlhttp.send();
 	}
 </script>		
-<div style="margin-top:50px">
+<div style=" position: absolute;left: 0; right: 0; bottom: 0; margin-top:0px">
 <?php TPL :: display('footer');?>
 </div>
+	</div>
+
 <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
@@ -771,5 +777,7 @@ jQuery(".main-ad").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effec
 			document.getElementById('append_parent').style.display='none';
 		}			
 	</script>
+	</div>
+	
 </body>
 </html>

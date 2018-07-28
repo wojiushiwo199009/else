@@ -16,7 +16,7 @@ font-family:\5FAE\8F6F\96C5\9ED1 !important;
 outline:medium;
 }
 
-.container{width:100%;margin:-17px auto;}
+.container{width:100%;}
 
 /*top*/
 .top{position: fixed;top:0;width:100%;margin:0 auto;height:58px;background:#000;z-index:3000;}
@@ -235,10 +235,10 @@ border: 1px solid #32b48a;
     margin-bottom: 15px;
 }
 .sign-dsf a:nth-child(3):hover{
-    background: #3caae3;
+    background: #e90e24;
 }
 .sign-dsf a:nth-child(2):hover{
-    background: #e90e24;
+    background: #3caae3;
 }
 .sign-dsf a:nth-child(1):hover{
     background: #58bc46;

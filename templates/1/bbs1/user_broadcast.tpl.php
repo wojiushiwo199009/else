@@ -10,7 +10,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?= $nam[0]['username']?>的广播  魅族社区 </title>
+    <title><?= $nam[0]['username']?>的广播  大数据 </title>
   
     <link rel="stylesheet" type="text/css" href="css/bbscss/style_1_common.css" />
     <link rel="stylesheet" type="text/css" href="css/bbscss/style_1_home_follow.css" />

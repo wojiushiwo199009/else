@@ -50,6 +50,8 @@ body{
 </head>
 
 <body id="nv_forum" class="pg_guide" onkeydown="if(event.keyCode==27) return false;">
+	<div class="container">
+		<div>
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 <script>
 	var uids2 =  '<?=$_SESSION['u_uidss']?>';
@@ -146,7 +148,7 @@ body{
 				}
 				
 		</script>
-		<div class="cname" style="margin-left:30px;margin-right:8px;" >选择版块</div>
+		<div class="cname" style="margin-left:10px;margin-right:8px;" >选择版块</div>
 		<div class="select_box select_box_2" style="float:left; position:relative;">
 			<div class="box_menu" value="0"  vl="0" style="color:#1daeed;" filter="true" id="box_menu1">
 			<?php 
@@ -266,6 +268,7 @@ body{
 <div style="margin-top:50px">
 <?php TPL :: display('footer');?>
 </div>
+	</div>
 <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
@@ -328,6 +331,7 @@ jQuery(".main-ad").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effec
 </script>
 <!--统计代码-->
 <script src="js/bbsjs/flow.js" type="text/javascript" charset="utf-8"></script>
+</div>
 </body>
 </html>
 <script type="text/javascript">

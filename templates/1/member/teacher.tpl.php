@@ -96,7 +96,7 @@
                     <div class="clearfloat"></div>
                 </div>
             </div>
-            <div class="safe_btm" style="border-bottom:dashed 1px #dfdfdf;">
+            <div class="safe_btm">
                 <div class="safe_con">
                     <h3>绑定邮箱</h3>
                     <p>绑定后，可以使用邮箱找回密码，收到老师的指导信息等。</p>
@@ -129,7 +129,7 @@
             </div> 
             <div class="person_right" style="margin-left:90px">
                 <p><span>昵称</span><input type="text" name="realname" id="realname" value="<?= $info['realname']?>"/></p>
-                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#27b28b;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#27b28b;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#27b28b;color:#fff;"':''?>>保密</a></p>
+                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#1890ff;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#1890ff;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#1890ff;color:#fff;"':''?>>保密</a></p>
                 <input type="hidden" id="sex" name="sex" value="<?= $info['sex']?>">
                  <p><span>年龄</span><input type="text" name="age" id="age"  value="<?= $info['age']?>" style="width:30px"/> 岁</p>
                 <p><span>联系电话</span><input type="text" name="phone" id="phone"  value="<?= $info['phone']?>"/></p>
@@ -152,7 +152,7 @@
                     //alert(type);
                     $("#sex").val(type);
                     $("#gender a").css({"background":"#EEEEEE","color":"black"});
-                    $("#sex_"+type).css({"background":"#27b28b","color":"#fff"});
+                    $("#sex_"+type).css({"background":"#1890ff","color":"#fff"});
                 }
 
                 function check(){

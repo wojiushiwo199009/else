@@ -273,7 +273,7 @@
             <style>
                 .tanchu_content{position:fixed;top:50%;margin-top:-137px;left:50%;margin-left:-217px;width:435px;height:275px;background:#fff;text-align:center;z-index:1000;box-shadow:0px 0px 1px 2px #ccc;}
                 .tanchu_content .tit{height:30px;line-height:30px;text-align:center;}
-                .tanchu_content .tit span{float:none;display:inline-block;color:#27b28b;font-size:16px;font-weight:bold;}
+                .tanchu_content .tit span{float:none;display:inline-block;color:#1890ff;font-size:16px;font-weight:bold;}
                 .tanchu_content .tit img{float:right;margin:10px 15px; cursor:pointer;}
                 .tanchu_content p{margin:10px 0;text-align:left;font-size:14px;color:#404040;margin:0 15px;line-height:30px;}
                 .tanchu_content p span{float:left;font-weight:bold;text-align:right;font-size:14px;color:#666666;display:block;}
@@ -721,7 +721,7 @@
 				#img1Btn{display:none}
 			</style>
                 <p><span>昵称</span><input type="text" name="realname" id="realname" value="<?= $info['realname']?>"/></p>
-                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#27b28b;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#27b28b;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#27b28b;color:#fff;"':''?>>保密</a></p>
+                <p id="gender"><span>性别</span><a href="javascript:;" id="sex_1" <?= $info['sex'] == 1 ? 'style="background:#1890ff;color:#fff;"':''?> onclick="setsex(this,1)">男</a><a href="javascript:;" onclick="setsex(this,0)" id="sex_0"  <?= $info['sex'] == 0 ? 'style="background:#1890ff;color:#fff;"':''?>>女</a><a href="javascript:;" onclick="setsex(this,2)" id="sex_2"  <?= $info['sex'] == 2 ? 'style="background:#1890ff;color:#fff;"':''?>>保密</a></p>
                 <input type="hidden" id="sex" name="sex" value="<?= $info['sex']?>">
                 <p><span>年龄</span><input type="text" name="age" id="age"  value="<?= $info['age']?>" style="width:30px"/> 岁</p>
                 <p><span>联系电话</span><input type="text" name="phone" id="phone"  value="<?= $info['username']?>"/></p>
@@ -744,7 +744,7 @@
                         //alert(type);
                         $("#sex").val(type);
                         $("#gender a").css({"background":"#EEEEEE","color":"black"}); 
-                        $("#sex_"+type).css({"background":"#27b28b","color":"#fff"});
+                        $("#sex_"+type).css({"background":"#1890ff","color":"#fff"});
                     }
     
                     function check(){
@@ -819,7 +819,7 @@
                 <div class="clearfloat"></div>
             </div>
         </div>
-        <div class="safe_btm" style="border-bottom:dashed 1px #dfdfdf;">
+        <div class="safe_btm">
             <div class="safe_con">
                 <h3>绑定邮箱</h3>
                 <p>绑定后，可以使用邮箱找回密码，收到老师的指导信息等。</p>

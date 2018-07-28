@@ -139,8 +139,8 @@
 <div class="po cbarbox_postlist">
 <!--删除的帖子不显示-->
 <div class="pob">
-<a style="background-color: #32a5e7;
-    border: 1px solid #32a5e7;
+<a style="background-color: #1890ff;
+    border: 1px solid #1890ff;
     border-radius: 2px;
     color: #fff !important;
     cursor: pointer;

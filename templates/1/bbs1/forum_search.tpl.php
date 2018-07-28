@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>搜索  魅族社区 </title>
+<title>搜索  大数据 </title>
 <meta name="keywords" content="" />
-<meta name="description" content=",魅族社区" />
+<meta name="description" content=",大数据" />
 <meta name="generator" content="MEIZU 2013" />
 <meta name="author" content="MEIZU" />
 <meta name="copyright" content="2003-2013 Comsenz Inc." />
@@ -21,9 +21,9 @@
 <script src="js/bbsjs/common.js" type="text/javascript"></script>
 <meta property="wb:webmaster" content="f1284c3017204ff7" />
 <meta property="qc:admins" content="1300463313655125636" />
-<meta name="application-name" content="魅族社区" />
+<meta name="application-name" content="大数据" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="msapplication-tooltip" content="魅族社区" />
+<meta name="msapplication-tooltip" content="大数据" />
 <meta name="msapplication-task" content="name=;action-uri=portal.php;icon-uri=images/portal.ico" /><meta name="msapplication-task" content="name=版块;action-uri=forum.php;icon-uri=images/bbs.ico" />
 <meta name="msapplication-task" content="name=;action-uri=group.php;icon-uri=images/group.ico" />
 <script src="js/bbsjs/jquery-1.7.1.min.js" type="text/javascript"></script>

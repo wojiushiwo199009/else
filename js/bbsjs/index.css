@@ -373,7 +373,7 @@
 }
 
 .question_list li a {
-    color: #32a5e7;
+    color: #1890ff;
 }
 
 .question_page {
@@ -395,8 +395,8 @@
 
 .pg .act {
     color: #FFFFFF;
-    background-color: #32a5e7;
-    border: 1px solid #32a5e7;
+    background-color: #1890ff;
+    border: 1px solid #1890ff;
 }
 
 .question_btn {
@@ -425,8 +425,8 @@
 }
 
 .question_btn .closeDialog {
-    background-color: #32a5e7;
-    border: 1px solid #32a5e7;
+    background-color: #1890ff;
+    border: 1px solid #1890ff;
     color: #fff;
 }
 

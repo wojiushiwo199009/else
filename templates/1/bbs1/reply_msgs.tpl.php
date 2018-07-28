@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>用户38376820  魅族社区 </title>
+<title>用户38376820  大数据 </title>
 
 <meta name="keywords" content="" />
-<meta name="description" content=",魅族社区" />
+<meta name="description" content=",大数据" />
 <meta name="generator" content="MEIZU 2013" />
 <meta name="author" content="MEIZU" />
 <meta name="copyright" content="2003-2013 Comsenz Inc." />
@@ -23,9 +23,9 @@ var BROWSER_IS_MOBILE	= 0;		// 手机浏览器 1
 <script src="http://bbs.res.meizu.com/resources/php/bbs/static/js/common.js?sMz" type="text/javascript"></script>
         <meta property="wb:webmaster" content="f1284c3017204ff7" />
         <meta property="qc:admins" content="1300463313655125636" />
-<meta name="application-name" content="魅族社区" />
+<meta name="application-name" content="大数据" />
         <meta name="msapplication-tap-highlight" content="no" />
-<meta name="msapplication-tooltip" content="魅族社区" />
+<meta name="msapplication-tooltip" content="大数据" />
 <meta name="msapplication-task" content="name=;action-uri=http://bbs.meizu.cn/portal.php;icon-uri=http://bbs.res.meizu.com/resources/php/bbs/static/image/common/portal.ico" /><meta name="msapplication-task" content="name=版块;action-uri=http://bbs.meizu.cn/forum.php;icon-uri=http://bbs.res.meizu.com/resources/php/bbs/static/image/common/bbs.ico" />
 <meta name="msapplication-task" content="name=;action-uri=http://bbs.meizu.cn/group.php;icon-uri=http://bbs.res.meizu.com/resources/php/bbs/static/image/common/group.ico" />
     <script src="http://bbs.res.meizu.com/resources/php/bbs/static/js/jquery-1.7.1.min.js?sMz" type="text/javascript"></script>

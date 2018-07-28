@@ -139,20 +139,7 @@
 <div class="po cbarbox_postlist">
 <!--删除的帖子不显示-->
 <div class="pob">
-<a style="background-color: #32a5e7;
-    border: 1px solid #32a5e7;
-    border-radius: 2px;
-    color: #fff !important;
-    cursor: pointer;
-     display: inline-block;
-    font-size: 14px;
-    height: 36px;
-    line-height: 36px;
-    margin: 0 0 0 10px;
-    padding: 0 !important;
-    text-align: center;
-    width: 96px;
-     float:right;"     href="#f_pst" data-href="forum.php?mod=post&amp;action=reply&amp;fid=22&amp;tid=5285291&amp;reppost=118007890&amp;extra=page%3D1&amp;page=1">回复</a>
+<a href="#f_pst" data-href="forum.php?mod=post&amp;action=reply&amp;fid=22&amp;tid=5285291&amp;reppost=118007890&amp;extra=page%3D1&amp;page=1">回复</a>
                                                     
                                                                                                                                                                                                                 <a  id="recommend_subtract" class="support_oppose" href="javascript:;" onclick = "tipdup()" title="<?=$fdnd2?> 人反对" data-href="forum.php?mod=misc&amp;action=rate_extend&amp;support=0&amp;tid=5285291&amp;pid=118007890&amp;ratesubmit=yes&amp;infloat=yes&amp;page=1&amp;infloat=yes&amp;handlekey=rate&amp;inajax=1&amp;formhash=10149d6d&amp;ajaxtarget=fwin_content_rate" >
                                                                                         <i >反对</i>

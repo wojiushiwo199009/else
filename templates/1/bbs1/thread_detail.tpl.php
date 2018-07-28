@@ -685,12 +685,12 @@ var aimgfid = 0;
 			<? if($_SESSION['u_uidss'] == NULL){?>
 			<div align="center" class="ui-mask" data-widget-cid="widget-0" style=" line-height:135px;position: absolute; width: 592px; height: 135px; margin-left:1px;margin-top:2px;z-index: 998; display: block; opacity: 1; background-color: rgb(249,249 ,249);">
     		 您需要登录后才能回复&nbsp;&nbsp;&nbsp;&nbsp;   
-				<a href="<?=URL('login')?>" class="xi2" style="color:#32A5E7">登录</a>
+				<a href="<?=URL('login')?>" class="xi2" style="color:#1890ff">登录</a>
         <a class="separator"></a>&nbsp;
    
    		 <img src="images/shug.png" style="margin-left:-9px" height='10px'>
     
-				<a href="<?=URL('login.register')?>" class="xi2" style="color:#32A5E7">立刻注册</a>
+				<a href="<?=URL('login.register')?>" class="xi2" style="color:#1890ff">立刻注册</a>
 </div>
 <? }?>
 

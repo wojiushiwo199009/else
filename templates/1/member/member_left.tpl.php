@@ -36,7 +36,7 @@
             <span class="name" style="margin-bottom:5px;" title="<?= $info1[0]["realname"]?>"><?= F("publics.substrByWidth",$info1[0]["realname"],6);?><span style="margin-left:10px;" class="xb"><?= $info1[0]["age"]?>岁</span></span>
             <span class="right_span"><img src="images/student_img_06.png"><?= !empty($info1[0]["frozen_money"])? $info1[0]["frozen_money"]:"0" ?></span>
             <span class="xb">学币</span>
-            <span class="xb" onclick="makefull()" style="color:#27b28b;cursor:pointer;display:block;margin-top:5px;border:solid 1px #27b28b;width:60px;text-align:center;">去充值</span>
+            <span class="xb" onclick="makefull()" style="color:#1890ff;cursor:pointer;display:block;margin-top:5px;border:solid 1px #1890ff;width:60px;text-align:center;">去充值</span>
         </div>       
         <div class="clearfloat"></div>  
     </div>

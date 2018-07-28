@@ -42,7 +42,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .con_left .left_con .left_con_right .con_message span.fb_name{display:inline-block;margin-right:0px;width:90px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;top:3px;*top:0;margin:0 3px;}
 .con_left .left_con .left_con_right .con_message .gz{position:relative;top:2px;margin-right:5px;}
 .con_left .left_con .left_con_right .con_message .pl{position:relative;top:3px;margin-right:5px;}
-.con_left .left_con .left_con_right .con_message .read{color:#32a5e7;}
+.con_left .left_con .left_con_right .con_message .read{color:#1890ff;}
 .con_left .left_con .left_con_right p{font-size:12px;font-family:宋体;color:#515151;line-height:22px;}
 .con_left .left_con .left_con_right .weibo{float:left;margin-top:8px;}
 .con_left .left_con .left_con_right .weibo img{float:left;}
@@ -88,7 +88,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .lib_Menubox {margin:15px 0;}
 .lib_Menubox ul{list-style:none;}
 .lib_Menubox li{float:left;width:132px;height:40px;line-height:40px;border-bottom:solid 1px #e6e6e6;text-align:center;font-size:14px;font-weight:600;color:#222222;cursor:pointer;margin:30px 0;*margin:15px 0;}
-.lib_Menubox li.hover{cursor:222222;color:black;color:#32a5e7;font-size:14px;font-weight:600;padding:0px;border:solid 1px #e6e6e6;border-bottom:0;}
+.lib_Menubox li.hover{cursor:222222;color:black;color:#1890ff;font-size:14px;font-weight:600;padding:0px;border:solid 1px #e6e6e6;border-bottom:0;}
 
 .lib_Contentbox{clear:both;width:270px;text-align:center;}
 .lib_Contentbox span{display:block;font-size:14px;margin:15px 0;}

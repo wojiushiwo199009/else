@@ -223,7 +223,13 @@ textarea:focus{-moz-outline-style:none;}
 .footBot ul li.ten span{width:128px;}
 .footBot ul li.noBg{ background:none;}
 
-.footer{width:100%; min-width:1200px; overflow:hidden; padding:10px 0; border-bottom:1px solid #DDD; background:#FFF;}
+.footer{width:100%; min-width:1200px; overflow:hidden; padding:10px 0; background:#FFF;}
+div .footer{
+        position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .footerNav{ overflow:hidden; margin:25px auto 35px;}
 .footerNav ul li{width:152px; height:94px; text-align:center; border-right:1px solid #dedede; float:left;}
 .footerNav ul li p{height:24px; line-height:24px; color:#999;}

@@ -15,7 +15,7 @@
 .DynarchCalendar table {
   border-collapse: collapse;
   font: 11px "lucida grande",tahoma,verdana,sans-serif;
-  line-height: 14px;
+  line-height: 16px;
 }
 
 .DynarchCalendar-topBar {
@@ -34,7 +34,7 @@ table.DynarchCalendar-titleCont {
 }
 
 .DynarchCalendar-title div {
-  padding: 5px 17px;
+  padding: 9px 17px;
 }
 .DynarchCalendar-hover-title div {
   background-color: #fff;
@@ -209,7 +209,7 @@ table.DynarchCalendar-titleCont {
 .DynarchCalendar-menu table td div {
   text-align: center;
   font-weight: bold;
-  padding: 3px 5px;
+  padding: 8px 5px;
 }
 .DynarchCalendar-menu table td div.DynarchCalendar-menu-month {
   width: 4em;
@@ -232,6 +232,7 @@ table.DynarchCalendar-titleCont {
   text-align: center;
   font: 16px "lucida grande",tahoma,verdana,sans-serif;
   font-weight: bold;
+  line-height: 26px;
 }
 
 .DynarchCalendar-menu-sep {
@@ -239,7 +240,7 @@ table.DynarchCalendar-titleCont {
   overflow: hidden;
   border-top: 1px solid #888;
   background: #fff;
-  margin-top: 4px; margin-bottom: 3px;
+  margin-top: 5px; margin-bottom: 5px;
 }
 
 .DynarchCalendar-time td { font-weight: bold; font-size: 120%; }
@@ -262,13 +263,12 @@ table.DynarchCalendar-titleCont {
 }
 .DynarchCalendar-weekNumber {
   border-right: 1px solid #aaa;
-  margin-right: 4px;
   width: 2em !important;
-  padding-right: 8px !important;
+  padding-right: 10px !important;
 }
 
 .DynarchCalendar-day {
-  text-align: right; color: #222;
+  text-align: center; color: #222;
 }
 .DynarchCalendar-day-othermonth { color: #888; }
 .DynarchCalendar-weekend { color: #c22; }

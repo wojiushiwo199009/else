@@ -172,7 +172,7 @@ function formatStr(str) {
         </div>
         <div class="lib_Menubox lib_tabborder">
             <ul>
-            	<li class="hover" style="background:#27b28b;"><a name="2F" style="color:#FFFFFF">学啊精品课程</a></li>
+            	<li class="hover" style="background:#1890ff;"><a name="2F" style="color:#FFFFFF">学啊精品课程</a></li>
                 <li id="one1" onClick="setTab('one',1,5)" class="hover">热门推荐</li>
                 <li id="one2" onClick="setTab('one',2,5)" >人气最高</li> 
                 <li id="one3" onClick="setTab('one',3,5)">项目实战</li>   
@@ -346,7 +346,7 @@ function formatStr(str) {
         </div>
         <div class="lib_Menubox lib_tabborder">
             <ul> 
-            	<li class="hover" style="background:#27b28b;"><a name="3F" style="color:#FFFFFF">mooc课程</a></li>
+            	<li class="hover" style="background:#1890ff;"><a name="3F" style="color:#FFFFFF">mooc课程</a></li>
                <li id="two1" onclick="setTab('two',1,5)" class="hover">商学院</li>
                <li id="two2" onclick="setTab('two',2,5)" >计算机学院</li>
                <li id="two3" onclick="setTab('two',3,5)">土木工程</li>   

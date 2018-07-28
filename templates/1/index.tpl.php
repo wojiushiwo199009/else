@@ -141,7 +141,7 @@
 	.swiper-container {
 		width: 100%;
 		position:relative;
-		top:57px;
+		top:42px;
 		/*background:url(images/zr.gif) no-repeat center center;*/
 	}
 	.swiper-wrapper{
@@ -184,6 +184,7 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
+
 	<div class="container">
 		<img src="images/zr.gif" style="display:none;"/>
 		<?php TPL :: display("header");?>
@@ -236,15 +237,10 @@ var _hmt = _hmt || [];
 					foreach($banner as $bk => $bv){?>
 					<div class="swiper-slide"><img src="<?= $bv['imgurl']?>"></div>
 					<?php }}?>
-				</div>
-				<!-- Add Pagination -->
-				<div class="swiper-pagination" style="width:100%;min-width:1200px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
-				
-				
-				
-
-
 			</div>
+				<!-- Add Pagination -->
+			<div class="swiper-pagination" style="width:100%;min-width:1200px;height:28px;margin:0 auto;position:absolute;bottom:0;left:0;background:url(images/back.png);z-index:10;"></div>
+		</div>
 			<script src="js/swiper.min.js"></script>
 			<script>
 				var swiper = new Swiper('.swiper-container', {
@@ -488,103 +484,103 @@ var _hmt = _hmt || [];
 			<!--video-->
 
 			<div class="tanchu2">
-				<script>
-	//收藏   
-	function collect(systemid,catid){     
-		var uid = $('#huid').val();            
-		if(uid != '' && uid != 0){
-			$.ajax({
-				url:'<?= URL('bone.collect_sys')?>',
-				type:'POST',
-				data:{
-					uid		:	uid,
-					systemid	:	systemid,
-					catid	:	catid,	
-				},
-				success:function(r){
-					e = eval('(' + r + ')');
-					if(e.status == '1'){
-						//alert(1);
-						jAlert(e.info,'温馨提示');
-						location.reload(true); 
+			<script>
+				//收藏   
+				function collect(systemid,catid){     
+					var uid = $('#huid').val();            
+					if(uid != '' && uid != 0){
+						$.ajax({
+							url:'<?= URL('bone.collect_sys')?>',
+							type:'POST',
+							data:{
+								uid		:	uid,
+								systemid	:	systemid,
+								catid	:	catid,	
+							},
+							success:function(r){
+								e = eval('(' + r + ')');
+								if(e.status == '1'){
+									//alert(1);
+									jAlert(e.info,'温馨提示');
+									location.reload(true); 
+								}else{
+									jAlert(e.info,'温馨提示');
+								}	
+							}
+						});
 					}else{
-						jAlert(e.info,'温馨提示');
-					}	
-				}
-			});
-		}else{
-			//jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-			$("#maskLayer").css("display","block");		
-		}
-	} 
-	//分享   
-	function share(systemid,catid){
-		var uid = $('#huid').val();
-		var url =  $('#url').val();
-		//alert(url);
-		if(uid != '' && uid != 0){
-			$.ajax({
-				url:'<?= URL('bone.share')?>',
-				type:'POST',
-				data:{  
-					uid		:	uid,
-					url		:	url,
-				},
-				success:function(r){
-					e = eval('(' + r + ')');
-					if(e.status == '1'){
-						//alert(1);
-						//jAlert(e.info,'温馨提示');
-						//location.reload(true); 
-						$("#links").html(e.url)
-						$("#fenxiang_con").css("display","block");
-						$("#maskLayer").css("display","block");
+						//jAlert('请先登录','温馨提示');
+						$("#alert").css("display","block");
+						$("#maskLayer").css("display","block");		
+					}
+				} 
+				//分享   
+				function share(systemid,catid){
+					var uid = $('#huid').val();
+					var url =  $('#url').val();
+					//alert(url);
+					if(uid != '' && uid != 0){
+						$.ajax({
+							url:'<?= URL('bone.share')?>',
+							type:'POST',
+							data:{  
+								uid		:	uid,
+								url		:	url,
+							},
+							success:function(r){
+								e = eval('(' + r + ')');
+								if(e.status == '1'){
+									//alert(1);
+									//jAlert(e.info,'温馨提示');
+									//location.reload(true); 
+									$("#links").html(e.url)
+									$("#fenxiang_con").css("display","block");
+									$("#maskLayer").css("display","block");
+								}else{
+									jAlert(e.info,'温馨提示');
+								}	
+							}
+						});
 					}else{
-						jAlert(e.info,'温馨提示');
-					}	
+						//jAlert('请先登录','温馨提示');
+						$("#alert").css("display","block");
+						$("#maskLayer").css("display","block");		
+					}
 				}
-			});
-		}else{
-			//jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-			$("#maskLayer").css("display","block");		
-		}
-	}
-	//验证购买信息
-	function checkBuy(systemid,pid,coid,catid,type){
-		var uid = $("#huid").val();												//alert(uid); 
-		if(uid=='' || uid == 0){
-		   // jAlert('请先登录','温馨提示');
-		   $("#alert").css("display","block");
-		   $("#maskLayer").css("display","block");
-		}else{
-			$.ajax({  
-				url:'<?= URL('courSystem.checkBuy')?>',                   
-				type:'POST',
-				data:{uid:uid,systemid:systemid,pid:pid,coid:coid,catid:catid,type:type,},
-				
-				success:function(r){
-					e = eval('(' + r + ')');
-					if(e.status == '1'){
-						$("#pricess1").html(e.info);
-						$("#xiangxi").html(e.intro);
-						$("#a1").show();
-						$("#qwww").show();
-						$("#buyuid1").val(uid);
-						$("#type1").val('1');
-						$("#systemid1").val(systemid);
-						$("#pid1").val(pid);
-						$("#coid1").val(coid);
-						$("#catid1").val(catid);
+				//验证购买信息
+				function checkBuy(systemid,pid,coid,catid,type){
+					var uid = $("#huid").val();												//alert(uid); 
+					if(uid=='' || uid == 0){
+					// jAlert('请先登录','温馨提示');
+					$("#alert").css("display","block");
+					$("#maskLayer").css("display","block");
 					}else{
-						jAlert(e.info,'温馨提示');	
-					} 
+						$.ajax({  
+							url:'<?= URL('courSystem.checkBuy')?>',                   
+							type:'POST',
+							data:{uid:uid,systemid:systemid,pid:pid,coid:coid,catid:catid,type:type,},
+							
+							success:function(r){
+								e = eval('(' + r + ')');
+								if(e.status == '1'){
+									$("#pricess1").html(e.info);
+									$("#xiangxi").html(e.intro);
+									$("#a1").show();
+									$("#qwww").show();
+									$("#buyuid1").val(uid);
+									$("#type1").val('1');
+									$("#systemid1").val(systemid);
+									$("#pid1").val(pid);
+									$("#coid1").val(coid);
+									$("#catid1").val(catid);
+								}else{
+									jAlert(e.info,'温馨提示');	
+								} 
+							}
+						});	
+					}
 				}
-			});	
-		}
-	}
-</script>
+			</script>
 <script>
 	$(function(){
 		$("#b1").click(function(){
@@ -662,118 +658,14 @@ var _hmt = _hmt || [];
 
 <div id="qwww" style="width:100%; position: fixed; top:0; left:0; z-index:111; height:100%; background:#000; opacity:0.4;filter:alpha(opacity=40); display:none; "></div>
 <!--study
-<div class="study">
 	<?
 		 $ad_list = DS('publics._get','','ad',' id = 1 and classid = 1 and audit = 1');
 	?>
-	<div class="study_top">
-    	<img src="images/xuea_img_28.png" /><span class="study_lc">学习流程</span><img src="images/xuea_img_28.png" />
-    </div>
-	<div class="study_bottom">
-        <a href="javascript:void(0);" class="one_a">
-            <span class="ico_back one_back"></span>
-            <span class="one_con">注册大数据研习社</span>
-        </a>
-        <a href="javascript:void(0);" class="two_a">
-            <span class="ico_back two_back"></span>
-            <span class="one_con">直接上课</span>
-        </a>
-        <a href="javascript:void(0);" class="three_a">
-            <span class="ico_back three_back"></span>
-            <span class="one_con">个人中心</span>
-        </a>
-        <a href="javascript:void(0);" class="four_a">
-            <span class="two_con">免费课程</span>
-            <span class="two_con">购买体系</span>
-            <span class="two_con">挣金币免学费</span>
-        </a>
-        <a href="javascript:void(0);" class="five_a">
-            <span class="two_con">收藏课程</span>
-            <span class="two_con">学啊测试金牌系统</span>
-            <span class="two_con">推广赚学币</span>
-        </a>
-        <a href="javascript:void(0);" class="five_btm">
-            <span class="two_con" style="margin:0">学币购买任何课程</span>
-        </a>
-        <a href="javascript:void(0);" class="five_btm btm_two">
-            <span class="two_con" style="margin:0">学习完毕</span>
-        </a>
-        <a href="javascript:void(0);" class="six_a">
-            <span class="ico_back six_back"></span>
-            <span class="one_con">免费就业指导服务</span>
-        </a>
-        <a href="javascript:void(0);" class="seven_a">
-            <span class="ico_back six_back" style="margin-left:28px"></span>
-            <span class="one_con">进阶课程免费学习体验</span>
-        </a>
-        <a href="javascript:void(0);" class="five_btm btm_three">
-            <span class="two_con" style="margin:0">就业</span>
-        </a>
-        <a href="javascript:void(0);" class="eight_a">
-            <span class="ico_back eight_back"></span>
-            <span class="one_con" style="width:90px">金牌会员终身享受讲师在线指导</span>
-        </a>
-        
-        <div class="n-fc-round">
-            <a href="javascript:void(0);" class="n-round-center viphover">
-                <span class="study_back">在线学习</span>
-            </a>
-            <div class="n-fc-ring">
-                <div class="n-ring-con">
-                    <a class="n-round-icon n-sshd" href="javascript:void(0);">
-                        <span>在线师生互动</span>
-                    </a>
-                    <a class="n-round-icon n-zxbj" href="javascript:void(0);">
-                        <span>实时在线笔记</span>
-                    </a>
-                    <a class="n-round-icon n-zxb" href="javascript:void(0);">
-                        <span>边学习边分享边赚学币</span>
-                    </a>
-                    <a class="n-round-icon n-xmtd" href="javascript:void(0);">
-                        <span>在线组织项目团队</span>
-                    </a>
-                    <a class="n-round-icon n-xxcs" href="javascript:void(0);">
-                        <span>课后学习测试</span>
-                    </a>
-                    <a class="n-round-icon n-jszd" href="javascript:void(0);">
-                        <span>讲师课下即时指导</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $(function() {
-                $('.n-round-center').hover(function() {
-                    $('.n-fc-round').addClass('open');
-                    $(this).removeClass('viphover');
-                });
-                $('.n-fc-round').hover(function() {
-                }, function() {
-                    $(this).removeClass('open');
-                    $('.n-round-center').addClass('viphover');
-                })
-            });
-        </script>
-    </div>
-</div>
-
 -->
-
-<!-- -->
-
-
-<div class="clearfloat"></div>
-<div class="news">
-	<!--明星学员-->
-	
-				<!--官方活动-->
-				
-				
-				<!-- 新闻喜讯-->
-			
+		<div class="clearfloat"></div>
+		<div class="news">
 				<div class="clearfloat"></div>
 			</div>
-		</div>
 		<script>
 			function dialog(url,title,width,height){
 				$.dialog({
@@ -789,20 +681,10 @@ var _hmt = _hmt || [];
 				});
 			}
 		</script>
-<!--<script>
-$(document).ready(function () {
-	var event = arguments.callee.caller.arguments[0]||window.event;//消除浏览器差异  
-		$(document).keyup(function (evnet) {
-			if (evnet.keyCode == '13') {				
-				$('#sosuo').click();
-				//alert(1);	
-			}
-		});
-		
-	});
-</script>-->
 
 <?php TPL :: display("footer1")?>
 </div>
+		</div>
+
 </body>
 </html>

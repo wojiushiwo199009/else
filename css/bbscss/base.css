@@ -55,7 +55,7 @@ a:focus {outline:none;-moz-outline:none;}
 	line-height: 18px;
 	width: 64px;
 	color: white;
-	background-color: #32a5e7;
+	background-color: #1890ff;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -190,7 +190,7 @@ div.footer-language_menu{-moz-box-shadow: 0px 0px 10px #E1E4E8;-webkit-box-shado
 .fright{float: right;}
 .fleft{float: left;}
 .clear{content: "";clear: both;display: block;height: 0;overflow: hidden}
-.blue{color:#32a5e7;}
+.blue{color:#1890ff;}
 .hide{display: none;}
 .black{color: black;}
 .noselect{-moz-user-select:none;}
@@ -230,7 +230,7 @@ div.footer-language_menu{-moz-box-shadow: 0px 0px 10px #E1E4E8;-webkit-box-shado
 	-webkit-text-overflow: ellipsis;
 }
 a.activeBtn:hover{
-	border: 1px solid #32a5e7;
+	border: 1px solid #1890ff;
 	color: #40abe9;
 	background-color: white;
 }
@@ -267,7 +267,7 @@ a.fullBtnBlue{
 	margin-bottom: 20px;
 	outline: none;
 	cursor:pointer;
-	background-color: #32a5e7;
+	background-color: #1890ff;
 	color: #fff;
 }
 a.fullBtnGray{
@@ -432,7 +432,7 @@ min-width: 28px;_padding:0 10px 0 10px; height: 28px;line-height: 28px;}
 .pageDiv a:link,.pageDiv a:active,.pageDiv a:visited{color: #515151;text-decoration: none;}
 .pageDiv a.selected{cursor:default;border-width:0px;background-color: #00a7ea;padding-top: 1px;color: white;}
 .pageDiv a:hover{
-	border: 1px solid #32a5e7;
+	border: 1px solid #1890ff;
 	color: #40abe9;
 	background-color: white;
 	text-decoration: none;
@@ -491,7 +491,7 @@ DIV.MANItips .content {TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px
 	background-color: #f2f2f2;
 }
 .mzItemChecked {
-	background-color: #32a5e7;
+	background-color: #1890ff;
 }
 .mzSelectLi div{
 	font: 14px/1.0 "Microsoft Yahei","\u5b8b\u4f53";
@@ -505,7 +505,7 @@ DIV.MANItips .content {TEXT-ALIGN: left; PADDING-BOTTOM: 5px; PADDING-LEFT: 10px
 	cursor: pointer;
 }
 .mzItemChecked div{
-	border-bottom: solid 1px #32a5e7;
+	border-bottom: solid 1px #1890ff;
 }
 ::-webkit-input-placeholder{color:#909090;}
 input:-moz-placeholder{color:#909090;}

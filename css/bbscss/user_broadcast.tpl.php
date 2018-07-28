@@ -7,10 +7,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?=$nam[0]['username']?>的广播  魅族社区 </title>
+<title><?=$nam[0]['username']?>的广播  大数据 </title>
 
 <meta name="keywords" content="<?=$nam[0]['username']?>的广播" />
-<meta name="description" content="<?=$nam[0]['username']?>的广播 ,魅族社区" />
+<meta name="description" content="<?=$nam[0]['username']?>的广播 ,大数据" />
 <meta name="generator" content="MEIZU 2013" />
 <meta name="author" content="MEIZU" />
 <meta name="copyright" content="2003-2013 Comsenz Inc." />
@@ -28,9 +28,9 @@
 <script src="js/common.js" type="text/javascript"></script>
 <meta property="wb:webmaster" content="f1284c3017204ff7" />
 <meta property="qc:admins" content="1300463313655125636" />
-<meta name="application-name" content="魅族社区" />
+<meta name="application-name" content="大数据" />
 <meta name="msapplication-tap-highlight" content="no" />
-<meta name="msapplication-tooltip" content="魅族社区" />
+<meta name="msapplication-tooltip" content="大数据" />
 <meta name="msapplication-task" content="name=;action-uri=http://bbs.meizu.cn/portal.php;icon-uri=http://127.0.0.1/resources/images/portal.ico" /><meta name="msapplication-task" content="name=版块;action-uri=http://127.0.0.1:8004/forum.php;icon-uri=http://127.0.0.1/images/bbs.ico" />
 <meta name="msapplication-task" content="name=;action-uri=http://127.0.0.1/group.php;icon-uri=http://127.0.0.1/images/group.ico" />
 <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
@@ -40,6 +40,7 @@
 </head>
 
 <body id="nv_home" class="pg_follow" onkeydown="if(event.keyCode==27) return false;">
+	<div class="container">
 <div id="append_parent" style="display:none">
 
 <div id="fwin_followmod" class="fwinmask" style="position: absolute; z-index: 601; left: 496px; top: 226px;" initialized="true"><style type="text/css">object{visibility:hidden;}</style><table cellspacing="0" cellpadding="0" class="fwin"><tbody><tr><td id="fwin_content_followmod" class="m_c" style="" fwin="followmod"><h3 class="flb" id="fctrl_followmod" style="cursor: move;"><em>提示信息</em><span><a title="关闭" onclick="hideWindow2();" class="flbc" href="javascript:;">关闭</a></span></h3>
@@ -759,6 +760,6 @@ ab.init('follow_avatar');
 </script>
 <!--统计代码-->
 <script src="js/flow.js" type="text/javascript" charset="utf-8"></script>
-
+</div>
 </body>
 </html>

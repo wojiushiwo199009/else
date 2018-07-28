@@ -82,6 +82,8 @@ body{
 
 
 <body id="nv_home" class="pg_follow" onkeydown="if(event.keyCode==27) return false;">
+	<div class="container">
+		<div>
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 <div id="hd">
 	<?php
@@ -123,7 +125,7 @@ body{
     		</div>
 		<!--右侧导航结束-->
         
-			<div class="mn ct1_feed float_l" style=" background-color: #F2F2F2;">
+			<div class="mn ct1_feed float_l">
             	<div id="diycontenttop" class="area"></div>
 				<?php
 					//var_dump($re);
@@ -142,6 +144,7 @@ body{
 
 <div style="margin-top:50px">
 <?php TPL :: display('footer');?>
+</div>
 </div>
 <script>
 function copy_html(id1,id2){
@@ -219,5 +222,6 @@ jQuery(".main-product").slide({trigger:"click"});
 jQuery(".main-ad").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:1,trigger:"click"});
 </script>
 <script src="js/bbsjs/flow.js" type="text/javascript" charset="utf-8"></script>
+</div>
 </body>
 </html>

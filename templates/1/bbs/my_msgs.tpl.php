@@ -51,6 +51,8 @@ body{
 </head>
 
 <body id="nv_home" class="pg_space" onkeydown="if(event.keyCode==27) return false;">
+	<div class="container">
+		<div>
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 <div id="hd">
 <script>
@@ -147,144 +149,136 @@ body{
                 </div>      
 				<? if(V('r:ccid') == 3){?>
 				
-					<div class="xld xlda notice_msg " >
+				<div class="xld xlda notice_msg " >
 
-			<div class="nts pml" id="inforsssss22">
-	<?  $tixing = DS('publics._get','','remind','followid='.$_SESSION['u_uidss'].' order by addtime desc limit 0,25');	?>
-				<? if(isset($tixing) && !empty($tixing)){?>
-				<? foreach($tixing as $k=>$v){?>
-				<? $user = DS('publics._get','','users','id ='.$v['uid']);	?>	
-				<? $user2 = DS('publics._get','','users','id ='.$_SESSION['u_uidss']);	?>	
-				<? if($v['status'] == 1){?>	
-				<dl notice="6652481" class="cl" onmouseover="showin7(<?=$v['id']?>)">
-													<table cellspacing="0" cellpadding="0">
-														<colgroup><col width="34px">
-														<col width="744px">
-														</colgroup><tbody><tr>
-															<th>
-																<div class="avt mbn">
-<a class="avatar" href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><img src="<?=$user[0]['logo']==NULL?"images/course_conimg_27.png":$user[0]['logo']?>" style="cursor: pointer;"><span class="shadowbox_avatar"> </span></a>
-<? if($v['is_show'] == 0){?>
-	<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
-<?	}?>
-																												</div>
-															</th>
-															<td>
-	<div class="ntc_body readntc_body">
-																												<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 发给您的信息 <a target="_blank" href="<?=URL('bbsUser.my_msgs','&ccid=1')?>" class="closenotice"><?=htmlspecialchars($v['information'])?></a> &nbsp; <a class="lit" target="_blank" href="<?=URL('bbs2.space','&uid='.$v['uid'].'&followuid='.$_SESSION['u_uidss'])?>">查看 ›</a>                                            </div>
-																<div class="time_msgnotice">
-<span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
-<a title="删除"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+					<div class="nts pml" id="inforsssss22">
+						<?  $tixing = DS('publics._get','','remind','followid='.$_SESSION['u_uidss'].' order by addtime desc limit 0,25');	?>
+							<? if(isset($tixing) && !empty($tixing)){?>
+							<? foreach($tixing as $k=>$v){?>
+							<? $user = DS('publics._get','','users','id ='.$v['uid']);	?>	
+							<? $user2 = DS('publics._get','','users','id ='.$_SESSION['u_uidss']);	?>	
+							<? if($v['status'] == 1){?>	
+							<dl notice="6652481" class="cl" onmouseover="showin7(<?=$v['id']?>)">
+								<table cellspacing="0" cellpadding="0">
+									<colgroup><col width="34px">
+									<col width="744px">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>
+												<div class="avt mbn">
+													<a class="avatar" href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><img src="<?=$user[0]['logo']==NULL?"images/course_conimg_27.png":$user[0]['logo']?>" style="cursor: pointer;"><span class="shadowbox_avatar"> </span></a>
+													<? if($v['is_show'] == 0){?>
+														<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
+													<?	}?>
+												</div>
+											</th>
+											<td>
+											<div class="ntc_body readntc_body">
+												<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 发给您的信息 <a target="_blank" href="<?=URL('bbsUser.my_msgs','&ccid=1')?>" class="closenotice"><?=htmlspecialchars($v['information'])?></a> &nbsp; <a class="lit" target="_blank" href="<?=URL('bbs2.space','&uid='.$v['uid'].'&followuid='.$_SESSION['u_uidss'])?>">查看 ›</a>
+											</div>
+											<div class="time_msgnotice">
+												<span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
+												<a title="删除"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+											</div>
+											<div class="cr"></div>
+												</td>
+										</tr>
+									</tbody>
+								</table>
+							</dl>
+							<? }else if($v['status'] == 3){?>	
+												
+							<?  $tidid = DS('publics._get','','bbs_postcomment','tid='.$v['tid'].' and pid='.$v['fid'].' and dateline = '.$v['tidaddtime']);	?>
+								<dl notice="6652481" class="cl" onmouseover="showin7(<?=$v['id']?>)">
+									<table cellspacing="0" cellpadding="0">
+									<colgroup><col width="34px">
+									<col width="744px">
+									</colgroup><tbody>
+									<tr>
+										<th><div class="avt mbn">
+										<a class="avatar" href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><img src="<?=$user[0]['logo']==NULL?"images/noavatar_big.gif":$user[0]['logo']?>" style="cursor: pointer;"><span class="shadowbox_avatar"> </span></a>
+										<? if($v['is_show'] == 0){?>
+											<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
+										<?	}?>
+										</div>
+										</th>
+										<td>
+											<div class="ntc_body readntc_body">
+												<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 回复了您的帖子 <a target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>" class="closenotice"><?=htmlspecialchars($v['information'])?></a> &nbsp; <a class="lit" target="_blank" href="<?= URL('bbs2.lczda','&lcid='.$tidid[0]['id'].'&tid='.$v['tid'].'&fid='.$v['fid'])?>">查看 ›
+												</a>
+											</div>
+											<div class="time_msgnotice">
+												<span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
+												<a title="屏蔽"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+											</div>
+											<div class="cr"></div>
+										</td>
+									</tr>
+									</tbody></table>
+								</dl>
+								<? }else if($v['status'] == 2 and $v[0]['uid'] != 0){?>	
+								<dl notice="6641167" class="cl" onmouseover="showin7(<?=$v['id']?>)">
+									<table cellspacing="0" cellpadding="0">
+										<colgroup><col width="34px">
+										<col width="744px">
+											</colgroup>
+											<tbody>
+												<tr>
+												<th>
+													<div class="avt mbn">
+														<a class="avatar"><img alt="systempm" src="<?=$user[0]['logo']==NULL?"images/noavatar_big.gif":$user[0]['logo']?>"><span class="shadowbox_avatar"> </span></a>
+														<? if($v['is_show'] == 0){?>
+														<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
+														<?	}?>
+													</div>
+												</th>
+												<td><div class="ntc_body readntc_body">
+												
+													<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 收听了您。<a href="<?=URL('bbsUser.my_follow','&ccid=2')?>">点击查看 ›</a> </div><div class="time_msgnotice"><span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span><a title="删除" id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+														</div><div class="cr"></div>
+												</td>
+												</tr>
+											</tbody>
+									</table>
+								</dl>
+												<? }else if($v['status'] == 4){?>	
+													<dl notice="5543691" class="cl" onmouseover="showin7(<?=$v['id']?>)">
+								                            	<table cellspacing="0" cellpadding="0">
+								                                	<colgroup><col width="34px">
+								                                    <col width="744px">
+								                                	</colgroup><tbody><tr>
+								                                    	<th>
+								                                            <div class="avt mbn">
+								             <a class="avatar"><img alt="systempm" src="<?=$user[0]['logo']==NULL?"images/course_conimg_27.png":$user2[0]['logo']?>"><span class="shadowbox_avatar"> </span></a>
+											 <? if($v['is_show'] == 0){?>
+									<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
+								<?	}?>
+								                                                                                            </div>
+								                                        </th>
+								                                        <td>
+								                                        <div class="ntc_body readntc_body">您发表的主题 <a target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>"><?=htmlspecialchars($v['information'])?></a> 已发表成功！ &nbsp; <a class="lit" target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>">查看 ›</a>                                            </div>
+								                                            <div class="time_msgnotice">
+								                                                <span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
+								                                                <a title="删除"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+								</div>
+								                                            <div class="cr"></div>
+								                                        </td>
+								                                    </tr>
+								                                </tbody></table>
+								                            
+
+
+								</dl>	
+									  			 <? }?>	
+												 <? }?>	
+												 <? }?>	 
 
 
 					</div>
-																<div class="cr"></div>
-															</td>
-														</tr>
-													</tbody></table>
-												
-					
-					
-					</dl>
-				<? }else if($v['status'] == 3){?>	
-				
-		<?  $tidid = DS('publics._get','','bbs_postcomment','tid='.$v['tid'].' and pid='.$v['fid'].' and dateline = '.$v['tidaddtime']);	?>
-					<dl notice="6652481" class="cl" onmouseover="showin7(<?=$v['id']?>)">
-													<table cellspacing="0" cellpadding="0">
-														<colgroup><col width="34px">
-														<col width="744px">
-														</colgroup><tbody><tr>
-															<th>
-																<div class="avt mbn">
-<a class="avatar" href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><img src="<?=$user[0]['logo']==NULL?"images/noavatar_big.gif":$user[0]['logo']?>" style="cursor: pointer;"><span class="shadowbox_avatar"> </span></a>
-<? if($v['is_show'] == 0){?>
-	<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
-<?	}?>
-																												</div>
-															</th>
-															<td>
-																											<div class="ntc_body readntc_body">
-																												<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 回复了您的帖子 <a target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>" class="closenotice"><?=htmlspecialchars($v['information'])?></a> &nbsp; <a class="lit" target="_blank" href="<?= URL('bbs2.lczda','&lcid='.$tidid[0]['id'].'&tid='.$v['tid'].'&fid='.$v['fid'])?>">查看 ›</a>                                            </div>
-																<div class="time_msgnotice">
-<span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
-																	<a title="屏蔽"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
+					<div class="pgs cl pagebar">
 					</div>
-																<div class="cr"></div>
-															</td>
-														</tr>
-													</tbody></table>
-												
-					
-					
-					</dl>
-				<? }else if($v['status'] == 2 and $v[0]['uid'] != 0){?>	
-					<dl notice="6641167" class="cl" onmouseover="showin7(<?=$v['id']?>)">
-													<table cellspacing="0" cellpadding="0">
-														<colgroup><col width="34px">
-														<col width="744px">
-														</colgroup><tbody><tr>
-															<th>
-																<div class="avt mbn">
-	<a class="avatar"><img alt="systempm" src="<?=$user[0]['logo']==NULL?"images/noavatar_big.gif":$user[0]['logo']?>"><span class="shadowbox_avatar"> </span></a>
-	<? if($v['is_show'] == 0){?>
-	<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
-<?	}?>
-</div>
-															</th>
-															<td>
-			<div class="ntc_body readntc_body">
-			
-		<a href="<?=URL('bbsUser.user_broadcast','&id='.$v['uid'])?>"><?=$user[0]['realname']?></a> 收听了您。<a href="<?=URL('bbsUser.my_follow','&ccid=2')?>">点击查看 ›</a>      
-		                                      </div>
-																<div class="time_msgnotice">
-																	<span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
-																	<a title="删除" id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
-					</div>
-																<div class="cr"></div>
-															</td>
-														</tr>
-													</tbody></table>
-												
-					
-					
-					</dl>
-				<? }else if($v['status'] == 4){?>	
-					<dl notice="5543691" class="cl" onmouseover="showin7(<?=$v['id']?>)">
-                            	<table cellspacing="0" cellpadding="0">
-                                	<colgroup><col width="34px">
-                                    <col width="744px">
-                                	</colgroup><tbody><tr>
-                                    	<th>
-                                            <div class="avt mbn">
-             <a class="avatar"><img alt="systempm" src="<?=$user[0]['logo']==NULL?"images/course_conimg_27.png":$user2[0]['logo']?>"><span class="shadowbox_avatar"> </span></a>
-			 <? if($v['is_show'] == 0){?>
-	<img style="width:12px;height:12px;margin:-5px 0 0px 34px" src="images/pm_unread22.png">
-<?	}?>
-                                                                                            </div>
-                                        </th>
-                                        <td>
-                                        <div class="ntc_body readntc_body">您发表的主题 <a target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>"><?=htmlspecialchars($v['information'])?></a> 已发表成功！ &nbsp; <a class="lit" target="_blank" href="<?=URL('bbs.thread_detail','&tid='.$v['tid'].'&fid='.$v['fid'])?>">查看 ›</a>                                            </div>
-                                            <div class="time_msgnotice">
-                                                <span class="xg1 xw0"><span title="<?=date("Y-m-d H-i-s",$v['addtime'])?>"><?=date("m月d号",$v['addtime'])?></span></span>
-                                                <a title="删除"  id="a_note_<?=$v['id']?>" href="javascript:;"  onclick="delxingx(<?=$v['id']?>)" class="shield_msgnotice">删除</a>
-</div>
-                                            <div class="cr"></div>
-                                        </td>
-                                    </tr>
-                                </tbody></table>
-                            
-
-
-</dl>	
-	  			 <? }?>	
-				 <? }?>	
-				 <? }?>	 
-
-
-			</div>
-			<div class="pgs cl pagebar">
-</div>
-			</div>
+				</div>
 					
 					
 					
@@ -318,84 +312,84 @@ body{
 					
 				<div class="xld xlda notice_msg" id="inforsssss">
 
-<div class="nts pml">
-<? foreach($information as $k=>$v){?>
+						<div class="nts pml">
+						<? foreach($information as $k=>$v){?>
 
-			<dl notice="6641562" class="cl" onmouseover="showin(<?=$v['id']?>)">
-				<table cellspacing="0" cellpadding="0">
-					<colgroup><col width="34px">
-					<col width="744px">
-					</colgroup><tbody><tr>
-						<th>
-							
-						</th>
-					<td>
-				<div class="ntc_body">
-			
-						<?=$v['content']?>
-				
+									<dl notice="6641562" class="cl" onmouseover="showin(<?=$v['id']?>)">
+										<table cellspacing="0" cellpadding="0">
+											<colgroup><col width="34px">
+											<col width="744px">
+											</colgroup><tbody><tr>
+												<th>
+													
+												</th>
+											<td>
+										<div class="ntc_body">
+									
+												<?=$v['content']?>
+										
+										</div>
+							<div class="time_msgnotice">
+						               <span class="xg1 xw0"><span title="<?=date('Y-m-d ',$v["addtime"])?>"><?=date('Y-m-d ',$v["addtime"])?></span></span>
+						       <a href="javascript:;" title="删除" onclick="delwiodow(<?=$v['id']?>);" id="a_note_<?=$v['id']?>" class="shield_msgnotice">删除</a>
+						</div>
+										<div class="cr"></div>
+												</td>
+											</tr>
+										</tbody></table>
+									</dl>
+										<?	}?>
+										<?	}else{?>
+									<div style="border:none;" class="pagebar_space">
+						                        <span style="float:left;">当前没有相应的短消息</span>
+						                       
+						                        <div class="cr"></div>
+						                    </div>
+									<? }?>		
+									<div class="pgs pbm cl pagebar">
+
+						</div>
+						</div>
 				</div>
-	<div class="time_msgnotice">
-               <span class="xg1 xw0"><span title="<?=date('Y-m-d ',$v["addtime"])?>"><?=date('Y-m-d ',$v["addtime"])?></span></span>
-       <a href="javascript:;" title="删除" onclick="delwiodow(<?=$v['id']?>);" id="a_note_<?=$v['id']?>" class="shield_msgnotice">删除</a>
-</div>
-				<div class="cr"></div>
-						</td>
-					</tr>
-				</tbody></table>
-			</dl>
-				<?	}?>
-				<?	}else{?>
-			<div style="border:none;" class="pagebar_space">
-                        <span style="float:left;">当前没有相应的短消息</span>
-                       
-                        <div class="cr"></div>
-                    </div>
-			<? }?>		
-			<div class="pgs pbm cl pagebar">
-
-</div>
-</div>
-</div>
-		<script>					
-   		 function delwiodow(id){
-					var xmlhttp;
-					if (window.XMLHttpRequest){
-								xmlhttp=new XMLHttpRequest();
-					}else{
-								xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-					 }xmlhttp.onreadystatechange=function(){
-								if (xmlhttp.readyState==4 && xmlhttp.status==200){
-								location.href =""
-								}
-								
-					}
-						var json = '{"user":"'+encodeURIComponent(id)+'"}';
-						//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
-						xmlhttp.open("POST","<?=URL("bbs2.delwiodow")?>"+'&json='+json,true);
-						xmlhttp.send();		
-			}			
-
-							function showin(id){
-								$(".time_msgnotice a").attr("style","color:#e6e6e6 !important")
-								$("#a_note_"+id).attr("style","color:black !important")
+				<script>					
+		   		 function delwiodow(id){
+							var xmlhttp;
+							if (window.XMLHttpRequest){
+										xmlhttp=new XMLHttpRequest();
+							}else{
+										xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+							 }xmlhttp.onreadystatechange=function(){
+										if (xmlhttp.readyState==4 && xmlhttp.status==200){
+										location.href =""
+										}
+										
 							}
-							$("#inforsssss").mouseout(function(){
-								$(".time_msgnotice a").attr("style","color:#e6e6e6 !important")
-								})
-							
-			 </script>
+								var json = '{"user":"'+encodeURIComponent(id)+'"}';
+								//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
+								xmlhttp.open("POST","<?=URL("bbs2.delwiodow")?>"+'&json='+json,true);
+								xmlhttp.send();		
+					}			
+
+									function showin(id){
+										$(".time_msgnotice a").attr("style","color:#e6e6e6 !important")
+										$("#a_note_"+id).attr("style","color:black !important")
+									}
+									$("#inforsssss").mouseout(function(){
+										$(".time_msgnotice a").attr("style","color:#e6e6e6 !important")
+										})
+									
+					 </script>
 
 		
-				<? }else if(V('r:ccid') == 1 or V('r:ccid') == NULL){?>
+					<? }else if(V('r:ccid') == 1 or V('r:ccid') == NULL){?>
 				                  
 					<div id="deletepmform">
 						<div class="pagebar_space">
 							<label id="checkAllPm" for="delete_all" class="but1 pn normalbtn graybtn" style="padding:7px 8px;" onClick="checkall();"><span style="display:none;" ><input type="checkbox" name="chkall" id="delete_all" class="pc" onClick="allce()" /></span><strong>全选</strong></label>
-							<em id="de"><span class="normalbtn graybtn disabledgraybtn" style="margin-left:20px;"<button id="deletePm" class="pn but1 disabledgraybtn" type="submit" name="deletepmsubmit_btn" value="true"><strong>删除</strong></button></span></em>
+							<em id="de"><span class="normalbtn graybtn disabledgraybtn" style="margin-left:20px;"><button id="deletePm" class="pn but1 disabledgraybtn" type="submit" name="deletepmsubmit_btn" value="true"><strong>删除</strong></button></span></em>
 							<em id="de1" style="display:none" onClick="ded1()"><span class="normalbtn graybtn" style="margin-left:20px;"</span><button id="deletePm1" class="pn but1 disabledgraybtn" type="submit" name="deletepmsubmit_btn" value="true"><strong>删除</strong></button></span></em>
 							
-							<em id="de2"><span class="normalbtn graybtn disabledgraybtn" style="margin-left:20px;"<button id="deletePm" class="pn but1 disabledgraybtn" type="submit" name="deletepmsubmit_btn" value="true"><strong>标记已读</strong></button></span></em>
+							<em id="de2"><span class="normalbtn graybtn disabledgraybtn" style="margin-left:20px;"><button id="deletePm" class="pn but1 disabledgraybtn" type="submit" name="deletepmsubmit_btn" value="true"><strong>标记已读</strong></button></span></em>
 							
 							<em id="de3" style="display:none"><span class="normalbtn graybtn" style="margin-left:20px;"><button class="pn but1" type="button" name="markreadpm_btn" value="true" onClick="pagebar_space();"><strong>标记已读</strong></button></span></em>
 							<a class="normalbtn bluebtn" style="float:right;" href="<?= URL('bbsUser.send_msg')?>" target="_blank" ><strong>发消息</strong></a><div class="cr"></div>			
@@ -468,12 +462,12 @@ body{
 									<div class="o"  >
 										<span style="display:;"><input type="checkbox" name="deletepm_deluid" id="a_delete_<?= $pv['id']?>" class="pc" value="<?=$pv['followuid']?>"  onClick="de1()" 
 										style="width: 16px;
- height: 55px;
- padding: 0 5px 0 0;
- background: url(checkbox.png) no-repeat;
- display: block;
- clear: left;
- float: left;"
+									 height: 55px;
+									 padding: 0 5px 0 0;
+									 background: url(checkbox.png) no-repeat;
+									 display: block;
+									 clear: left;
+									 float: left;"
 										/></span>
 										
 										<?php /*?><span class="box_simcheck"></span><?php */?>
@@ -522,12 +516,12 @@ body{
 								<dd class="m avt">
 									<div class="o"  >
 										<span style="display:;"><input type="checkbox" name="deletepm_deluid" id="a_delete_<?= $pv['id']?>" class="pc" value="<?=$pv['uid']?>"  onClick="de1()"  style="width: 16px;
- height: 55px;
- padding: 0 5px 0 0;
- background: url(checkbox.png) no-repeat;
- display: block;
- clear: left;
- float: left;"/></span>
+											 height: 55px;
+											 padding: 0 5px 0 0;
+											 background: url(checkbox.png) no-repeat;
+											 display: block;
+											 clear: left;
+											 float: left;"/></span>
 										<?php /*?><span class="box_simcheck"></span><?php */?>
 									</div>
 									<div class="im" style="position:relative">
@@ -579,13 +573,13 @@ body{
 						</div>
 						<div class="pgs pbm cl pagebar"></div>
 					</div>
-				<? }?>
+					<? }?>
 				
-<script type="text/javascript">
-	addBlockLink('deletepmform', 'dl');
-</script>
-<script>				
-							function is_readl(uid,followuid){
+					<script type="text/javascript">
+						addBlockLink('deletepmform', 'dl');
+					</script>
+					<script>				
+						function is_readl(uid,followuid){
 								$.post( '<?=URL('bbs2.is_read1')?>',{uid:uid,followuid:followuid}, function( i )
 								  {
 								   
@@ -602,93 +596,93 @@ body{
 								$(".operation a").attr("style","color:#e6e6e6 !important")
 								})
 							
-	function ded1(){
-			
-		var checklist = document.getElementsByName ("deletepm_deluid");
-		
-		var value = ""
-		for(var i=0;i<checklist.length;i++){
-			if(checklist[i].checked != false){
-				
-			var	value = value+checklist[i].value+',';
-			}
-		}		
-	
-		$.post( '<?=URL('bbs2.de')?>',{id:value}, function( i )
-			{
-				location.href =""
-		    });		   
-	}
-	function pagebar_space(){
-		var checklist = document.getElementsByName ("deletepm_deluid");
-		
-		var value = ""
-		for(var i=0;i<checklist.length;i++){
-			if(checklist[i].checked != false){
-				
-			var	value = value+checklist[i].value+',';
-			}
-		}		
-	
-		$.post( '<?=URL('bbs2.pagebar_space')?>',{id:value}, function( i )
-			{
-				location.href =""
-		    });
-		}
-	function del_msgs(uid,followuid){
-		$.post( '<?=URL('bbs2.delmsg')?>',{uid:uid,followuid:followuid}, function( i )
-			{
-				location.href =""
-		    });
-	}
-</script>
-	<script>
-				setTimeout(function(){
-					var ccid = "<?=V('r:ccid')?>"
-					if(ccid == 3){
-						var xmlhttp;
-						if (window.XMLHttpRequest){
-									xmlhttp=new XMLHttpRequest();
-						}else{
-									xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-						 }xmlhttp.onreadystatechange=function(){
-									if (xmlhttp.readyState==4 && xmlhttp.status==200){
-									
-	
-									}
-									
-						}
-							//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
-							xmlhttp.open("POST","<?=URL("bbs2.shownow")?>",true);
-							xmlhttp.send();	
-						
-						
-						}
-					},3000)
-					
-	
-				function delxingx(id){
+						function ded1(){
 								
-					var xmlhttp;
-					if (window.XMLHttpRequest){
-								xmlhttp=new XMLHttpRequest();
-					}else{
-								xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-					 }xmlhttp.onreadystatechange=function(){
-								if (xmlhttp.readyState==4 && xmlhttp.status==200){
-								
-									location.href=""
+							var checklist = document.getElementsByName ("deletepm_deluid");
+							
+							var value = ""
+							for(var i=0;i<checklist.length;i++){
+								if(checklist[i].checked != false){
+									
+								var	value = value+checklist[i].value+',';
 								}
+							}		
+						
+							$.post( '<?=URL('bbs2.de')?>',{id:value}, function( i )
+								{
+									location.href =""
+							    });		   
+						}
+						function pagebar_space(){
+							var checklist = document.getElementsByName ("deletepm_deluid");
+							
+							var value = ""
+							for(var i=0;i<checklist.length;i++){
+								if(checklist[i].checked != false){
+									
+								var	value = value+checklist[i].value+',';
+								}
+							}		
+						
+							$.post( '<?=URL('bbs2.pagebar_space')?>',{id:value}, function( i )
+								{
+									location.href =""
+							    });
+							}
+						function del_msgs(uid,followuid){
+							$.post( '<?=URL('bbs2.delmsg')?>',{uid:uid,followuid:followuid}, function( i )
+								{
+									location.href =""
+							    });
+						}
+					</script>
+					<script>
+						setTimeout(function(){
+							var ccid = "<?=V('r:ccid')?>"
+							if(ccid == 3){
+								var xmlhttp;
+								if (window.XMLHttpRequest){
+											xmlhttp=new XMLHttpRequest();
+								}else{
+											xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+								 }xmlhttp.onreadystatechange=function(){
+											if (xmlhttp.readyState==4 && xmlhttp.status==200){
+											
+			
+											}
+											
+								}
+									//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
+									xmlhttp.open("POST","<?=URL("bbs2.shownow")?>",true);
+									xmlhttp.send();	
 								
-					}
-					
+								
+								}
+							},3000)
+							
+			
+						function delxingx(id){
+										
+							var xmlhttp;
+							if (window.XMLHttpRequest){
+										xmlhttp=new XMLHttpRequest();
+							}else{
+										xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+							 }xmlhttp.onreadystatechange=function(){
+										if (xmlhttp.readyState==4 && xmlhttp.status==200){
+										
+											location.href=""
+										}
+										
+							}
+						
 
-						//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
-						xmlhttp.open("POST","<?=URL("bbs2.tianxdel")?>"+'&id='+id,true);
-						xmlhttp.send();		
-			}			
-		
-								
+							//var json = '[{"aa":"33","bb":"44"},{"cc":"33","dd":"44"},{"ee":"33","ff":"44"}]';
+							xmlhttp.open("POST","<?=URL("bbs2.tianxdel")?>"+'&id='+id,true);
+							xmlhttp.send();		
+						}			
+			
+									
 							function showin7(id){
 								$(".time_msgnotice a").attr("style","color:#e6e6e6 !important")
 								$("#a_note_"+id).attr("style","color:black !important")
@@ -754,11 +748,11 @@ body{
 </script>
 <div class="wp mtn"><div id="diy3" class="area"></div></div>	
 </div>
-
-</div>
-<div style="margin-top:50px">
+<div style="position: absolute;left: 0; right: 0; bottom: 0; margin-top:0px">
 <?php TPL :: display('footer');?>
 </div>
+</div>
+
 <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
@@ -820,5 +814,6 @@ jQuery(".main-ad").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effec
 	scrolltop_obj.init();
 </script>
 <script src="js/bbsjs/flow.js" type="text/javascript" charset="utf-8"></script>
+</div>
 </body>
 </html>

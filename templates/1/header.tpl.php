@@ -205,8 +205,8 @@
 					<div class="dl_ttl">第三方账号登陆</div>
 					<p class='sign-dsf'>
             			<a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
-            			<a href=""><img src="images/weibo.png" /></a>
             			<a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+            			<!-- <a href=""><img src="images/weibo.png" /></a> -->
 					</p>
 					<p style="display:none"><input type="reset" name="button" id="res" value="重置" /></p>
 				</div>
@@ -233,8 +233,8 @@
 				<div class="dl_ttl">第三方账号登陆</div>
 				<p class='sign-dsf'>
 					<a href="<?= URL('wxOauth.login'); ?>" target="_blank"><img src="images/wechat.png" /></a>
-					<a href=""><img src="images/weibo.png" /></a>
 					<a href="<?= URL('qqConnect.login'); ?>" target="_blank"><img src="images/qq.png" /></a>
+					<!-- <a href=""><img src="images/weibo.png" /></a> -->
 				</p>
 			</div>
 			
@@ -295,12 +295,17 @@
 		function denglu(){
         //$("#alert").attr("style","display:block");
         $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+		// $("#alert").slideDown();
+		$(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()
     }
     function zhuce(){
         //$("#message12").attr("style","display:block");
-        $("#maskLayer").attr("style","display:block");
-        $("#message12").slideDown();
+        $("#maskLayer").css("display","block");
+		$(".zhuceAndDenglu").css("display",'block');
+		$("#alert").css({'display':'none'});
+		$("#message12").fadeIn(400);
     }
     var myAlert = document.getElementById("alert");  
     var passw4 = document.getElementById("passw4");

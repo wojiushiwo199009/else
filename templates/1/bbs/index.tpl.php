@@ -62,6 +62,9 @@ body{
 </style>
 </head>
 <body id="nv_portal" class="pg_index" onkeydown="if(event.keyCode==27) return false;" >
+	<div class="container">
+		<div>
+
 <div id="append_parent"></div>
 <div id="ajaxwaitid"></div>
 
@@ -155,6 +158,7 @@ function copy_html(id1,id2){
 <div style="margin-top:50px">
 <?php TPL :: display('footer1');?>
 </div>
+</div>
 <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
@@ -211,5 +215,7 @@ jQuery(".main-product").slide({trigger:"click"});
 //广告
 jQuery(".main-ad").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:false,vis:1,trigger:"click"});
 </script>
+	</div>
+
 </body>
 </html>

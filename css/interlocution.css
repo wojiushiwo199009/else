@@ -49,6 +49,10 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
     border: 1px solid #ddd;
     outline: none;
 }
+.right_top input:nth-child(1):focus{
+    box-shadow: 0 0 0 2px rgba(24,144,255,.2);
+    border-color: #40a9ff;
+}
 .right_top .top_a{display:inline-block;width:100px;height:41px;text-align:center;line-height:35px;font-size:15px;color:#fff;font-weight:bold;margin-left:10px;*position:relative;top:-10px;cursor:pointer;text-indent:0;}
 .right_top .sac{background:#27b28b;}
 .right_top .ans{background:#fc8131;}
@@ -56,8 +60,10 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .lib_Menubox{height:40px;margin:10px 15px;border-bottom:dotted 1px #d2d2d2;}
 .lib_Menubox ul li{display:block;cursor:pointer;float:left;font-size:16px;font-weight:bold;font-family:\5FAE\8F6F\96C5\9ED1;width:95px;height:38px;line-height:38px;}
 .lib_Menubox ul li a{color:#0c0405;}
-.lib_Menubox li.hover{cursor:pointer;border-bottom:solid 2px #27b28b;color:#0c0405;}
-
+.lib_Menubox li.hover{cursor:pointer;border-bottom:solid 2px #1890ff;color:#0c0405;}
+.lib_Menubox li.hover a{
+    color: #1890ff;
+}
 .pl_bottom{margin:10px 15px 25px 15px;}
 .pl_bottom2{margin:10px 15px 25px 15px;border-bottom:dotted 1px #d2d2d2;}
 .pl_left{

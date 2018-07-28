@@ -125,7 +125,7 @@ body{
     		</div>
 		<!--右侧导航结束-->
         
-			<div class="mn ct1_feed float_l" style=" background-color: #F2F2F2;">
+			<div class="mn ct1_feed float_l">
             	<div id="diycontenttop" class="area"></div>
 				<?php
 					//var_dump($re);
