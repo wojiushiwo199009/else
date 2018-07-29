@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/head.css" /> 
 <link rel="stylesheet" type="text/css" href="css/foot.css" /> 
 <link href="css/jquery.alerts.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
 <!-- 滚动图片 -->
 <!--  <script type="text/javascript" src="js/jQuery.v1.8.3-min.js"></script>-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
@@ -163,46 +164,50 @@ var _hmt = _hmt || [];
 </head>
 <body>
 <div class="container">
+	<div class="menuHolder" style="top:58px;">
+				<div class="menuWindow">
+					<ul class="p1">
+						<li class="s1"><a href="javascript:;">菜单</a>
+							<ul class="p2">
+								<?
+									$link_list = DS('publics._get','','linkage',' parentid = 0 and keyid = 1');
+										if($link_list){
+											foreach($link_list as $key => $val){
+									?>
+										<li class='s2'>
+											<a href="javascript:;"><?= $val['name']?></a>
+											<?
+											$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']) ?>
+											<ul class="p3 <?='a'.count($c_list)?>">
+												<?
+
+												if($c_list){
+													foreach($c_list as $ck => $cv){
+														?>
+														<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>"><?=$cv['name']?></a></li>
+														<?
+													}
+												}
+												?>
+											</ul>
+										</li>
+										<?
+									}
+								}
+								?>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 <? TPL :: display('header1');?>
 <!--start_banner-->
 <!--<div style="background:url(images/kecheng_img_08.png) center top no-repeat #f4f4f4;width:100%;margin:0 auto;">
 -->	
-<div>
-<div class="content">
-		<div class="sort">
-			<div class="sort-list"> 
-				<ul>
-					<li class="hover2"> <span class="li_title">全部分类</span> </li>
-					<?
-				 	$link_list = DS('publics._get','','linkage',' parentid = 0 and keyid = 1');
-						if($link_list){
-							foreach($link_list as $key => $val){
-					?>
-					<li> <a href="javascript:;">
-						<?= $val['name']?>
-						<img src="images/index_img_03.png"/><!--<span>IOS/iPhone/AndroidARM</span>--></a>
-						<ul>
-							<?
-							$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']);
-							if($c_list){
-								foreach($c_list as $ck => $cv){
-							?>
-								<li><a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>">
-									<?= $cv['name']?>
-									</a></li>
-							<?
-								}
-							}
-							?>
-						</ul>
-					</li>
-					<?
-}
-}
-?>
-				</ul>
-			</div>
-		</div>
+
+<div class="content scontent">
+		
+		
        	<input type="hidden" name="usr" id="xr_uid" value="<?= $_SESSION['xr_id']?>">
 		<div class="content_right n-course-box w-content">
 			<ul>
@@ -257,8 +262,12 @@ var _hmt = _hmt || [];
 				var uid	=	$('#xr_uid').val();
 				//alert(uid);
 				if(uid == '' || uid ==0){
-					$("#alert").slideDown();
+					// $("#alert").slideDown();
 					$("#maskLayer").css("display","block");	
+					$(".denglu").show()
+		$(".zhuce").hide()	
+		 $(".zhuceAndDenglu").css("display",'block');
+		 	window.scroll(0,0)
 				}else{
 					$.ajax({
 						url:'<?= URL('courSystem.isbuy')?>',
@@ -282,6 +291,4 @@ var _hmt = _hmt || [];
 		</div>
 		<div class="clearfloat"></div>
 	</div>
-</div>
-<!--end_banner-->
 <? TPL :: display('footer');?>

@@ -4,7 +4,7 @@
 body{margin:0px;padding:0px;font-size:14px;color:#000;}
 .tips{width:702px;margin:0 auto;line-height:24px;padding-top:10px;}
 .bredcolor{color:#fff;}
-.menuHolder {width:100px; height:100px; margin:0px 0 250px 0px; position: fixed;z-index:3000;}
+.menuHolder {width:100px; height:100px; margin:0px 0 250px 0px; position: fixed;z-index:3000;top:58px;}
 .menuHolder ul {padding:0; margin:0; list-style:none; position:absolute; left:0; top:0; width:0; height:0;}
 .menuHolder ul li {border-radius:0 0 300px 0; width:0; height:0;}
 .menuHolder ul li a {color:#fdfdfd; text-decoration:none; font:bold 13px/30px arial, sans-serif; text-align:center; box-shadow:-5px 5px 5px rgba(0,0,0,0.4);

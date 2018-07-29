@@ -141,7 +141,7 @@
 	.swiper-container {
 		width: 100%;
 		position:relative;
-		top:42px;
+		top:41px;
 		/*background:url(images/zr.gif) no-repeat center center;*/
 	}
 	.swiper-wrapper{
@@ -186,13 +186,7 @@ var _hmt = _hmt || [];
 <body>
 
 	<div class="container">
-		<img src="images/zr.gif" style="display:none;"/>
-		<?php TPL :: display("header");?>
-		<div class="swiper-container">
-
-			<div class="sort" id="left_class" style="">
-			</div>
-			<div class="menuHolder">
+		<div class="menuHolder">
 				<div class="menuWindow">
 					<ul class="p1">
 						<li class="s1"><a href="javascript:;">菜单</a>
@@ -227,6 +221,13 @@ var _hmt = _hmt || [];
 					</ul>
 				</div>
 			</div>
+		<img src="images/zr.gif" style="display:none;"/>
+		<?php TPL :: display("header");?>
+		<div class="swiper-container">
+
+			<div class="sort" id="left_class" style="">
+			</div>
+			
 
 
 			<div class="swiper-wrapper" style="width:1920px;">
@@ -510,8 +511,12 @@ var _hmt = _hmt || [];
 						});
 					}else{
 						//jAlert('请先登录','温馨提示');
-						$("#alert").css("display","block");
+						// $("#alert").css("display","block");
 						$("#maskLayer").css("display","block");		
+						$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()
+							window.scroll(0,0)
 					}
 				} 
 				//分享   
@@ -536,6 +541,9 @@ var _hmt = _hmt || [];
 									$("#links").html(e.url)
 									$("#fenxiang_con").css("display","block");
 									$("#maskLayer").css("display","block");
+									// $(".zhuceAndDenglu").css("display",'block');
+									// $(".denglu").show()
+									// $(".zhuce").hide()
 								}else{
 									jAlert(e.info,'温馨提示');
 								}	
@@ -543,8 +551,11 @@ var _hmt = _hmt || [];
 						});
 					}else{
 						//jAlert('请先登录','温馨提示');
-						$("#alert").css("display","block");
 						$("#maskLayer").css("display","block");		
+						$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()		
+							window.scroll(0,0)		
 					}
 				}
 				//验证购买信息
@@ -552,8 +563,11 @@ var _hmt = _hmt || [];
 					var uid = $("#huid").val();												//alert(uid); 
 					if(uid=='' || uid == 0){
 					// jAlert('请先登录','温馨提示');
-					$("#alert").css("display","block");
 					$("#maskLayer").css("display","block");
+					$(".zhuceAndDenglu").css("display",'block');
+					$(".denglu").show()
+					$(".zhuce").hide()
+					window.scroll(0,0)
 					}else{
 						$.ajax({  
 							url:'<?= URL('courSystem.checkBuy')?>',                   

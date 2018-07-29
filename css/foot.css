@@ -45,7 +45,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .foot_con .foot_right{float:right;margin:30px 0;}
 .foot_con .foot_right .weixin{float:left;}
 .foot_con .foot_right img{margin:10px 20px;}
-.foot_con .foot_right span{display:inline-block;height:30px;line-height:30px;width:70px;text-align:center;background:#fff;border:solid 1px #27b28b;color:#818181;font-size:14px;font-weight:bold;}
+.foot_con .foot_right span{display:inline-block;height:30px;line-height:30px;width:70px;text-align:center;background:#fff;border:solid 1px #1890ff;color:#818181;font-size:14px;font-weight:bold;}
 .foot_con .foot_right span:hover{border:solid 1x #666;}
 .foot_con .foot_right span.ewm_title{width:139px;display:block;height:25px;background:transparent;border:0;margin:0 0 0 17px;text-align:left;}
 #weixin{border-radius:5px 0 0 5px;margin-left:18px;}

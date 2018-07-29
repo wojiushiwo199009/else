@@ -161,8 +161,6 @@ var _hmt = _hmt || [];
 </head>
 <body>
 <div class="container">
-    <?php TPL :: display("header1")?>
-<div class="zong">
 	<div class="menuHolder">
 			<div class="menuWindow">
 				<ul class="p1">
@@ -199,6 +197,9 @@ var _hmt = _hmt || [];
 				</ul>
 			</div>
 		</div>
+    <?php TPL :: display("header1")?>
+<div class="zong">
+	
 	<div class="content">    
 		<link rel="stylesheet" type="text/css" href="css/interlocution.css" />
 		<div class="content_right">
@@ -211,8 +212,11 @@ var _hmt = _hmt || [];
             var uid = $("#uid").val();
             var pro_name	=	$("#pro_name").val();
             if(uid == ''){
-                $("#alert").css("display","block");
-                $("#maskLayer").css("display","block");	
+               $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+				$("#maskLayer").css("display","block");	
+				window.scroll(0,0)
             }else if(pro_name == '请输入要搜索的问题或您的提问' || $.trim(pro_name) == ''){
                 jAlert('请输入您的提问','温馨提示');
             }else{

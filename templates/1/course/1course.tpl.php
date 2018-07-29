@@ -247,8 +247,11 @@ $(document).ready(function(){
 				var uid	=	$('#xr_uid').val();
 				//alert(uid);
 				if(uid == '' || uid ==0){
-					$("#alert").slideDown();
 					$("#maskLayer").css("display","block");	
+					$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						window.scroll(0,0)
 				}else{
 					$.ajax({
 						url:'<?= URL('courSystem.isbuy')?>',

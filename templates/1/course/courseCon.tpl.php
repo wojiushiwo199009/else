@@ -260,134 +260,143 @@ var _hmt = _hmt || [];
             <div class="clearfloat"></div> 
             <p><?= $slist['introduce']?></p>
             <div class="buy"><a href="javascript:void(0);" onclick="checkBuy(<?= $slist['id']?>,0,0,2,1)">购买此体系</a></div>
-           <?php $info1 = DS("publics2._get","","users","id=".$_SESSION['xr_id']);?>
-<?php if($info1[0]['type'] == '1'){
-	       $xingming=$info1[0]["realname"];
-		   $leixing=2;
-           $fangjian=$slist['zhibojian'];
-		   $zong="http://zhibo.bigdata001.com/meeting/preloader.swf?userName=" . "" . $xingming. "" ."&realName=&password=&mediaServer=rtmp://zhibo.bigdata001.com&role=". "" .$leixing. "" ."&roomID=". "" .$fangjian. "" ."&scriptType=php";
-		   }
-		   else
-		   {
-	       $xingming=$info1[0]["realname"];
-		   $leixing=4;
-           $fangjian=$slist['zhibojian'];
-		   $zong="http://zhibo.bigdata001.com/meeting/preloader.swf?userName=" . "" . $xingming. "" ."&realName=&password=&mediaServer=rtmp://zhibo.bigdata001.com&role=". "" .$leixing. "" ."&roomID=". "" .$fangjian. "" ."&scriptType=php";
-		   }
-		   ?>
-          <div class="buy"><a href="<?= $zong?>" onclick="">进入直播间</a></div>
-        <div class="clearfloat"></div>
-    </div>
-<script>   
-function collect(systemid,catid){     
-	var uid = $('#huid').val();            
-	if(uid != '' && uid != 0){
-		$.ajax({
-			url:'<?= URL('bone.collect_sys')?>',
-			type:'POST',
-			data:{
-				uid		:	uid,
-				systemid	:	systemid,
-				catid	:	catid,	
-			},
-			success:function(r){
-				e = eval('(' + r + ')');
-				if(e.status == '1'){
-					//alert(1);
-					jAlert(e.info,'温馨提示');
-					location.reload(true); 
+	           <?php $info1 = DS("publics2._get","","users","id=".$_SESSION['xr_id']);?>
+				<?php if($info1[0]['type'] == '1'){
+		       $xingming=$info1[0]["realname"];
+			   $leixing=2;
+	           $fangjian=$slist['zhibojian'];
+			   $zong="http://zhibo.bigdata001.com/meeting/preloader.swf?userName=" . "" . $xingming. "" ."&realName=&password=&mediaServer=rtmp://zhibo.bigdata001.com&role=". "" .$leixing. "" ."&roomID=". "" .$fangjian. "" ."&scriptType=php";
+			   }
+		   	else
+			   {
+		       $xingming=$info1[0]["realname"];
+			   $leixing=4;
+	           $fangjian=$slist['zhibojian'];
+			   $zong="http://zhibo.bigdata001.com/meeting/preloader.swf?userName=" . "" . $xingming. "" ."&realName=&password=&mediaServer=rtmp://zhibo.bigdata001.com&role=". "" .$leixing. "" ."&roomID=". "" .$fangjian. "" ."&scriptType=php";
+			   }
+			   ?>
+          	<div class="buy"><a href="<?= $zong?>" onclick="">进入直播间</a></div>
+        	<div class="clearfloat"></div>
+    	</div>
+		<script>   
+			function collect(systemid,catid){     
+				var uid = $('#huid').val();            
+				if(uid != '' && uid != 0){
+					$.ajax({
+						url:'<?= URL('bone.collect_sys')?>',
+						type:'POST',
+						data:{
+							uid		:	uid,
+							systemid	:	systemid,
+							catid	:	catid,	
+						},
+						success:function(r){
+							e = eval('(' + r + ')');
+							if(e.status == '1'){
+								//alert(1);
+								jAlert(e.info,'温馨提示');
+								location.reload(true); 
+							}else{
+								jAlert(e.info,'温馨提示');
+							}	
+						}
+					});
 				}else{
-					jAlert(e.info,'温馨提示');
-				}	
+					//jAlert('请先登录','温馨提示');
+					 $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+					 $("#maskLayer").css("display","block");	
+					 	window.scroll(0,0)
+				}
 			}
-		});
-	}else{
-		//jAlert('请先登录','温馨提示');
-		 $("#alert").slideDown();
-		 $("#maskLayer").css("display","block");	
-	}
-}
-function share(systemid,catid){
-	var uid = $('#huid').val();            
-	if(uid != '' && uid != 0){
-		$("#fenxiang_con").fadeIn();
-		$("#maskLayer").css("display","block");
-	}else{
-		$("#alert").slideDown();
-		 $("#maskLayer").css("display","block");	
-	}
-}
-function checkBuy(systemid,pid,coid,catid,type){
-	var uid = $("#huid").val();												//alert(uid); 
-	if(uid=='' || uid == 0){
-	   // jAlert('请先登录','温馨提示');
-		$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
-	}else{
-		$.ajax({  
-			url:'<?= URL('courSystem.checkBuy')?>',                   
-			type:'POST',
-			data:{uid:uid,systemid:systemid,pid:pid,coid:coid,catid:catid,type:type,},
-			
-			success:function(r){
-				e = eval('(' + r + ')');
-				if(e.status == '1'){
-					$("#pricess1").html(e.info);
-					$("#xiangxi1").html(e.intro);
-					$("#a1").show();
-					$("#qwww").show();
-					$("#buyuid1").val(uid);
-					$("#type1").val('1');
-					$("#systemid1").val(systemid);
-					$("#pid1").val(pid);
-					$("#coid1").val(coid);
-					$("#catid1").val(catid);
-				}else if(e.status == '2'){
-					$("#pricess2").html(e.info);
-					$("#xiangxi2").html(e.intro);
-					$("#a2").show();
-					$("#qwww").show();
-					$("#buyuid2").val(uid);
-					$("#type2").val('2');
-					$("#systemid2").val(systemid);
-					$("#pid2").val(pid);
-					$("#coid2").val(coid);
-					$("#catid2").val(catid);
-				}else if(e.status == '3'){
-					$("#pricess3").html(e.info);
-					$("#xiangxi3").html(e.intro);
-					$("#a3").show();
-					$("#qwww").show();
-					$("#buyuid3").val(uid);
-					$("#type3").val('3');
-					$("#systemid3").val(systemid);
-					$("#pid3").val(pid);
-					$("#coid3").val(coid);
-					$("#catid3").val(catid);	
+			function share(systemid,catid){
+				var uid = $('#huid').val();            
+				if(uid != '' && uid != 0){
+					$("#fenxiang_con").fadeIn();
+					$("#maskLayer").css("display","block");
 				}else{
-					jAlert(e.info,'温馨提示');	
-				} 
+					$(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+					 $("#maskLayer").css("display","block");
+					 	window.scroll(0,0)	
+				}
 			}
-		});	
-	}
-}
-</script>
-<script>
-	$(function(){
-		$("#b1").click(function(){
-			$("#a1").css("display","none");
-			$("#qwww").css("display","none");
-		})
-		$("#b2").click(function(){
-			$("#a2").css("display","none");
-			$("#qwww").css("display","none");
-		})
-		$("#b3").click(function(){
-			$("#a3").css("display","none");
-			$("#qwww").css("display","none");
-		})
-	})
-</script>
+			function checkBuy(systemid,pid,coid,catid,type){
+				var uid = $("#huid").val();												//alert(uid); 
+				if(uid=='' || uid == 0){
+				   // jAlert('请先登录','温馨提示');
+					$("#maskLayer").attr("style","display:block");
+			     $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
+				}else{
+					$.ajax({  
+						url:'<?= URL('courSystem.checkBuy')?>',                   
+						type:'POST',
+						data:{uid:uid,systemid:systemid,pid:pid,coid:coid,catid:catid,type:type,},
+						
+						success:function(r){
+							e = eval('(' + r + ')');
+							if(e.status == '1'){
+								$("#pricess1").html(e.info);
+								$("#xiangxi1").html(e.intro);
+								$("#a1").show();
+								$("#qwww").show();
+								$("#buyuid1").val(uid);
+								$("#type1").val('1');
+								$("#systemid1").val(systemid);
+								$("#pid1").val(pid);
+								$("#coid1").val(coid);
+								$("#catid1").val(catid);
+							}else if(e.status == '2'){
+								$("#pricess2").html(e.info);
+								$("#xiangxi2").html(e.intro);
+								$("#a2").show();
+								$("#qwww").show();
+								$("#buyuid2").val(uid);
+								$("#type2").val('2');
+								$("#systemid2").val(systemid);
+								$("#pid2").val(pid);
+								$("#coid2").val(coid);
+								$("#catid2").val(catid);
+							}else if(e.status == '3'){
+								$("#pricess3").html(e.info);
+								$("#xiangxi3").html(e.intro);
+								$("#a3").show();
+								$("#qwww").show();
+								$("#buyuid3").val(uid);
+								$("#type3").val('3');
+								$("#systemid3").val(systemid);
+								$("#pid3").val(pid);
+								$("#coid3").val(coid);
+								$("#catid3").val(catid);	
+							}else{
+								jAlert(e.info,'温馨提示');	
+							} 
+						}
+					});	
+				}
+			}
+		</script>
+		<script>
+			$(function(){
+				$("#b1").click(function(){
+					$("#a1").css("display","none");
+					$("#qwww").css("display","none");
+				})
+				$("#b2").click(function(){
+					$("#a2").css("display","none");
+					$("#qwww").css("display","none");
+				})
+				$("#b3").click(function(){
+					$("#a3").css("display","none");
+					$("#qwww").css("display","none");
+				})
+			})
+		</script>
     <div class="tanchu_one" id="a1" style="display:none">
         <h3>购买本体系课程<img src="images/one_img_03.png" id="b1" /></h3>
         <div class="clearfloat"></div>
@@ -427,335 +436,337 @@ function checkBuy(systemid,pid,coid,catid,type){
         <input type="hidden" name="catid3" id="catid3" value="" />
         <a href="javascript:;" onclick="buy(3)">立即购买</a>
     </div>
-    <div id="qwww" style="width:100%; position: fixed; top:0; left:0; z-index:111; height:100%; background:#000; opacity:0.4;filter:alpha(opacity=40); display:none; "></div>
+    <div id="qwww" style="width:100%; position: fixed; top:0; left:0; z-index:111; height:100%; background:#000; opacity:0.4;filter:alpha(opacity=40); display:none; ">
+    	
+    </div>
 	<div class="con_bottom">
     	<div class="con_btm_left">
-<script type="text/javascript">
-            $(document).ready(function(){
-                $("#firstpane  .menu_head").click(function(){
-								
-					$(this).parents().find("p").removeClass("current");
-					if ($(this).parent().next("div.menu_body").css("display")=="block")
-					{ $(this).removeClass("current"); 
-						
-					}
-					
-					if ($(this).parent().next("div.menu_body").css("display")=="none")
-					{ $(this).addClass("current"); 
-						
-					}							
-				  $(this).parent().next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");								
-				});
-            });
-       </script>
-<?php 
-	if(!empty($_SESSION['xr_id'])){
-		$userInfo 	= DS("publics2._get","","users","id=".$_SESSION['xr_id']);
-		$userInfo	= $userInfo[0];
-?>
-        	<div id="firstpane" class="menu_list">
-<?
-		$issys = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and systemid=".$slist['id']." and type=1");
-						
-		//判断 是否购买体系  
-		if(!empty($issys)){
-			//购买整个体系	
-			if($cha_list){
-				foreach($cha_list as $kcha => $vcha){
-?>
-                <div style="position:relative;width:840px;height:33px;margin:10px 0;">
-                    <p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p><a  class="buy_zj">已购买</a>
-                </div>
-				<?php
-					//第一章节展开
-                    if($kcha == 0){
-                ?>
-				<div  class="menu_body" >
-				<?php
-                    }else{
-                ?>
-                <div  class="menu_body" style="display:none">
-                <?php
-					}
-				?>       
-                    <div class="con_list2">     
-                        <ul>            
-				<? 
-                    if($vcha['choice_kc']){
-                        $arrkc = str_replace('\\','',$vcha['choice_kc']);
-                        eval("\$arr = ".$arrkc.'; '); 
-                        foreach($arr as $kkc => $vkc){
-							$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
-							$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
-                ?>  
-							<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>"  style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="color:#666;font-size:12px;margin-left:15px;display:inline-block;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="color:#666;font-size:12px;margin-left:15px;display:inline-block;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
-				<?
-                        }
-                    }
-                ?>
-						</ul>
-					</div> 
-				</div>
-		<?php	}
-			}
-		}else{
-			//每购买整个体系
-					
-			if($cha_list){
-				foreach($cha_list as $kcha => $vcha){
-				$isp = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and pid=".$vcha['id']." and type=2");				
-				
-				//判断购买章节
-				if(!empty($isp)){
-					//购买章节
-			?>
-            	<div style="position:relative;width:840px;height:33px;margin:10px 0;">
-					<p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p><a class="buy_zj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a>
-				</div>
-				<?php
-                    //第一章节展开
-                    if($kcha == 0){
-                ?>
-				<div  class="menu_body" >
-				<?php
-                    }else{
-                ?>
-                <div  class="menu_body" style="display:none">
-				<?php
-                    }
-                ?>       
-					<div class="con_list2">     
-							<ul>            
-					<? 
-                        if($vcha['choice_kc']){
-                            $arrkc = str_replace('\\','',$vcha['choice_kc']);
-                            eval("\$arr = ".$arrkc.'; '); 
-                            foreach($arr as $kkc => $vkc){
-								$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
-								$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
-                    ?>  
-								<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><?= $vkc['name'];?></a>
-                                <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                                <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
+			<script type="text/javascript">
+	            $(document).ready(function(){
+	                $("#firstpane  .menu_head").click(function(){
+									
+						$(this).parents().find("p").removeClass("current");
+						if ($(this).parent().next("div.menu_body").css("display")=="block")
+						{ $(this).removeClass("current"); 
 							
-					<?
-                            }
-                        }
-                    ?>
+						}
+						
+						if ($(this).parent().next("div.menu_body").css("display")=="none")
+						{ $(this).addClass("current"); 
+							
+						}							
+					  $(this).parent().next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");								
+					});
+	            });
+	       </script>
+			<?php 
+				if(!empty($_SESSION['xr_id'])){
+					$userInfo 	= DS("publics2._get","","users","id=".$_SESSION['xr_id']);
+					$userInfo	= $userInfo[0];
+			?>
+        	<div id="firstpane" class="menu_list">
+			<?
+			$issys = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and systemid=".$slist['id']." and type=1");
+						
+			//判断 是否购买体系  
+			if(!empty($issys)){
+			//购买整个体系	
+				if($cha_list){
+					foreach($cha_list as $kcha => $vcha){
+				?>
+	                <div style="position:relative;width:840px;height:33px;margin:10px 0;">
+	                    <p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p><a  class="buy_zj">已购买</a>
+	                </div>
+					<?php
+						//第一章节展开
+	                    if($kcha == 0){
+	                ?>
+					<div  class="menu_body" >
+					<?php
+	                    }else{
+	                ?>
+	                <div  class="menu_body" style="display:none">
+		                <?php
+							}
+						?>       
+	                    <div class="con_list2">     
+		                    <ul>            
+								<? 
+			                    if($vcha['choice_kc']){
+			                        $arrkc = str_replace('\\','',$vcha['choice_kc']);
+			                        eval("\$arr = ".$arrkc.'; '); 
+			                        foreach($arr as $kkc => $vkc){
+										$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
+										$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
+			                		?>  
+									<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><?= $vkc['name'];?></a>
+		                            <div id="shipin_title<?=$vkc['id']?>"  style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+		                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
+		                                <p style="color:#666;font-size:12px;margin-left:15px;display:inline-block;">课时：<?= $courinfo[0]['kc_hours']?></p>
+		                                <p style="color:#666;font-size:12px;margin-left:15px;display:inline-block;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+		                            </div>
+		                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
+									<?
+				                        }
+				                    }
+			                	?>
 							</ul>
 						</div> 
-				</div>
-           <?php 
-		   		}else{
-					//没购买此章节
-		   ?>
-           		<div style="position:relative;width:840px;height:33px;margin:10px 0;">
-					<p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p>
-					<a href="javascript:void(0);" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,0,2,'2')" class="buy_zj">购买此章节</a>
-				</div>        
-				<?php
-                    if($kcha == 0){
-                ?>
-				<div  class="menu_body" >
-				<?php
-                    }else{
-                ?>
-                <div  class="menu_body" style="display:none">
-				<?php
-                    }
-                ?>            
-					<div class="con_list2">     
-						<ul>            
-				<? 
-                    if($vcha['choice_kc']){
-                        $arrkc = str_replace('\\','',$vcha['choice_kc']);
-                        eval("\$arr = ".$arrkc.'; '); 
-                        foreach($arr as $kkc => $vkc){
+					</div>
+				<?php	}
+				}
+				}else{
+					//每购买整个体系
 							
-                            $isc = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and coid=".$vkc['id']." and type=3");				
-							$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
-							$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);			
-                            if(!empty($isc)){
-                ?>  
-							<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>			
-				<?			
-							}else{
-								if($courinfo[0]['is_open'] == '1'){
-				?>
-                            <li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">免费</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
-                            <?php }else{?>
-                            <li aid="<?=$vkc['id']?>"><a href="javascript:;" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_title"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="javascript:;" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span><a href="javascript:void(0);"  onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_xj">购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>	
-							<?php }
-							}
-						}	
-					}
-				?>
-					</ul>
-					</div> 
-				</div>
-           	<?php
-		   			}
-				}
-			}
-		}?>
-        	</div>
-        <?php
-	}else{
-		?>
-        <!--未登录-->
-        <div id="firstpane" class="menu_list">
-            <?
-                if($cha_list){
-                    foreach($cha_list as $kcha => $vcha){
-            ?>
-            	<div style="position:relative;width:840px;height:33px;margin:10px 0;">
-                    <p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p>
-                    <a href="javascript:void(0);" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,0,2,'2')" class="buy_zj">购买此章节</a>
-          
-                </div>
-                <?php
-                    	if($kcha == 0){
-						?>
-					<div  class="menu_body" >
-                    <?php
-						}else{
+					if($cha_list){
+						foreach($cha_list as $kcha => $vcha){
+						$isp = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and pid=".$vcha['id']." and type=2");				
+						
+						//判断购买章节
+						if(!empty($isp)){
+							//购买章节
 					?>
-                    <div  class="menu_body" style="display:none">
-                    <?php
-						}
-					?>	
-                    <div class="con_list2">     
-                        <ul>            
-                        <? 
-                            if($vcha['choice_kc']){
-                                $arrkc = str_replace('\\','',$vcha['choice_kc']);
-                                eval("\$arr = ".$arrkc.'; ');    
-                                foreach($arr as $kkc => $vkc){
-									$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
-									$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
-									if($courinfo[0]['is_open'] == '1'){
-                        ?>  <li aid="<?=$vkc['id']?>">
-                        	<a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title" id="buy_title<?=$vkc['id']?>"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title" id="buy_title<?=$vkc['id']?>"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span>
-                            <a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">免费</a>
-                            <a href="javascript:;" class="buy_xj" onclick="jAler()">测评</a>
-                            
-                            </li>
-                        <?php }else{?>
-                            <li aid="<?=$vkc['id']?>"> 
-                            <a href="javascript:;" onclick="jAler()" class="buy_title" id="buy_title<?=$vkc['id']?>"><?= $vkc['name'];?></a>
-                            <div id="shipin_title<?=$vkc['id']?>"  style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
-                            	<p style="display:inline-block;"><a href="javascript:;" onclick="jAler()" class="buy_title" id="buy_title<?=$vkc['id']?>"><img src="images/course_conimg_18.png" /></a></p>
-                                <p style="color:#666;font-size:12px;display:inline-block;">课时：<?= $courinfo[0]['kc_hours']?></p>
-                                <p style="color:#666;font-size:12px;display:inline-block;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
-                            </div>
-                            <span class="xuxian"></span>
-                            
-                            <a href="javascript:void(0);"  onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_xj">购买</a>
-                            <a href="javascript:;" class="buy_xj" onclick="jAler()">测评</a>
-                            </li>
-						<?           }
+		            	<div style="position:relative;width:840px;height:33px;margin:10px 0;">
+							<p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p><a class="buy_zj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a>
+						</div>
+						<?php
+		                    //第一章节展开
+		                    if($kcha == 0){
+		                ?>
+						<div  class="menu_body" >
+						<?php
+		                    }else{
+		                ?>
+		                <div  class="menu_body" style="display:none">
+							<?php
+			                    }
+			                ?>       
+								<div class="con_list2">     
+										<ul>            
+								<? 
+			                        if($vcha['choice_kc']){
+			                            $arrkc = str_replace('\\','',$vcha['choice_kc']);
+			                            eval("\$arr = ".$arrkc.'; '); 
+			                            foreach($arr as $kkc => $vkc){
+											$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
+											$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
+			                    ?>  
+											<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><?= $vkc['name'];?></a>
+			                                <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+			                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
+			                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
+			                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+			                            </div>
+			                                <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
+										
+								<?
+			                            }
+			                        }
+			                    ?>
+									</ul>
+								</div> 
+						</div>
+		          		 <?php 
+				   		}else{
+							//没购买此章节
+					   	?>
+			           		<div style="position:relative;width:840px;height:33px;margin:10px 0;">
+								<p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p>
+								<a href="javascript:void(0);" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,0,2,'2')" class="buy_zj">购买此章节</a>
+							</div>        
+							<?php
+			                    if($kcha == 0){
+			                ?>
+							<div  class="menu_body" >
+								<?php
+				                    }else{
+				                ?>
+				                <div  class="menu_body" style="display:none">
+									<?php
+					                    }
+					                	?>            
+									<div class="con_list2">     
+											<ul>            
+											<? 
+					                    	if($vcha['choice_kc']){
+					                        $arrkc = str_replace('\\','',$vcha['choice_kc']);
+					                        eval("\$arr = ".$arrkc.'; '); 
+					                        foreach($arr as $kkc => $vkc){
+												
+					                            $isc = DS("publics._get","","integral","userID=".$_SESSION['xr_id']." and sourceType=1 and coid=".$vkc['id']." and type=3");				
+												$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
+												$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);			
+					                            if(!empty($isc)){
+					               			 ?>  
+												<li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><?= $vkc['name'];?></a>
+				                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+				                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+				                            </div>
+				                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">已购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>			
+											<?			
+											}else{
+												if($courinfo[0]['is_open'] == '1'){
+											?>
+				                            <li aid="<?=$vkc['id']?>"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><?= $vkc['name'];?></a>
+				                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+				                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+				                            </div>
+				                            <span class="xuxian"></span><a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">免费</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>
+				                            <?php }else{?>
+				                            <li aid="<?=$vkc['id']?>"><a href="javascript:;" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_title"><?= $vkc['name'];?></a>
+				                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+				                            	<p style="display:inline-block;"><a href="javascript:;" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_title"><img src="images/course_conimg_18.png" /></a></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
+				                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+				                            </div>
+				                            <span class="xuxian"></span><a href="javascript:void(0);"  onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_xj">购买</a><a href="javascript:;" class="buy_xj" <?= $userInfo['type']==2?'onclick="goExam('.$vkc['id'].')"':''?>>测评</a></li>	
+											<?php }
+											}
+										}	
+										}
+										?>
+										</ul>
+									</div> 
+								</div>
+						           	<?php
+								   			}
+										}
+									}
+								}?>
+		        			</div>
+					        <?php
+						}else{
+							?>
+					        <!--未登录-->
+				        <div id="firstpane" class="menu_list">
+				            <?
+				                if($cha_list){
+				                    foreach($cha_list as $kcha => $vcha){
+				            ?>
+				            	<div style="position:relative;width:840px;height:33px;margin:10px 0;">
+				                    <p class="menu_head" style="margin-top:0px;"><?= $vcha['ctitle']?></p>
+				                    <a href="javascript:void(0);" onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,0,2,'2')" class="buy_zj">购买此章节</a>
+				          
+				                </div>
+				                <?php
+				                    	if($kcha == 0){
+										?>
+								<div  class="menu_body" >
+				                    <?php
+										}else{
+									?>
+				                    <div  class="menu_body" style="display:none">
+				                    <?php
+										}
+									?>	
+				                    <div class="con_list2">     
+				                        <ul>            
+				                        <? 
+				                            if($vcha['choice_kc']){
+				                                $arrkc = str_replace('\\','',$vcha['choice_kc']);
+				                                eval("\$arr = ".$arrkc.'; ');    
+				                                foreach($arr as $kkc => $vkc){
+													$courinfo = DS("publics2._get","","course","id=".$vkc['id']);
+													$teach	  =	DS("publics2._get","","users","id=".$courinfo[0]['teach_id']);
+													if($courinfo[0]['is_open'] == '1'){
+				                        ?>  <li aid="<?=$vkc['id']?>">
+				                        	<a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title" id="buy_title<?=$vkc['id']?>"><?= $vkc['name'];?></a>
+					                            <div id="shipin_title<?=$vkc['id']?>" style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+			                            	<p style="display:inline-block;"><a href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid='.$catid)?>" class="buy_title" id="buy_title<?=$vkc['id']?>"><img src="images/course_conimg_18.png" /></a></p>
+			                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">课时：<?= $courinfo[0]['kc_hours']?></p>
+			                                <p style="display:inline-block;color:#666;font-size:12px;margin-left:15px;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+				                            </div>
+				                            <span class="xuxian"></span>
+				                            <a class="buy_xj" href="<?= URL('courSystem.curriculumEver','classid='.V('r:classid').'&sid='.V('r:sid').'&pid='.$vcha['id'].'&id='.$vkc['id'].'&catid=2')?>">免费</a>
+				                            <a href="javascript:;" class="buy_xj" onclick="jAler()">测评</a>
+				                            
+				                            </li>
+				                        <?php }else{?>
+				                            <li aid="<?=$vkc['id']?>"> 
+				                            <a href="javascript:;" onclick="jAler()" class="buy_title" id="buy_title<?=$vkc['id']?>"><?= $vkc['name'];?></a>
+				                            <div id="shipin_title<?=$vkc['id']?>"  style="display:none;float:left;position:absolute;left:350px;z-index:3;top:0;width:370px;">
+				                            	<p style="display:inline-block;"><a href="javascript:;" onclick="jAler()" class="buy_title" id="buy_title<?=$vkc['id']?>"><img src="images/course_conimg_18.png" /></a></p>
+				                                <p style="color:#666;font-size:12px;display:inline-block;">课时：<?= $courinfo[0]['kc_hours']?></p>
+				                                <p style="color:#666;font-size:12px;display:inline-block;">赞（<?= $courinfo[0]['good']?>）踩（<?= $courinfo[0]['bad']?>）</p>
+				                            </div>
+				                            <span class="xuxian"></span>
+				                            
+				                            <a href="javascript:void(0);"  onclick="checkBuy(<?= $slist['id']?>,<?= $vcha['id']?>,<?= $vkc['id']?>,2,'3')" class="buy_xj">购买</a>
+				                            <a href="javascript:;" class="buy_xj" onclick="jAler()">测评</a>
+				                            </li>
+										<?           }
+												}
+				                            }
+				                        ?>
+				                        </ul>
+				                    	</div> 
+						                </div>       
+						            <?php	}}?>
+						        </div>
+					        <?php
 								}
-                            }
-                        ?>
-                        </ul>
-                    </div> 
-                </div>       
-            <?php	}}?>
-        </div>
-        <?php
-			}
-		?>
-    </div>
-    
-   <!-- 右部-->
-    <div class="con_btm_right">
-    	<!--最热课程-->
-        <div class="con_right_top">
-            <h3>最热课程排行榜</h3>
-            <?
-                if($hot_list){
-                    foreach($hot_list as $khot => $vhot){
-						$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vhot['id']." group by userID"); 
-            ?>
-            <div class="right_top_con">
-                <a href="<?= URL('courSystem.courseCon','&clssid='.$vhot['couClass'].'&sid='.$vhot['id'].'&catid=2')?>" title="<?= $vhot['stitle']?>">   
-                <img src="<?= !empty($vhot['thumb'])?$vhot['thumb']:'images/course_conimg_15.png' ?>" style="width:130px;height:68px"/>
-                <span class="right_title"><?= F("publics.substrByWidth",$vhot['stitle'],13);?></span>
-                <span><?= $vhot['sys_hours']?></span>
-                <span><img src="images/course_conimg_22.png" /><?= count($buy_sys)?>人在学习</span>
-                <div class="clearfloat"></div>
-                </a>
-            </div>  
-            <?
-                    }
-                }
-				$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$sid." group by userID limit 0,20"); 
-            	$buy_sys1	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$sid." group by userID");
-			?>
-        </div>
-        
-        <!--学习该课程-->
-        <div class="con_right_top">
-            <h3><?= count($buy_sys1)?>人在学习该课程</h3>
-            <ul>
-                <?
-				if(!empty($buy_sys)){
-                        foreach($buy_sys as $sk => $sv){
-							$buyuser = DS("publics2._get","","users","id=".$sv['userID']." limit 0,4"); 
-                ?>
-                <li><img src="<?= !empty($buyuser[0]['logo'])?$buyuser[0]['logo']:'images/course_conimg_27.png' ?>" style="width:49px;height:49px"/><span><a href="<?= URL('bbsUser.user_broadcast','&id='.$buyuser[0]['id'])?>" style="color:black"><?= !empty($buyuser[0]['realname'])?$buyuser[0]['realname']:$buyuser[0]['username']?></a></span></li>
-                <?
-						}
-                    }
-                ?>
-            </ul>
-            <div class="clearfloat"></div>
-            <?php
-            	if(count($buy_sys1) > 20){
-			?>
-           <!-- <div style="float:right;font-size:15px;font-weight:bold;color:black;">【<a href="javascript:onchange();" style="color:black;">换一批</a>】</div>-->
-            <?php
-				}
-			?>
-        </div>
-    </div>
-    <div class="clearfloat"></div>
-</div>
-</div>
+							?>
+					    </div>
+	    
+			   <!-- 右部-->
+			    <div class="con_btm_right">
+			    	<!--最热课程-->
+			        <div class="con_right_top">
+			            <h3>最热课程排行榜</h3>
+			            <?
+			                if($hot_list){
+			                    foreach($hot_list as $khot => $vhot){
+									$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$vhot['id']." group by userID"); 
+			            ?>
+			            <div class="right_top_con">
+			                <a href="<?= URL('courSystem.courseCon','&clssid='.$vhot['couClass'].'&sid='.$vhot['id'].'&catid=2')?>" title="<?= $vhot['stitle']?>">   
+			                <img src="<?= !empty($vhot['thumb'])?$vhot['thumb']:'images/course_conimg_15.png' ?>" style="width:130px;height:68px"/>
+			                <span class="right_title"><?= F("publics.substrByWidth",$vhot['stitle'],13);?></span>
+			                <span><?= $vhot['sys_hours']?></span>
+			                <span><img src="images/course_conimg_22.png" /><?= count($buy_sys)?>人在学习</span>
+			                <div class="clearfloat"></div>
+			                </a>
+			            </div>  
+			            <?
+			                    }
+			                }
+							$buy_sys	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$sid." group by userID limit 0,20"); 
+			            	$buy_sys1	=	DS("publics2._get","","integral","sourceType=1 and systemid=".$sid." group by userID");
+						?>
+			        </div>
+			        
+			        <!--学习该课程-->
+			        <div class="con_right_top">
+			            <h3><?= count($buy_sys1)?>人在学习该课程</h3>
+			            <ul>
+			                <?
+							if(!empty($buy_sys)){
+			                        foreach($buy_sys as $sk => $sv){
+										$buyuser = DS("publics2._get","","users","id=".$sv['userID']." limit 0,4"); 
+			                ?>
+			                <li><img src="<?= !empty($buyuser[0]['logo'])?$buyuser[0]['logo']:'images/course_conimg_27.png' ?>" style="width:49px;height:49px"/><span><a href="<?= URL('bbsUser.user_broadcast','&id='.$buyuser[0]['id'])?>" style="color:black"><?= !empty($buyuser[0]['realname'])?$buyuser[0]['realname']:$buyuser[0]['username']?></a></span></li>
+			                <?
+									}
+			                    }
+			                ?>
+			            </ul>
+			            <div class="clearfloat"></div>
+			            <?php
+			            	if(count($buy_sys1) > 20){
+						?>
+			           <!-- <div style="float:right;font-size:15px;font-weight:bold;color:black;">【<a href="javascript:onchange();" style="color:black;">换一批</a>】</div>-->
+			            <?php
+							}
+						?>
+			        </div>
+			    </div>
+			    <div class="clearfloat"></div>
+			</div>
+	</div>
 <script type="text/javascript">
 	
 	$(".con_list2 ul li").mouseover(function(){
@@ -776,12 +787,18 @@ function goExam(coid){
 
 function test(){
 	$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+     $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
 }
 
 function jAler(){
 	$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+   $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	;
+			window.scroll(0,0)
 }
 function buy(t){
 	if(t==1){
@@ -842,9 +859,9 @@ function buy(t){
 	});	
 }
 </script>
+</div>
 <!--footer-->
 <?php TPL :: display("footer1")?>
 <!--footer--end-->
-</div>
 </body>
 </html>

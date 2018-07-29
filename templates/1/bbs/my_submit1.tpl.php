@@ -9,7 +9,7 @@
 
 <script src="js/bbsjs/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="js/bbsjs/forum.js" type="text/javascript"></script>
-<!--<script src="js/bbsjs/public.js" type="text/javascript"></script>-->
+<script src="js/bbsjs/public.js" type="text/javascript"></script>
 <script src="js/bbsjs/jquery.elements.js" type="text/javascript"></script>     
 <link rel="stylesheet" href="css/style.css" />
 <link href="css/nav.css" rel="stylesheet" />
@@ -72,7 +72,7 @@ body{
 				<div class="boardnav">
 					<!-- 个人中心 帖子 -->
 					<div id="ct" class="ct2_a wp cl" >
-						<div  id="sd_bdl" class="back_left bdl" onMouseOver="showMenu({'ctrlid':this.id, 'pos':'dz'});" >
+						<div  id="sd_bdl" class="back_left bdl">
 							<dl class="a" id="lf_">
 								<dt>个人中心</dt>
 								<dd ><a href="<?= URL('bbsUser.my_dynamic')?>" title="动态">动态</a></dd>
@@ -104,23 +104,22 @@ body{
 										<tr>
 											<td class="common" >
 										<script>
-											(function(){
+											// (function(){
 												var oSon=document.getElementById('son_menu');
 												var oMenu=document.getElementById('box_menu');
 												var timer=null;
-												
-												oSon.onmouseover=oMenu.onmouseover=function(){
-													clearInterval(timer);
-													oSon.style.display='block';
-												};
-												
-												oSon.onmouseout=oMenu.onmouseout=function(){
-													timer=setInterval(function(){
-														oSon.style.display='none';
-													}, 500);
-													
-												};
-											})();
+												if(oSon){
+													oSon.onmouseover=oMenu.onmouseover=function(){
+														clearInterval(timer);
+														oSon.style.display='block';
+													};
+													oSon.onmouseout=oMenu.onmouseout=function(){
+														timer=setInterval(function(){
+															oSon.style.display='none';
+														}, 500);
+													};
+												}
+											// })();
 										</script>
 										<script>
 											function selStatus(status){
@@ -206,23 +205,25 @@ body{
 						</div>
 					</div>
 					<script>
-						(function(){
+						// (function(){
 							var oSon1=document.getElementById('son_menu1');
 							var oMenu1=document.getElementById('box_menu1');
 							var timer=null;
-							
-							oSon1.onmouseover=oMenu1.onmouseover=function(){
-								clearInterval(timer);
-								oSon1.style.display='block';
-							};
-							
-							oSon1.onmouseout=oMenu1.onmouseout=function(){
-								timer=setInterval(function(){
-									oSon1.style.display='none';
-								}, 500);
+							if(oSon1){
+
+								oSon1.onmouseover=oMenu1.onmouseover=function(){
+									clearInterval(timer);
+									oSon1.style.display='block';
+								};
 								
-							};
-						})();
+								oSon1.onmouseout=oMenu1.onmouseout=function(){
+									timer=setInterval(function(){
+										oSon1.style.display='none';
+									}, 500);
+									
+								};
+							}
+						// })();
 					</script>
 					<script>
 						function selForum(forumId){

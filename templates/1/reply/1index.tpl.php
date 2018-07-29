@@ -200,8 +200,11 @@ $(document).ready(function(){
             var uid = $("#uid").val();
             var pro_name	=	$("#pro_name").val();
             if(uid == ''){
-                $("#alert").css("display","block");
-                $("#maskLayer").css("display","block");	
+				$("#maskLayer").css("display","block");	
+                $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+			window.scroll(0,0)
             }else if(pro_name == '请输入要搜索的问题或您的提问' || $.trim(pro_name) == ''){
                 jAlert('请输入您的提问','温馨提示');
             }else{

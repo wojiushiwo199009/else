@@ -16,7 +16,7 @@
 <div class="boardnav">
  <!-- 个人中心 帖子 -->
 <div id="ct" class="ct2_a wp cl" >
-	<div  id="sd_bdl" class="back_left bdl" onMouseOver="showMenu({'ctrlid':this.id, 'pos':'dz'});" >
+	<div  id="sd_bdl" class="back_left bdl" >
     	<dl class="a" id="lf_">
             <dt>个人中心</dt>
             <dd ><a href="<?= URL('bbsUser.my_dynamic')?>" title="动态">动态</a></dd>

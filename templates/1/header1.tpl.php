@@ -50,10 +50,10 @@
         $_SESSION['u_uidss'] = $_SESSION['xr_id'];
         ?>
         <div class="dengluhou" >
-            <p class="name" style="float:left" id="a" onMouseOver="tabb()"><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
+            <p class="name" style="float:left" id="a" ><a href="<?= URL('member.xmember')?>" title="<?= $info[0]['realname']?>"><?php if(empty($info[0]['logo'])){?><img src="images/course_conimg_27.png"><?php }else{?><img src="<?= $info[0]['logo']?>"><?php }?><span title="<?= $info[0]['realname']?>"><?= F("publics.substrByWidth",$info[0]['realname'],6);?></span></a><?php if($info[0]['type'] ==2){?><a href="<?= URL('member.xmember','&tid=6');?>"><span style="margin-left:10px;"><img src="images/student_img_06.png" style="height:15px;width:15px;position:relative;top:3px;border-radius:0;" /><?= $info[0]['frozen_money']?></span></a><?php }?></p>
             <div class="list" id="b" style="display:none;">
                 <div class="triangle"></div>
-                <p style="margin-top:15px;">正使用手机账号登录</p>
+                <p style="margin-top:6px;">正使用手机账号登录</p>
                 <p><a href="<?= URL('member.xmember')?>">个人主页</a></p>
                 <?php if($info[0]['type']==1){?>
                 <p><a href="<?= URL('member.xmember','&tid=2');?>">提问我的</a></p>
@@ -98,7 +98,10 @@
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
            $("#maskLayer").attr("style","display:block");
-           $("#alert").slideDown();
+          $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
        }else{
          $.ajax({
             url:'<?= URL('member.istest')?>',
@@ -161,6 +164,7 @@ function formatStr(str) {
 		// $("#message12").fadeIn(400);
         $(".zhuce").show()
         $(".denglu").hide()
+        	window.scroll(0,0)
 		// $("#message12").slideDown();
 	});
        });
@@ -279,7 +283,10 @@ function formatStr(str) {
     function denglu(){
         //$("#alert").attr("style","display:block");
         $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+       $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
     }
     function zhuce(){
         //$("#message12").attr("style","display:block");
@@ -309,15 +316,18 @@ function formatStr(str) {
     var findpas1 = document.getElementById("findpas1");
     var findpas2 = document.getElementById("findpas2");
        //导航栏的登陆按钮方法
-       reg.onclick = function(){  
+       if(reg){
+            reg.onclick = function(){  
             //   maskLayer.style.display = "block";
-            maskLayer.style.display = "block";
-            $(".zhuceAndDenglu").css("display",'block');
-            //  $('#alert').fadeIn(400);
-            //  $(message12).css({'display':'none'});
-            $(".denglu").show()
-            $(".zhuce").hide()
-        }
+                maskLayer.style.display = "block";
+                $(".zhuceAndDenglu").css("display",'block');
+                //  $('#alert').fadeIn(400);
+                //  $(message12).css({'display':'none'});
+                $(".denglu").show()
+                $(".zhuce").hide()
+                	window.scroll(0,0)
+            }
+       }
          //关闭按钮
          mClose.onclick = function() {
             //myAlert.style.display = "none";

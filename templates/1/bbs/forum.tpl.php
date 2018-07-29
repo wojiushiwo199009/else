@@ -10,9 +10,10 @@
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_common.css" />
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_forum_post.css" />
 <link href="css/nav.css" rel="stylesheet" />
+
 <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="/js/jquery.SuperSlide.2.1.1.js"></script>
-
+<!-- <script src="js/bbsjs/public.js" type="text/javascript"></script> -->
 
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_common.css" />
 <link rel="stylesheet" type="text/css" href="/css/bbscss/style_1_forum_index.css" />
@@ -88,10 +89,10 @@ body{
 <div style="margin-top:50px">
 <?php TPL :: display('footer');?>
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
-</script>
+</script> -->
 <!--统计代码-->
 <script src="js/bbsjs/flow.js" type="text/javascript" charset="utf-8"></script>
 

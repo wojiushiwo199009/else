@@ -512,7 +512,10 @@ if(uid != '' && uid != 0){
 }else{
     //jAlert('请先登录','温馨提示');
      $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();	
+    $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
 }
 } 
 
@@ -522,7 +525,10 @@ var uid = $("#huid").val();												//alert(uid);
 if(uid=='' || uid == 0){
    // jAlert('请先登录','温馨提示');
     $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+    $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
 }else{
     $.ajax({  
         url:'<?= URL('courSystem.checkBuy')?>',                   

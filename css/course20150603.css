@@ -31,15 +31,15 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .sort .sort-list li a img{float:right;margin:8px 15px;*position:absolute;top:-5px;right:0px;}
 .sort .sort-list li a span{color:#999999;display:block;height:30px;width:200px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
 .sort .sort-list li.hover{background:url(../images/index_img_01.png) repeat;}           
-.sort .sort-list li.hover2{background:url(../images/index_img_01.png) repeat;background-size:290px 40px;width:287px;border-left:solid 3px #28b18a;margin:0;}
-.sort .sort-list li.hover a{color:#28b18a;}
+.sort .sort-list li.hover2{background:url(../images/index_img_01.png) repeat;background-size:290px 40px;width:287px;border-left:solid 3px #1890ff;margin:0;}
+.sort .sort-list li.hover a{color:#1890ff;}
       
 .sort .sort-list ul ul{display:none;position:absolute;top:60px;left:210px;}
-.sort .sort-list ul li.hover ul{background:#fff;border:1px solid #28b18a;left:290px;margin-top:-60px;width:200px;z-index:19;position:absolute;height:598px;overflow:hidden}
+.sort .sort-list ul li.hover ul{background:#fff;border:1px solid #1890ff;left:290px;margin-top:-60px;width:200px;z-index:19;position:absolute;height:598px;overflow:hidden}
 .sort .sort-list ul li.hover ul li{height:60px;width:100px;float:left;padding:0;margin:0;border:0;text-align:center;}
 .sort .sort-list ul li.hover ul{display:block}
 .sort .sort-list ul li.hover ul li a{display:block;height:30px;width:100px;line-height:30px;font-size:14px;border-bottom:0;margin:0;padding:0;color:#333;}
-.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#28b18a;}
+.sort .sort-list ul li.hover ul li a:hover{background-position:15px -181px;color:#1890ff;}
 
 /*leftcontent*/
 /*rightcontent*/
@@ -53,7 +53,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .fenye{margin:20px 0 10px 0;}
 .fenye a{display:inline-block;padding:2px 8px;margin:0 10px;font-size:14px;color:#787d82;}
-.fenye a:hover{background:#27b28b;color:#fff;}
-.fenye a.avtive{background:#27b28b;color:#fff;}
+.fenye a:hover{background:#1890ff;color:#fff;}
+.fenye a.avtive{background:#1890ff;color:#fff;}
 
 /*rightcontent*/

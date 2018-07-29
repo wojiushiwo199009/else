@@ -202,14 +202,14 @@
 	<div id="load11" style="display:none"></div>			
 					
 					<div style="display:none" class="flw_replybox cl" id="relaybox_<?=$pv['id']?>"><span style="margin: -23px 135px 0 0;" class="cnr"></span>
-<form onsubmit="return ajaxpost2(this.id, 'return_qrelay_12918932');" action="home.php?mod=spacecp&amp;ac=follow&amp;op=relay&amp;tid=5313176" id="postform_5313176" autocomplete="off" method="post">
+<form onsubmit="return ajaxpost2(this.id, 'return_qrelay_12918932');" action="home.php?mod=spacecp&amp;ac=follow&amp;op=relay&amp;tid=5313176" class="postform_5313176" autocomplete="off" method="post">
 <input type="hidden" value="true" name="relaysubmit">
 <input type="hidden" value="http://bbs.meizu.cn/home.php?mod=follow" name="referer">
 <input type="hidden" value="3554c853" name="formhash">
 <input type="hidden" value="5313176" name="tid">
 <input type="hidden" value="qrelay_12918932" name="handlekey">
             <span class="flw_autopt">
-            	<textarea onkeyup="strLenCalc(this, 'checklen5313176', 140);" rows="4" cols="80" class="pts" name="note" id="note_5313176"></textarea>
+            	<textarea onkeyup="strLenCalc(this, 'checklen5313176', 140);" rows="4" cols="80" class="pts" name="note" class="note_5313176"></textarea>
             </span>
             
             <div style=" margin:30px 0px;">
@@ -227,7 +227,7 @@
 <script reload="1" type="text/javascript">updateseccode5('SAyd29av0','follow_rebroadcast');</script>
 </div>
 </div>                          
-                <button tabindex="23" value="true" class="pn pnc" id="relaysubmit_btn" name="relaysubmit_btn" type="submit" style="float:right; margin-left:20px;"><span>转播</span></button>
+                <button tabindex="23" value="true" class="pn pnc" class="relaysubmit_btn" name="relaysubmit_btn" type="submit" style="float:right; margin-left:20px;"><span>转播</span></button>
             	<label style="margin-top:8px;" class="y wrap_simcheck checked_simcheck"><span class="box_simcheck"></span><input type="checkbox" checked="checked" value="1" class="pc" name="addnewreply">同时回复</label>         
                 <div style="float:right;  margin:8px 20px 0 0;">还能输入<span class="xg1" id="checklen5313176">140</span>字</div><div class="cr"></div>
             </div>
@@ -239,7 +239,7 @@
 </div>
 
 <script type="text/javascript">
-$('note_5313176').focus();
+$('.note_5313176').focus();
 function succeedhandle_qrelay_12918932(url, message, values) {
 $('relaybox_12918932').style.display = 'none';
 showCreditPrompt();
@@ -247,10 +247,10 @@ showCreditPrompt();
 </script>
 </div>
 					<div style="display:none" class="flw_replybox cl" id="replybox_<?=$pv['id']?>"><span class="cnr"></span>
-<form class="mbm" onsubmit="this.message.value = parseurl(this.message.value);ajaxpost(this.id, 'return_qreply_12918932', 'return_qreply_12918932', 'onerror');return false;" action="forum.php?mod=post&amp;action=reply&amp;fid=22&amp;extra=&amp;tid=5313176&amp;replysubmit=yes" id="postform_12918932" autocomplete="off" method="post">
-<input type="hidden" value="3554c853" id="formhash" name="formhash">
+<form class="mbm" onsubmit="this.message.value = parseurl(this.message.value);ajaxpost(this.id, 'return_qreply_12918932', 'return_qreply_12918932', 'onerror');return false;" action="forum.php?mod=post&amp;action=reply&amp;fid=22&amp;extra=&amp;tid=5313176&amp;replysubmit=yes" class="postform_12918932" autocomplete="off" method="post">
+<input type="hidden" value="3554c853" class="formhash" name="formhash">
 <input type="hidden" value="qreply_12918932" name="handlekey">
-<span style="display: none;" id="subjectbox"><input style="width: 25em" tabindex="21" value="" class="px" id="subject" name="subject"></span>
+<span style="display: none;" id="subjectbox"><input style="width: 25em" tabindex="21" value="" class="px" class="subject" name="subject"></span>
 
     <span class="flw_autopt">
     	<textarea rows="4" cols="80" class="pts" id="postmessage_<?=$pv['id']?>" name="message"></textarea>

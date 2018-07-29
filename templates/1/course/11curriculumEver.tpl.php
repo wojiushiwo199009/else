@@ -192,7 +192,10 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+		$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						window.scroll(0,0)
 		}else{
 			window.location.href="<?= URL('member.exam_detail','&coid=')?>"+coid;	
 		}	
@@ -202,7 +205,11 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+               $(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						window.scroll(0,0)
+
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.comment_video')?>',                   
@@ -305,8 +312,11 @@ var _hmt = _hmt || [];
 		var uid = $("#huid").val();												//alert(uid); 
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-			$("#maskLayer").css("display","block");
+		   $("#maskLayer").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+			window.scroll(0,0)
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.checkBuy')?>',                   
@@ -499,8 +509,11 @@ function dialog(url,title,width,height){
 			$(document).ready(function(){
 				$("#bbtn").click(function(){
 					if($("#xrid").val()==""){
-						$("#maskLayer").attr("style","display:block");
-        				$("#alert").slideDown();
+						$("#maskLayer").css("display","block");	
+						$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						window.scroll(0,0)
 						return false;
 					}else{
 						var uid 		= 	$("#xrid").val();
@@ -553,8 +566,11 @@ function dialog(url,title,width,height){
 			$(document).ready(function(){
 				$("#askquiz").click(function(){
 					if($("#xrid").val()=="" || $("#xrid").val()==0){
-						$("#alert").css("display","block");
-            			//$("#maskLayer").css("display","block");
+						$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						$("#maskLayer").css("display","block");
+						window.scroll(0,0)
 						return false;
 					}
 				});
@@ -563,8 +579,11 @@ function dialog(url,title,width,height){
 			function is_submit(){
 				
 				if($("#xrid").val()=="" || $("#xrid").val() ==0){
+					$(".zhuceAndDenglu").css("display",'block');
 					$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+						$(".denglu").show()
+						$(".zhuce").hide()	
+						window.scroll(0,0)
 					return false;
 				}	
 					if($("#askquiz").val() == "" || $("#askquiz").val().replace(/^\s*/g, "") == ''){
@@ -663,8 +682,11 @@ function dialog(url,title,width,height){
 		var content	=	formatStr($("#recontent"+qid).val());
 		var requid	=	$("#xrid").val();
 		if(requid ==''){ 
-			$("#alert").slideDown();
+			$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
 			$("#maskLayer").css("display","block");
+			window.scroll(0,0)
 			return false;	
 		}
 		

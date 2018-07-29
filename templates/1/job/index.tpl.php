@@ -163,9 +163,6 @@ var _hmt = _hmt || [];
 </head>
 <body>
 <div class="container">
-<?php TPL :: display("header1")?>
-<div class="zong">
-
 	<div class="menuHolder">
 		<div class="menuWindow">
 			<ul class="p1">
@@ -202,6 +199,10 @@ var _hmt = _hmt || [];
 			</ul>
 		</div>
 	</div>
+<?php TPL :: display("header1")?>
+<div class="zong">
+
+	
 
 	<div class="content">
         <!--video-->
@@ -277,7 +278,10 @@ var _hmt = _hmt || [];
         }else{
             //jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();		
+        $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)	
         }
     } 
     
@@ -287,7 +291,10 @@ var _hmt = _hmt || [];
         if(uid=='' || uid == 0){
            // jAlert('请先登录','温馨提示');
 		   $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+     $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
+			window.scroll(0,0)
         }else{
             $.ajax({  
                 url:'<?= URL('courSystem.checkBuy')?>',                   

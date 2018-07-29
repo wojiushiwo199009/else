@@ -262,8 +262,11 @@ $(document).ready(function(){
 			var qid  = $("#qid").val();
 			if(suid == ''){
 				//jAlert("请先登录","温馨提示");
-				$("#alert").css("display","block");
-             $("#maskLayer").css("display","block");	
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+			 $("#maskLayer").css("display","block");	
+			 window.scroll(0,0)
 			}else{
 				if(quid == suid){
 					$.ajax({
@@ -317,8 +320,11 @@ $(document).ready(function(){
 		//alert(requid);
 		if(requid == ''){ 
 			//jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-             $("#maskLayer").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+			 $("#maskLayer").css("display","block");
+			 window.scroll(0,0)
 			 return false;	
 		}
 		

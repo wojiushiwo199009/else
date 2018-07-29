@@ -204,7 +204,12 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+		// $("#alert").slideDown();
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()			
+				window.scroll(0,0)
+		
 		}else{
 			window.location.href="<?= URL('member.exam_detail','&coid=')?>"+coid;	
 		}	
@@ -214,7 +219,10 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+        	$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+				window.scroll(0,0)
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.comment_video')?>',                   
@@ -317,8 +325,11 @@ var _hmt = _hmt || [];
 		var uid = $("#huid").val();												//alert(uid); 
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
-			$("#maskLayer").css("display","block");
+		    $("#maskLayer").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+				window.scroll(0,0)
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.checkBuy')?>',                   
@@ -503,7 +514,7 @@ function dialog(url,title,width,height){
                 <textarea name="askquiz" id="askquiz" cols="130" rows="5" style="width:840px;"></textarea>
                 <input type="hidden" id="xrid" value="<?=$_SESSION['xr_id']?>" />
                 <input type="hidden" id="xrname" value="<?=$_SESSION['xr_name']?>" />
-                <center><input type="button" onClick="is_submit()" value="提交" /></center>
+                <center style="text-align:right;padding-right:10px;"><input type="button" onClick="is_submit()" value="提交" /></center>
                 <p style="display:none"><input type="reset" id="set" value="重置" /></p>
         	</form>
         </div>
@@ -512,7 +523,10 @@ function dialog(url,title,width,height){
 				$("#bbtn").click(function(){
 					if($("#xrid").val()==""){
 						$("#maskLayer").attr("style","display:block");
-        				$("#alert").slideDown();
+        				$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+							window.scroll(0,0)
 						return false;
 					}else{
 						var uid 		= 	$("#xrid").val();
@@ -565,8 +579,13 @@ function dialog(url,title,width,height){
 			$(document).ready(function(){
 				$("#askquiz").click(function(){
 					if($("#xrid").val()=="" || $("#xrid").val()==0){
-						$("#alert").css("display","block");
-            			//$("#maskLayer").css("display","block");
+						// $("#alert").css("display","block");
+						$("#maskLayer").css("display","block");
+					
+		$(".zhuceAndDenglu").css("display",'block');
+						$(".denglu").show()
+						$(".zhuce").hide()	
+							window.scroll(0,0)
 						return false;
 					}
 				});
@@ -576,7 +595,10 @@ function dialog(url,title,width,height){
 				
 				if($("#xrid").val()=="" || $("#xrid").val() ==0){
 					$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+        			$(".zhuceAndDenglu").css("display",'block');
+					$(".denglu").show()
+					$(".zhuce").hide()	
+						window.scroll(0,0)
 					return false;
 				}	
 					if($("#askquiz").val() == "" || $("#askquiz").val().replace(/^\s*/g, "") == ''){
@@ -675,8 +697,11 @@ function dialog(url,title,width,height){
 		var content	=	formatStr($("#recontent"+qid).val());
 		var requid	=	$("#xrid").val();
 		if(requid ==''){ 
-			$("#alert").slideDown();
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 			$("#maskLayer").css("display","block");
+				window.scroll(0,0)
 			return false;	
 		}
 		

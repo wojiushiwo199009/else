@@ -424,8 +424,12 @@ $(document).ready(function(){
 			});
 		}else{
 			//jAlert('请先登录','温馨提示');
-			 $("#alert").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 			 $("#maskLayer").css("display","block");		
+			 window.scroll(0,0)
+
 		}
 	} 
 	//分享   
@@ -457,8 +461,11 @@ $(document).ready(function(){
 			});
 		}else{
 			//jAlert('请先登录','温馨提示');
-			 $("#alert").css("display","block");
-			 $("#maskLayer").css("display","block");		
+			 $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
+			 $("#maskLayer").css("display","block");
+			 window.scroll(0,0)		
 		}
 	}
 	//验证购买信息
@@ -466,8 +473,11 @@ $(document).ready(function(){
 		var uid = $("#huid").val();												//alert(uid); 
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 			$("#maskLayer").css("display","block");
+			window.scroll(0,0)
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.checkBuy')?>',                   

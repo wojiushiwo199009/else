@@ -37,7 +37,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 .lib_Menubox ul{float:left;}
 .lib_Menubox li{float:left;padding:0 10px;height:15px;line-height:15px;border-right:solid 1px #ccc;text-align:center;font-size:14px;color:#000;cursor:pointer;margin:11px 0;}
 .lib_Menubox li.hover{cursor:pointer;color:#000;font-size:14px;padding:0 10px;}
-.lib_Menubox .fatie{float:right;display:block;width:98px;height:38px;text-align:center;line-height:38px;color:#fff;background:#27b28b;font-size:12px;font-family:宋体;*margin-top:-17px;}
+.lib_Menubox .fatie{float:right;display:block;width:98px;height:38px;text-align:center;line-height:38px;color:#fff;background:#1890ff;font-size:12px;font-family:宋体;*margin-top:-17px;}
 
 .lib_Menubox li.select_box{width:100px;text-align:center;border-right:0;background:url(../images/sanjiao.png) no-repeat right bottom;position:relative;left:25px;z-index:10;padding:0;}
 .lib_Menubox .select_box span{cursor:pointer;display:block;width:100px;text-align:center;overflow:hidden;margin-bottom:15px;}
@@ -54,13 +54,13 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
 
 .fenye{margin:20px 0 10px 0;}
 .fenye a{display:inline-block;padding:2px 8px;margin:0 10px;font-size:14px;color:#787d82;}
-.fenye a:hover{background:#27b28b;color:#fff;}
-.fenye a.avtive{background:#27b28b;color:#fff;}
+.fenye a:hover{background:#1890ff;color:#fff;}
+.fenye a.avtive{background:#1890ff;color:#fff;}
 
 /*leftcontent*/
 /*rightcontent*/
 .con_right{float:left;width:300px;background:#fff;border:solid 1px #e6e6e6;margin-left:20px;}
-.con_right .date{width:270px;background:#27b28b;margin:15px;}
+.con_right .date{width:270px;background:#1890ff;margin:15px;}
 .con_right .date span{display:inline-block;width:107px;height:48px;text-align:center;line-height:52px;background:url(../images/shequ_img_05.png) no-repeat;margin:10px 20px;color:#242424;font-size:18px;font-weight:bold;}
 .con_right .date a{display:inline-block;color:#fff;font-size:22px;letter-spacing:5px;margin-left:30px;*position:relative;top:-5px;}
 .con_right .hot{font-size:20px;font-weight:500;margin:0 15px;color:#369897;float:left;}

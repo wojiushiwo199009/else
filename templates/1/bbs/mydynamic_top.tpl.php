@@ -1,5 +1,6 @@
 <div id="flw_header" class="mbw bbs cl" style=" background-color:#FFFFFF; border:#e6e6e6 1px solid;">
-    <div class="follow_avatar" style="position:relative;" id="follow_avatar" onmouseover="ssbb()">
+    <!-- <div class="follow_avatar" style="position:relative;" id="follow_avatar" onmouseover="ssbb()"> -->
+    <div class="follow_avatar" style="position:relative;" id="follow_avatar">
         <a class="avatar" >
 	<?php
         $uid = $_SESSION['u_uidss'];
@@ -24,7 +25,7 @@
 				
     		<span class="shadowbox_avatar"></span>
         </a>
-        <script>
+        <!-- <script>
 			function ssbb(){
 				document.getElementById('follow_avatar_absolute').style.display = "block";
 			}
@@ -33,9 +34,9 @@
 				document.getElementById('follow_avatar_absolute').style.display='none';
 			};		
 		</script>
-        <!--<div class="follow_avatar_absolute" style="display:none;" id="follow_avatar_absolute">
+        <div class="follow_avatar_absolute" style="display:none;" id="follow_avatar_absolute">
         	<a href="<?= URL('center.center_set')?>">修改头像</a>
-        </div>  -->                     
+        </div>               -->
     </div>
     <div class="broadcast" style="width:578px;_width:577px; border-left:#e6e6e6 1px solid;" >
     	<div class="broadcast_top" >

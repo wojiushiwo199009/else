@@ -64,6 +64,9 @@ body,td,th { font-family: "微软雅黑", "Microsoft Yahei", "宋体", Tahoma, S
 </head>
 
 <body id="nv_search" class="pg_forum" onkeydown="if(event.keyCode==27) return false;">
+<div class="container">
+
+<div>
 <div id="append_parent"></div><div id="ajaxwaitid"></div>
 <div id="hd">
 	<?php
@@ -72,84 +75,85 @@ body,td,th { font-family: "微软雅黑", "Microsoft Yahei", "宋体", Tahoma, S
 	?>
 
 	</div> 
+</div>
 	
 	<div id="wp" class="wp" style="margin-top:60px;"><!--国-->
-	<div  class="wp"><!--国-->
-	<?
-	TPL :: display("bbs/hd");
-	?>
+		<div  class="wp"><!--国-->
+				<?
+				TPL :: display("bbs/hd");
+				?>
 
-<div  class="cl w">
-<div class="mw">
+		<div  class="cl w">
+			<div class="mw">
 
 
-<div class="tl">
+			<div class="tl">
 
- <div class="cr"></div>
-<div class="mainbox threadlist" style="margin:0">
-<table class="tsearch" cellspacing="0" cellpadding="0" width="100%">
-<thead>
-<tr style=" background-color:#E6EAEB;">
-<th >标题</th>
-<td class="forum" width="95" style="width:95px;" >板块</td>
-<td class="author" width="130" style="width:130px;">作者</td>
-<td class="nums" width="60" style="width:60px;">回复</td>
-<td class="nums" width="60" style="width:60px;">查看</td>
-<td class="lastpost" width="130" style="width:130px;">最后更新</td>
-</tr>
-</thead>
+			 <div class="cr"></div>
+			<div class="mainbox threadlist" style="margin:0">
+			<table class="tsearch" cellspacing="0" cellpadding="0" width="100%">
+			<thead>
+			<tr style=" background-color:#E6EAEB;">
+			<th >标题</th>
+			<td class="forum" width="95" style="width:95px;" >板块</td>
+				<td class="author" width="130" style="width:130px;">作者</td>
+				<td class="nums" width="60" style="width:60px;">回复</td>
+				<td class="nums" width="60" style="width:60px;">查看</td>
+				<td class="lastpost" width="130" style="width:130px;">最后更新</td>
+				</tr>
+				</thead>
 
-<? if(V('r:key') != NULL and strlen(V('r:key') != 1)){?>
-<? $mark=DS('publics.page_list','',20,'subject like '.'\''.'%'.V('r:key').'%'.'\'','dateline desc',V('g'),'bbs_post');?>
-<? }?>
-<? if(isset($mark['info']) && !empty($mark['info'])){?>
-<? foreach($mark['info'] as $k=>$v){?>
+				<? if(V('r:key') != NULL and strlen(V('r:key') != 1)){?>
+				<? $mark=DS('publics.page_list','',20,'subject like '.'\''.'%'.V('r:key').'%'.'\'','dateline desc',V('g'),'bbs_post');?>
+				<? }?>
+				<? if(isset($mark['info']) && !empty($mark['info'])){?>
+				<? foreach($mark['info'] as $k=>$v){?>
 
-<? $plant = DS('publics._get','','bbs_forum',"fid ='".$v['fid']."'");	?>
-<? $name  = DS('publics._get','','users',"id ='".$v['authorid']."'");	?>
-<? $hflast = DS('publics._get','','bbs_postcomment',"tid='".$v['pid']."' and comment != '' order by dateline desc limit 0,1");	?>
-<? $name2  = DS('publics._get','','users',"id ='".$hflast[0]['authorid']."'");	?>
+				<? $plant = DS('publics._get','','bbs_forum',"fid ='".$v['fid']."'");	?>
+				<? $name  = DS('publics._get','','users',"id ='".$v['authorid']."'");	?>
+				<? $hflast = DS('publics._get','','bbs_postcomment',"tid='".$v['pid']."' and comment != '' order by dateline desc limit 0,1");	?>
+				<? $name2  = DS('publics._get','','users',"id ='".$hflast[0]['authorid']."'");	?>
 
-<? //var_dump($hflast)?>
-<tbody>
-<tr>
-<th>
+				<? //var_dump($hflast)?>
+				<tbody>
+				<tr>
+				<th>
 
-<a href="<?= URL('bbs.thread_detail','&fid='.$v['fid'].'&tid='.$v['pid'])?>" target="_blank"  onclick="look(<?=$v['pid']?>)">
+				<a href="<?= URL('bbs.thread_detail','&fid='.$v['fid'].'&tid='.$v['pid'])?>" target="_blank"  onclick="look(<?=$v['pid']?>)">
 
-<? 
-echo  str_replace(V('r:key'),'<strong><font color="#ff0000"><strong><font color="#ff0000">'.V('r:key').'</font></strong></font></strong>',htmlspecialchars($v['subject']));
+				<? 
+				echo  str_replace(V('r:key'),'<strong><font color="#ff0000"><strong><font color="#ff0000">'.V('r:key').'</font></strong></font></strong>',htmlspecialchars($v['subject']));
 
-?></a>
+				?></a>
 
-</th>
-<td class="forum"><a href="<?= URL('bbs.thread','&fid='.$plant[0]['fid'])?>"><?=$plant[0]['name']?></a></td>
-<td class="author">
+				</th>
+				<td class="forum"><a href="<?= URL('bbs.thread','&fid='.$plant[0]['fid'])?>"><?=$plant[0]['name']?></a></td>
+				<td class="author">
 
-<a href="<?= URL('bbsUser.user_broadcast','&id='.$v['authorid'])?>"><?=$name[0]['username']?></a>
-<br />
+				<a href="<?= URL('bbsUser.user_broadcast','&id='.$v['authorid'])?>"><?=$name[0]['username']?></a>
+				<br />
 
-<em><?=date('Y-m-d H:i',$v["dateline"])?></em>
-</td>
-<td class="nums"><strong><?=$v['alltip']?></strong> </td>
-<td class="nums"><em><?=$v['looknum']?></em></td>
-<td class="lastpost">
-<? if($hflast[0]['tid'] == NULL){
-	$tid = $v['pid'];
-	}else{
-	$tid = $hflast[0]['tid'];	
-	}?>
-<? if($hflast[0]['fid'] == NULL){
-	$fid = $v['fid'];
-	}else{
-	$fid = $hflast[0]['fid'];	
-	}?>	
-<em><a href="<?= URL('bbs2.lczda','&lcid='.$hflast[0]['id'].'&tid='.$tid.'&fid='.$fid)?>" target="_blank" onclick="look(<?=$v['pid']?>)">
+				<em><?=date('Y-m-d H:i',$v["dateline"])?></em>
+				</td>
+				<td class="nums"><strong><?=$v['alltip']?></strong> </td>
+				<td class="nums"><em><?=$v['looknum']?></em></td>
+				<td class="lastpost">
+				<? if($hflast[0]['tid'] == NULL){
+					$tid = $v['pid'];
+					}else{
+					$tid = $hflast[0]['tid'];	
+					}?>
+				<? if($hflast[0]['fid'] == NULL){
+					$fid = $v['fid'];
+					}else{
+					$fid = $hflast[0]['fid'];	
+					}?>	
+				<em><a href="<?= URL('bbs2.lczda','&lcid='.$hflast[0]['id'].'&tid='.$tid.'&fid='.$fid)?>" target="_blank" onclick="look(<?=$v['pid']?>)">
 
-<span title="<?=date('Y-m-d H:i:ss',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline'])?>"><?php 
+				<span title="<?=date('Y-m-d H:i:ss',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline'])?>"><?php 
 
-		if(date('Y',time()) != date('Y',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline'])){
-		echo date('Y',time()) - date('Y',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline']);
+						if(date('Y',time()) != date('Y',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline'])){
+						echo date('Y',time()) - date('Y',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline']);
 								echo '年前';
 							}else if(date('m',time()) != date('m',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline'])){
 								echo date('m',time()) - date('m',(int)$hflast[0]['dateline']==NULL?$v['dateline']:$hflast[0]['dateline']);
@@ -169,77 +173,78 @@ echo  str_replace(V('r:key'),'<strong><font color="#ff0000"><strong><font color=
 							}else {
 								echo '刚刚';
 								}									
-						?></span></a></em>
-                <br />
-<? 
-if($hflast[0]['authorid'] == NULL){
-	$idiid = $v['authorid'];
-	}else{
-	$idiid = $hflast[0]['authorid'];	
-		}
-?>				
-<cite><a href="<?= URL('bbsUser.user_broadcast','&id='.$idiid)?>"><?=$name2[0]['username']==NULL?$name[0]['username']:$name2[0]['username']?></a></cite>
-</td>
-</tr>
-</tbody>
-	
-	   	<? }?>				
-	    <? }else{?>
-			<tbody><tr><th colspan="6">对不起，没有找到匹配结果。</th></tr></tbody>
-		<? }?>
+				?></span></a></em>
+	                <br />
+				<? 
+				if($hflast[0]['authorid'] == NULL){
+					$idiid = $v['authorid'];
+					}else{
+					$idiid = $hflast[0]['authorid'];	
+						}
+				?>				
+				<cite><a href="<?= URL('bbsUser.user_broadcast','&id='.$idiid)?>"><?=$name2[0]['username']==NULL?$name[0]['username']:$name2[0]['username']?></a></cite>
+				</td>
+				</tr>
+				</tbody>
+					
+					   	<? }?>				
+					    <? }else{?>
+							<tbody><tr><th colspan="6">对不起，没有找到匹配结果。</th></tr></tbody>
+						<? }?>
 
-</table>
-</div>
+				</table>
+				</div>
 				<div class="pages" style="margin:20px 0px 20px 40px;">
 					<?= !empty($mark['info'])?$mark['pagehtml']:''?>
 				</div>
 
-</div>        
-</div>
-</div>	
+			</div>        
+			</div>
+		</div>	
 
+		</div>
+		<div>
+<?php TPL :: display('footer');?>
 </div>
-</div>
+	</div>
 
 
 
                 
 
-<style>
-.forumlist table, .threadlist table,.pages_btns{border-right:none;}
-.threadlist td.lastpost{ width:120px;}
-td.nums{text-align:center;}
-.threadlist{ border-top:none;}
-.pages_btns{ border-bottom:1px solid #DFDFDF;}
+	<style>
+	.forumlist table, .threadlist table,.pages_btns{border-right:none;}
+	.threadlist td.lastpost{ width:120px;}
+	td.nums{text-align:center;}
+	.threadlist{ border-top:none;}
+	.pages_btns{ border-bottom:1px solid #DFDFDF;}
 
-.tsearch tr td, .tsearch tr th{ height:52px; font-size:15px; color:#646464 !important; padding:0 5px 0 0;}
-.tsearch tr th{padding:0 10px;}
-.tsearch a{ color:#646464 !important; text-decoration:none;}
-.tsearch a:hover{text-decoration:underline;}
-.tsearch thead tr td,.tsearch thead tr th{ height:40px !important;}
+	.tsearch tr td, .tsearch tr th{ height:52px; font-size:15px; color:#646464 !important; padding:0 5px 0 0;}
+	.tsearch tr th{padding:0 10px;}
+	.tsearch a{ color:#646464 !important; text-decoration:none;}
+	.tsearch a:hover{text-decoration:underline;}
+	.tsearch thead tr td,.tsearch thead tr th{ height:40px !important;}
 
 
-</style>
-<script>
-									function look(pid){
-										//alert()
-										var xmlhttp;
-										if (window.XMLHttpRequest){
-													xmlhttp=new XMLHttpRequest();
-										}else{
-													xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-										 }xmlhttp.onreadystatechange=function(){
-													if (xmlhttp.readyState==4 && xmlhttp.status==200){
-													
-													}
-										}
-											xmlhttp.open("GET","<?=URL('bbs2.indexlook','&tid=')?>"+pid,true);
-											xmlhttp.send();	
-										}
-								</script>	
-<div style="margin-top:50px">
-<?php TPL :: display('footer');?>
-</div>
+	</style>
+	<script>
+		function look(pid){
+			//alert()
+			var xmlhttp;
+			if (window.XMLHttpRequest){
+						xmlhttp=new XMLHttpRequest();
+			}else{
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			 }xmlhttp.onreadystatechange=function(){
+						if (xmlhttp.readyState==4 && xmlhttp.status==200){
+						
+						}
+			}
+				xmlhttp.open("GET","<?=URL('bbs2.indexlook','&tid=')?>"+pid,true);
+				xmlhttp.send();	
+			}
+	</script>	
+
 <script type="text/javascript">
 	scrolltop_obj 	= new goto_top();
 	scrolltop_obj.init();
@@ -366,5 +371,6 @@ scrolltop_obj.init();
 </script>
 
 <script src="http://tongji.meizu.com/js/flow.js" type="text/javascript" charset="utf-8"></script>
+</div>
 </body>
 </html>

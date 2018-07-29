@@ -3122,7 +3122,7 @@ li.items_setlist .itemicon_setlist{position:absolute;right:18px;top:34px;display
 
 
 /*  首页 */
-.signin_expand_2{width:268px;height:62px;line-height:52px;font-size:16px;border:1px solid #27b28b;border-radius:2px 2px 2px 2px;background-color:#27b28b;color:#FFFFFF;overflow:hidden;cursor:pointer;}
+.signin_expand_2{width:268px;height:62px;line-height:52px;font-size:16px;border:1px solid #1890ff;border-radius:2px 2px 2px 2px;background-color:#1890ff;color:#FFFFFF;overflow:hidden;cursor:pointer;}
 .week_ban{display:inline-block;width:92px;height:50px; margin:5px 5px 0 22px; background:url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/main_icon.png") no-repeat scroll -107px -221px;_background-image:url("http://bbs.res.meizu.com/resources/php/bbs/static/image/common/main_icon.gif"); color:#000000; font-size:18px; padding:0 0 0 26px; _margin:5px 5px 0 10px; float:left; }
 .btncont_signin_2{ float:left; font-size:22px;margin:5px 0 0 15px; width:92px; text-align:center; color:#ffffff; }
 .hassignin_expand{color:#56af45;background-color:#43b56b;border:1px solid #e3e5e6;color:#56af45;}

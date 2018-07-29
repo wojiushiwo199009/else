@@ -143,4 +143,4 @@ function showthreadclass() {
 	simulateSelect('typeid');
 }
 
-loadcss('forum_moderator');
+// loadcss('forum_moderator');
