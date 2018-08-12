@@ -282,9 +282,11 @@ var _hmt = _hmt || [];
 				</div> -->
 				<input type="hidden" name="huid" id="huid" value="<?= $_SESSION['xr_id']?>">
 				<input type="hidden" name="url" id="url" value="<?= $_SERVER['HTTP_HOST']?>">
-				<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;">
+				<div class="lib_Contentbox lib_tabborder" style="overflow:hidden;padding-top:10px;">
 					<div id="con_one_1" class="hover n-index-course">
-						<h3 class='con-title'>热门推荐</h3>
+						<div class='floor'>
+							<h3 class='con-title'>热门推荐</h3>
+						</div>
 						<div class="tab_content n-course-box w-content">
 							<ul>
 								<?
@@ -324,7 +326,9 @@ var _hmt = _hmt || [];
 						</div>
 					</div>
 					<div id="con_one_2" class="hover n-index-course">
-						<h3 class='con-title'>人气最高</h3>
+						<div class='floor'>
+							<h3 class='con-title'>人气最高</h3>
+						</div>
 						<div class="tab_content n-course-box w-content">
 							<ul>
 								<?
@@ -363,7 +367,9 @@ var _hmt = _hmt || [];
 						</div>
 					</div>
 					<div id="con_one_3" class="hover n-index-course">
-						<h3 class='con-title'>项目实战</h3>
+						<div  class='floor'>
+							<h3 class='con-title'>项目实战</h3>
+						</div>
 						<div class="tab_content n-course-box w-content">
 							<ul>
 								<?
@@ -402,7 +408,9 @@ var _hmt = _hmt || [];
 						</div>
 					</div>
 					<div id="con_one_4" class="hover n-index-course">
-						<h3 class='con-title'>仙人指路</h3>
+						<div class='floor'>
+							<h3 class='con-title'>仙人指路</h3>
+						</div>
 						<div class="tab_content n-course-box w-content">
 							<ul>
 								<?
@@ -441,7 +449,9 @@ var _hmt = _hmt || [];
 						</div>
 					</div>
 					<div id="con_one_5" class="hover n-index-course">
-						<h3  class='con-title'>企业之声</h3>
+						<div class='floor'>
+							<h3  class='con-title'>企业之声</h3>
+						</div>
 						<div class="tab_content n-course-box w-content">
 							<ul>
 								<?

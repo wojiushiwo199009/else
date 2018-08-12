@@ -405,7 +405,7 @@ function dialog(url,title,width,height){
 	});
 }
 </script>
-    <div style="position:fixed;bottom:20%;right:0px;z-index:100;cursor:pointer;"><!--<img src="images/biji.png" onclick="dialog('<?= URL("courSystem")?>','做笔记',400,300)"/>--><!--<img src="images/xuer_img_03.jpg" id="acfatie" />--><a href="javascript:;" style="color:#27b28b;font-size:14px;display:block;" onclick="goExam(<?= $cinfo[0]['id']?>)"><img src="images/xuer_img_03.png" /></a><img src="images/xuer_img_05.png" id="acbiji" /></div>
+    <div style="position:fixed;bottom:20%;right:0px;z-index:100;cursor:pointer;"><!--<img src="images/biji.png" onclick="dialog('<?= URL("courSystem")?>','做笔记',400,300)"/>--><!--<img src="images/xuer_img_03.jpg" id="acfatie" />--><a href="javascript:;" style="color:#1890ff;font-size:14px;display:block;" onclick="goExam(<?= $cinfo[0]['id']?>)"><img src="images/xuer_img_03.png" /></a><img src="images/xuer_img_05.png" id="acbiji" /></div>
     <div class="biji" id="biji" style="display:none;">
         <div class="tit"><span>做笔记</span><i class="close"><img id="guan" src="images/one_img_03.png"></i><div class="clearfloat"></div></div>
         <form>

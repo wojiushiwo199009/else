@@ -65,12 +65,39 @@
 .leftnav-box ul dl.n-course-play dd em i.now-play{color:#ff6400}
 
 .n-icon-live{padding:1px 5px;background:#ff0000;color:#fff;}
+.floor{
+	margin: 0 auto;
+	height: 45px;
+}
 .con-title{
-	margin: 20px 20px 0 0px;
-    text-align: left;
-    border-top: 1px solid #dedede;
-	padding-top: 20px;
-	color: #303332;
+    position: relative;
+    width: 150px;
+    height: 45px;
+    font-size: 28px;
+    font-family: 'fzzzh';
+    font-weight: normal;
+    text-align: center;
+    line-height: 45px;
+    padding: 0 50px;
+	margin: 0 auto 20px;
+	margin-top: 20px;
+    overflow: hidden;
+    color: #222;
+}
+.con-title::before{
+	left: 0;
+}
+.con-title::after{
+	right: 0;
+}
+.con-title:before, .con-title:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    display: block;
+    background: #222;
+    top: 19px;
 }
 /*** 学习流程图 ***/
 .n-index-flowchart{background:#fff;padding:20px 0 30px;}

@@ -288,7 +288,9 @@ var _hmt = _hmt || [];
         }else{
             //jAlert('请先登录','温馨提示');  
 			 $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();		
+       $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()			
         }
     }
    function share(systemid,catid){
@@ -297,7 +299,9 @@ var _hmt = _hmt || [];
 		$("#fenxiang_con").fadeIn();
 		$("#maskLayer").css("display","block");
 	}else{
-		$("#alert").slideDown();
+		$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 		 $("#maskLayer").css("display","block");	
 	}
 }
@@ -306,7 +310,9 @@ var _hmt = _hmt || [];
         if(uid=='' ||　uid ==0){
             //jAlert('请先登录','温馨提示');
 			 $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+        $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
         }else{
             $.ajax({  
                 url:'<?= URL('courSystem.checkBuy')?>',
@@ -653,12 +659,16 @@ function goExam(coid){
 
 function test(){
 	$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+       $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 }
 
 function jAler(){
 	$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+    $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 }
 function buy(t){
 	if(t==1){

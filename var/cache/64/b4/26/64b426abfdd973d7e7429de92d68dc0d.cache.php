@@ -1,7 +1,7 @@
 <?php
 //This is a cache file, Don't modify me!
-//Created: Jul 29, 2018, 15:23
-//Identify: 709a95c2cac0f86d255a740ff777825e
+//Created: Aug 12, 2018, 17:05
+//Identify: 55c1e4249dbd05ad28e3b542fb43f6e7
 
 if(!defined("IN_APPLICATION")) { exit("Access Denied"); }
 
@@ -16,7 +16,7 @@ $__cache_data = array (
       'level' => 0,
       'log' => '',
     ),
-    'timeout' => 1532935411,
+    'timeout' => 1534151118,
     'ttl' => 86400,
   ),
 );

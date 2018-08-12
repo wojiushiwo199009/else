@@ -251,7 +251,9 @@ var _hmt = _hmt || [];
 				var uid	=	$('#xr_uid').val();
 				//alert(uid);
 				if(uid == '' || uid ==0){
-					$("#alert").slideDown();
+					$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 					$("#maskLayer").css("display","block");	
 				}else{
 					$.ajax({

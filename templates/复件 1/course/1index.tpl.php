@@ -255,9 +255,13 @@ $(document).ready(function(){
                 }
             });
         }else{
+			console.log(3);
+			
             //jAlert('请先登录','温馨提示');
 			 $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();	
+        $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
         }
     } 
     
@@ -267,7 +271,9 @@ $(document).ready(function(){
         if(uid=='' || uid == 0){
            // jAlert('请先登录','温馨提示');
 		   $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+        $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
         }else{
             $.ajax({  
                 url:'<?= URL('courSystem.checkBuy')?>',                   

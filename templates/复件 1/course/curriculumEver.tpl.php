@@ -204,7 +204,9 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+       $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 		}else{
 			window.location.href="<?= URL('member.exam_detail','&coid=')?>"+coid;	
 		}	
@@ -214,7 +216,9 @@ var _hmt = _hmt || [];
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
 			$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+        $(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 		}else{
 			$.ajax({  
 				url:'<?= URL('courSystem.comment_video')?>',                   
@@ -317,7 +321,9 @@ var _hmt = _hmt || [];
 		var uid = $("#huid").val();												//alert(uid); 
 		if(uid=='' || uid == 0){
 		   // jAlert('请先登录','温馨提示');
-			$("#alert").css("display","block");
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 			$("#maskLayer").css("display","block");
 		}else{
 			$.ajax({  
@@ -512,7 +518,9 @@ function dialog(url,title,width,height){
 				$("#bbtn").click(function(){
 					if($("#xrid").val()==""){
 						$("#maskLayer").attr("style","display:block");
-        				$("#alert").slideDown();
+        				$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 						return false;
 					}else{
 						var uid 		= 	$("#xrid").val();
@@ -576,7 +584,9 @@ function dialog(url,title,width,height){
 				
 				if($("#xrid").val()=="" || $("#xrid").val() ==0){
 					$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+					$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 					return false;
 				}	
 					if($("#askquiz").val() == "" || $("#askquiz").val().replace(/^\s*/g, "") == ''){
@@ -675,7 +685,9 @@ function dialog(url,title,width,height){
 		var content	=	formatStr($("#recontent"+qid).val());
 		var requid	=	$("#xrid").val();
 		if(requid ==''){ 
-			$("#alert").slideDown();
+			$(".zhuceAndDenglu").css("display",'block');
+			$(".denglu").show()
+			$(".zhuce").hide()	
 			$("#maskLayer").css("display","block");
 			return false;	
 		}

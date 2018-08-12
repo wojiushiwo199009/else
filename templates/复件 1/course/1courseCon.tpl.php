@@ -267,9 +267,13 @@ function collect(systemid,catid){
 			}
 		});
 	}else{
+		console.log(8);
+		
 		//jAlert('请先登录','温馨提示');
-		 $("#alert").slideDown();
 		 $("#maskLayer").css("display","block");	
+		 $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
 	}
 }
 function share(systemid,catid){
@@ -278,7 +282,9 @@ function share(systemid,catid){
 		$("#fenxiang_con").fadeIn();
 		$("#maskLayer").css("display","block");
 	}else{
-		$("#alert").slideDown();
+		$(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
 		 $("#maskLayer").css("display","block");	
 	}
 }
@@ -287,7 +293,9 @@ function checkBuy(systemid,pid,coid,catid,type){
 	if(uid=='' || uid == 0){
 	   // jAlert('请先登录','温馨提示');
 		$("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();
+       $(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
 	}else{
 		$.ajax({  
 			url:'<?= URL('courSystem.checkBuy')?>',                   

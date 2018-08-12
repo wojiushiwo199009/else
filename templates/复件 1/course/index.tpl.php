@@ -271,7 +271,9 @@ var _hmt = _hmt || [];
         }else{
             //jAlert('请先登录','温馨提示');
 			 $("#maskLayer").attr("style","display:block");
-        $("#alert").slideDown();	
+        	$(".zhuceAndDenglu").css("display",'block');
+		$(".denglu").show()
+		$(".zhuce").hide()	
         }
     } 
     

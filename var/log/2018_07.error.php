@@ -3948,3 +3948,162 @@
 [2018-07-29 22:55:25]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
 [2018-07-29 22:55:25]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
 ====================/index.php?m=member.xmember&tid=8 End====================
+
+====================/index.php Start====================
+[2018-07-31 21:02:27]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Table 'study.xsmart_skins' doesn't exist. SQL:SELECT * FROM xsmart_skins ORDER BY `sort_num` , `skin_id`	
+====================/index.php End====================
+
+====================/index.php?m=member.xmember Start====================
+[2018-07-31 21:16:20]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:16:20]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember End====================
+
+====================/index.php?m=member.xmember&tid=1&ctype=2 Start====================
+[2018-07-31 21:16:22]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:16:22]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=1&ctype=2 End====================
+
+====================/index.php?m=member.xmember&tid=1&ctype=3 Start====================
+[2018-07-31 21:16:24]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:16:24]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=1&ctype=3 End====================
+
+====================/index.php?m=member.xmember&tid=2 Start====================
+[2018-07-31 21:16:26]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:16:26]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=2 End====================
+
+====================/index.php?m=member.xmember&tid=1 Start====================
+[2018-07-31 21:18:08]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:18:08]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=1 End====================
+
+====================/index.php?m=member.xmember&tid=3 Start====================
+[2018-07-31 21:18:13]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:18:13]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=3 End====================
+
+====================/index.php?m=member.xmember Start====================
+[2018-07-31 21:24:59]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:24:59]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember End====================
+
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 Start====================
+[2018-07-31 21:28:40]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:select * from xsmart_users where id=	
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 End====================
+
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 Start====================
+[2018-07-31 21:30:33]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:select * from xsmart_users where id=	
+====================/index.php?m=courSystem.courseCon&classid=17&sid=15&catid=2 End====================
+
+====================/index.php?m=courSystem.curriculumEver&classid=17&sid=15&pid=33&id=32&catid=2 Start====================
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and systemid=15 and type=1' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and systemid=15 and type=1	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and pid=33 and type=2' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and pid=33 and type=2	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=35 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=35 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=36 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=36 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=37 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=37 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=38 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=38 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=40 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=40 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=42 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=42 and type=3	
+[2018-07-31 21:30:52]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and sourceType=1 and coid=45 and type=3' at line 1. SQL:select * from xsmart_integral where userID =  and sourceType=1 and coid=45 and type=3	
+====================/index.php?m=courSystem.curriculumEver&classid=17&sid=15&pid=33&id=32&catid=2 End====================
+
+====================/index.php?m=member.xmember Start====================
+[2018-07-31 21:32:09]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:32:09]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember End====================
+
+====================/index.php?m=member.xmember&tid=6 Start====================
+[2018-07-31 21:32:14]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:32:14]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=6 End====================
+
+====================/index.php?m=member.xmember Start====================
+[2018-07-31 21:33:03]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:03]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember End====================
+
+====================/index.php?m=member.xmember&tid=2 Start====================
+[2018-07-31 21:33:07]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:07]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=2 End====================
+
+====================/index.php?m=member.xmember&tid=3 Start====================
+[2018-07-31 21:33:09]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:09]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=3 End====================
+
+====================/index.php?m=member.xmember&tid=3 Start====================
+[2018-07-31 21:33:14]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:14]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=3 End====================
+
+====================/index.php?m=member.xmember&tid=3 Start====================
+[2018-07-31 21:33:19]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:19]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=3 End====================
+
+====================/index.php?m=member.xmember&tid=5 Start====================
+[2018-07-31 21:33:21]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:21]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=5 End====================
+
+====================/index.php?m=member.xmember&tid=5 Start====================
+[2018-07-31 21:33:29]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:29]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=5 End====================
+
+====================/index.php?m=member.xmember&tid=6 Start====================
+[2018-07-31 21:33:33]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:33]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=6 End====================
+
+====================/index.php?m=member.xmember&tid=7 Start====================
+[2018-07-31 21:33:36]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:36]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=7 End====================
+
+====================/index.php?m=member.xmember&tid=8 Start====================
+[2018-07-31 21:33:39]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:39]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=8 End====================
+
+====================/index.php?m=member.xmember Start====================
+[2018-07-31 21:33:46]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:46]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember End====================
+
+====================/index.php?m=member.xmember&tid=1&ctype=2 Start====================
+[2018-07-31 21:33:48]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. SQL:select count(*) as num from xsmart_question where coid in ()	
+[2018-07-31 21:33:48]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') order by inputtime desc limit 0,10' at line 1. SQL:select * from xsmart_question where coid in () order by inputtime desc limit 0,10	
+====================/index.php?m=member.xmember&tid=1&ctype=2 End====================
+
+====================/admin.php?m=mgr/admin.login Start====================
+[2018-07-31 21:34:35]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+[2018-07-31 21:34:35]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+====================/admin.php?m=mgr/admin.login End====================
+
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 Start====================
+[2018-07-31 21:34:43]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+[2018-07-31 21:34:44]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 End====================
+
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 Start====================
+[2018-07-31 21:34:50]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+[2018-07-31 21:34:50]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. SQL:Select * From xsmart_admin_group Where gid=	
+====================/admin.php?m=mgr/admin.chklogin&ajax=1 End====================
+
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 Start====================
+[2018-07-31 21:34:57]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT count(*) as num FROM `xsmart_course` as a LEFT JOIN xsmart_course_data as b ON a.id = b.id  where 1=1 and a.catid in (1) 	
+[2018-07-31 21:34:57]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT * FROM xsmart_course as a LEFT JOIN xsmart_course_data as b ON a.id = b.id where 1=1 and a.catid in (1)  order by a.id desc limit 0,200	
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 End====================
+
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1&router=classes/0/0 Start====================
+[2018-07-31 21:35:21]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT count(*) as num FROM `xsmart_course` as a LEFT JOIN xsmart_course_data as b ON a.id = b.id  where 1=1 and a.catid in (1) 	
+[2018-07-31 21:35:21]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT * FROM xsmart_course as a LEFT JOIN xsmart_course_data as b ON a.id = b.id where 1=1 and a.catid in (1)  order by a.id desc limit 0,200	
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1&router=classes/0/0 End====================
+
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 Start====================
+[2018-07-31 21:36:16]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT count(*) as num FROM `xsmart_course` as a LEFT JOIN xsmart_course_data as b ON a.id = b.id  where 1=1 and a.catid in (1) 	
+[2018-07-31 21:36:16]:	XXXSMART	0.2	12345	[db]	[error]	[execute]query error:Unknown column 'a.catid' in 'where clause'. SQL:SELECT * FROM xsmart_course as a LEFT JOIN xsmart_course_data as b ON a.id = b.id where 1=1 and a.catid in (1)  order by a.id desc limit 0,200	
+====================/admin.php?m=mgr/modelForm.infoList&modelid=4&catid=1 End====================
