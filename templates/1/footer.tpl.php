@@ -18,7 +18,7 @@
             </ul>
             <div class="clearfloat"></div>
             <?
-                $class_list = DS('publics._get','','article_class',' parentid = 7 limit 5');
+                $class_list = DS('publics._get','','article_class',' parentid = 7 limit 6');
                 if(!empty($class_list)){
                     foreach($class_list as $klist => $vlist){
             ?>

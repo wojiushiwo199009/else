@@ -9,12 +9,16 @@
 			
 			<ul> 
 				<?php 
-				$article_list = DS('publics._get','','article_class',' parentid = 0 order by lmorder asc limit 5');
+				$article_list = DS('publics._get','','article_class',' parentid = 0 order by lmorder asc limit 6');
 				if($article_list){    
 					foreach($article_list as $key => $val){
 						if($val['classname'] == '测评'){
 							?> 
 							<li><a href="javascript:;" onclick="test1()">测评</a></li>
+							<?php		
+						}else if($val['classname'] == '解决方案'){
+							?> 
+							<li><a href="javascript:;" onmouseenter="showmenu()">解决方案</a></li>
 							<?php		
 						}else{
 							?>
@@ -111,6 +115,16 @@
 				<a href="javascript:;" id="sosuo" onclick="sousuo()"><img src="images/search.png" class="search_btn"/></a>
 			</div>
 			<script type="text/javascript">
+				function showmenu() {
+					$(".menu-dropdown").addClass('animate')
+					$(".menu-dropdown").css({
+						'width':'700px',
+						'height':'400px',
+						'right':'0px',
+						'top':'77px,'
+						'z-index':1
+					})
+				}
 				function test1(){
 					var uid = $("#xr_uid").val();
 					

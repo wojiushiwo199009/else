@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/foot.css?2017040822" /> 
 	<link href="/css/jquery.alerts.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
+
 	<meta name="baidu-tc-verification" content="bbf97a97d2668dce1ed093cba54014e6" />
 
 <!--  20170408 yinzj4
@@ -29,6 +30,8 @@
 <script src="/js/jquery.alerts.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jquery1.42.min.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="js/menu/base-all.js"></script>		
+<script type="text/javascript" src="js/menu/common-header.js"></script>		
 <script type="text/javascript"> 
 	var InterValObj; //timer变量，控制时间 
 	var count = 60; //间隔函数，1秒执行 
@@ -137,11 +140,14 @@
 <link rel="stylesheet" type="text/css" href="css/index1.css" /> 
 <link rel="stylesheet" media="screen" type="text/css" href="css/new-index.css"/>
 <link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu/global.css" /> 
+<link rel="stylesheet" type="text/css" href="css/menu/common-header9.css" /> 
 <style>
 	.swiper-container {
 		width: 100%;
 		position:relative;
-		top:41px;
+		/* top:41px; */
+		top:-4px;
 		/*background:url(images/zr.gif) no-repeat center center;*/
 	}
 	.swiper-wrapper{
@@ -186,6 +192,77 @@ var _hmt = _hmt || [];
 <body>
 
 	<div class="container">
+		<div class='ali-common-header-inner'>
+		<ul class="menu item pull-left" id='J_common_header_menu' data-spm='201'>
+			<li class="top-menu-item" has-dropdown="true" menu-type="product" data-spm-click="">
+				<span class="menu-hd">
+				</span>
+          <div class="menu-dropdown common-header-clearfix">
+            <div class="menu-dropdown-inner">
+			  <div class="menu-dropdown-sidebar pull-left">
+			  	<?
+				  				$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+							?>
+								<a data-spm-click="gostr=/aliyun;locaid=" class="active common-header-clearfix" sidebar-type="<?=$val['linkageid']?>" href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><span class="icon pull-right">
+                  </span></a>
+								
+							<?
+						}
+					}
+					?>
+			  </div>
+
+              <div class="menu-dropdown-content">
+                <!-- 下拉右侧内容 -->
+                <!-- 模板一： -->
+
+				<?
+								$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+				?>
+
+						<div style="display: block;background-image:url(./images/ecs-bg-x1.jpg);"
+                class="item-sub ecs-bg tpl1 product-bg-common common-header-clearfix" sidebar-type="<?=$val['linkageid']?>">
+			                 <div class="menu-dropdown-bd menu-dropdown-split-line">
+			                    <div class="menu-dropdown-down-item">
+
+									<?
+									$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']) ?>
+										<?
+
+										if($c_list){
+											foreach($c_list as $ck => $cv){
+												?>
+												<a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>">
+													<h4><?=$cv['name']?></h4>
+												</a>
+												<?
+											}
+										}
+										?>
+									</div>
+									
+								</div>
+							</div>
+							<?
+						}
+					}
+				?>
+
+              </div>
+            </div>
+          </div>
+        </li>
+		</ul>
+	</div>
+
+
+<!-- 
 		<div class="menuHolder">
 				<div class="menuWindow">
 					<ul class="p1">
@@ -220,7 +297,7 @@ var _hmt = _hmt || [];
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 		<img src="images/zr.gif" style="display:none;"/>
 		<?php TPL :: display("header");?>
 		<div class="swiper-container">

@@ -10,13 +10,15 @@
 <link rel="stylesheet" type="text/css" href="css/head.css" /> 
 <link rel="stylesheet" type="text/css" href="css/foot.css" /> 
 <link href="css/jquery.alerts.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/circle-menu.css" /> 
+<!-- <link rel="stylesheet" type="text/css" href="css/circle-menu.css" />  -->
 <!-- 滚动图片 -->
 <!--  <script type="text/javascript" src="js/jQuery.v1.8.3-min.js"></script>-->
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script src="/js/jquery.alerts.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/zzsc.js"></script>		
+<script type="text/javascript" src="js/menu/base-all.js"></script>		
+<script type="text/javascript" src="js/menu/common-header.js"></script>	
 <!-- 纵向导航 -->
 <script type="text/javascript">
 $(document).ready(function(){
@@ -151,6 +153,8 @@ $(document).ready(function(){
 <link rel="stylesheet" type="text/css" href="css/course_content.css" />
 <link rel="stylesheet" type="text/css" href="css/course.css" />
 <link rel="stylesheet" media="screen" type="text/css" href="css/new-index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/menu/global.css" /> 
+<link rel="stylesheet" type="text/css" href="css/menu/common-header9.css" /> 
  <!--百度异步统计代码-->
  <script>
 var _hmt = _hmt || [];
@@ -164,7 +168,76 @@ var _hmt = _hmt || [];
 </head>
 <body>
 <div class="container">
-	<div class="menuHolder" style="top:58px;">
+<div class='ali-common-header-inner'>
+		<ul class="menu item pull-left" id='J_common_header_menu' data-spm='201'>
+			<li class="top-menu-item" has-dropdown="true" menu-type="product" data-spm-click="">
+				<span class="menu-hd">
+				</span>
+          <div class="menu-dropdown common-header-clearfix">
+            <div class="menu-dropdown-inner">
+			  <div class="menu-dropdown-sidebar pull-left">
+			  	<?
+				  				$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+							?>
+								<a data-spm-click="gostr=/aliyun;locaid=" class="active common-header-clearfix" sidebar-type="<?=$val['linkageid']?>" href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><span class="icon pull-right">
+                  </span></a>
+								
+							<?
+						}
+					}
+					?>
+			  </div>
+
+              <div class="menu-dropdown-content">
+                <!-- 下拉右侧内容 -->
+                <!-- 模板一： -->
+
+				<?
+								$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+				?>
+
+						<div style="display: block;background-image:url(./images/ecs-bg-x1.jpg);"
+                class="item-sub ecs-bg tpl1 product-bg-common common-header-clearfix" sidebar-type="<?=$val['linkageid']?>">
+			                 <div class="menu-dropdown-bd menu-dropdown-split-line">
+			                    <div class="menu-dropdown-down-item">
+
+									<?
+									$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']) ?>
+										<?
+
+										if($c_list){
+											foreach($c_list as $ck => $cv){
+												?>
+												<a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>">
+													<h4><?=$cv['name']?></h4>
+												</a>
+												<?
+											}
+										}
+										?>
+									</div>
+									
+								</div>
+							</div>
+							<?
+						}
+					}
+				?>
+
+              </div>
+            </div>
+          </div>
+        </li>
+		</ul>
+	</div>
+
+	<!-- <div class="menuHolder" style="top:58px;">
 				<div class="menuWindow">
 					<ul class="p1">
 						<li class="s1"><a href="javascript:;">菜单</a>
@@ -199,7 +272,7 @@ var _hmt = _hmt || [];
 						</li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 <? TPL :: display('header1');?>
 <!--start_banner-->
 <!--<div style="background:url(images/kecheng_img_08.png) center top no-repeat #f4f4f4;width:100%;margin:0 auto;">
