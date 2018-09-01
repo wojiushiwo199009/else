@@ -17,6 +17,7 @@ a:active {outline: none;star:expression(this.onFocus=this.blur());}
     min-height: calc(100% - 320px);
     padding-bottom: 340px;
     background: #f0f8ff;
+    margin-top: 0;
 }
 
 /*footer*/

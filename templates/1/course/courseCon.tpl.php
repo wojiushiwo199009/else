@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
 
 .fenxiang_con .close {
     background: #fff none repeat scroll 0 0;
-    border: 1px solid #1890ff;
+    border: 1px solid #f5222d;
     border-radius: 50%;
     cursor: pointer;
     float: right;

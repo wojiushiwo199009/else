@@ -206,7 +206,7 @@
 .n-course-box ul li .course-hover-btn{padding:10px 0;height:32px;overflow:hidden;width: calc(100% - 20px);position: absolute;bottom: 0;}
 .n-course-box ul li .course-hover-btn .study-btn{float:left;width:90px;}
 .n-course-box ul li .course-hover-btn .det-btn{float:right;width:90px;}
-.n-course-box ul li .course-hover-btn span a{display:block;height:30px;line-height:30px;background:#1eaee3;text-align:center;font-size:14px;color:#fff;transition:all 0.2s ease;}
+.n-course-box ul li .course-hover-btn span a{display:block;height:30px;line-height:30px;background:#1890ff;text-align:center;font-size:14px;color:#fff;transition:all 0.2s ease;}
 .n-course-box ul li .course-hover-btn span.det-btn a{background:#ff3e2e;color:#fff;}
 
 /*** 首页app模块 ***/

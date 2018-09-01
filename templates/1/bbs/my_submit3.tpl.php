@@ -63,7 +63,7 @@
                     <div class="cname" style="margin-left:10px;margin-right:8px;" >选择版块</div>
                     <div class="select_box select_box_2" style="float:left; position:relative;">
                     <div class="box_menu" value="0"  vl="0" style="color:#1daeed;" filter="true" >全部<span class="arrow_dark"></span></div>
-                    <div class="son_menu" style="position:absolute; display:none;width:138px;height:320px;overflow-y:scroll;">
+                    <div class="son_menu" style="position:absolute; display:none;width:146px;height:320px;overflow-y:scroll;">
 						<ul>
 							<li value="0" vl="" class="one" >全部</li>
                             <li value="6"   vl="6" >售前售后服务</li>

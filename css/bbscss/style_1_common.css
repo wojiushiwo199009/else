@@ -606,12 +606,14 @@ Last Modify:	Pony
 #toptb a.showmenu { padding-right: 15px; }
 #toptb a.hover { background-color: #FFF; }
 #toptb .pipe { float: left; display: none; }
-#hd { border-bottom: 0 solid #C2D5E3; margin-top: 42px; }
+#hd { border-bottom: 0 solid #C2D5E3; }
 #diy-tg { float: right; width: 55px; background: url(http://bbs.res.meizu.com/resources/php/bbs/static/image/diy/panel-toggle.png) no-repeat 100% 1px; text-indent: -9999px; overflow: hidden; }
 #diy-tg_menu { position: absolute; margin: -2px 0 0 -1px; padding: 6px 0; width: 72px; height: 48px; background: url(http://bbs.res.meizu.com/resources/php/bbs/static/image/diy/panel-toggle-drop.png) no-repeat 0 0; text-align: center; }
 #diy-tg_menu a { float: none !important; }
 #toptb #diy-tg_menu { margin: -6px 0 0 -10px; }
-
+#hd .wp{
+	margin-top: 42px;
+}
 .hdc { height: 80px; background: url(http://bbs.res.meizu.com/resources/php/bbs/static/image/common/headbg.jpg) repeat-x 0 0;}
 .ie6 .hdc { height: 80px; }
 #hd h2 { padding: 0 20px 8px 0; float: left; }
@@ -1869,8 +1871,11 @@ a.r_bbs .hideLeft{width:0px;}
 	bottom: 0 !important;
 	margin-top:0px !important;
 }
+.container>div#wp{
+	position: relative !important;
+}
 #nv_home .container>div:nth-child(3){
-	    position: absolute !important;
+	/* position: absolute !important; */
     left: 0 !important;
     right: 0 !important;
 	bottom: 0 !important;
@@ -2103,7 +2108,7 @@ a:hover{ text-decoration:none;}
 .bluebtn{background-color:#1890ff;border:1px solid #1890ff;border-radius:2px 2px 2px 2px;color:#FFF ;cursor:pointer;}
 .bluebtn span{color:#FFF}
 a.bluebtn{color:#FFFFFF !important;display:inline-block;border-radius: 4px;}
-a.bluebtn:hover{background-color:#2799db;border:1px solid #309ddb;color:#FFF; text-decoration:none;}
+a.bluebtn:hover{background-color:#40a9ff;border:1px solid #40a9ff;color:#FFF; text-decoration:none;}
 a.bluebtn button,a.bluebtn input{background:none;border:none;color:#FFFFFF;cursor:pointer;height:36px;}
 a.bluebtn button{
 border-radius: 4px;
@@ -2163,7 +2168,7 @@ border-radius:4px;
 .plate_mn .plateintro .cont_pintro{padding:0px;}
 .boxspacing_10{height:10px;background-color:#F2F2F2;}
 .bm_pintro a{margin-right:14px;color:#515151;}
-.plate_mn{box-shadow: 0 0 4px #ECECEC; width:700px;float:left;_overflow:hidden;}
+.plate_mn{box-shadow: 0 0 4px #ECECEC; width:700px;float:left;overflow:hidden;background: #fff;}
 .plate_mn .bm_c{padding:0px 20px;}
 .plate_mn .tl th,.plate_mn .tl td{padding:12px 0px !important;}
 .plate_mn .cont_wp{padding:0px;width:auto !important;}
@@ -3124,4 +3129,9 @@ li.items_setlist .itemicon_setlist{position:absolute;right:18px;top:34px;display
 .hassignin_expand{color:#56af45;background-color:#43b56b;border:1px solid #e3e5e6;color:#56af45;}
 .hassignin_expand .btncont_signin_2{ color:#FFFFFF; }
 
-
+div.footers{
+	position:absolute;
+	bottom: 0;
+	left:0;
+	right:0;
+}

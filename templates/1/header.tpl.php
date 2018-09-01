@@ -18,7 +18,7 @@
 							<?php		
 						}else if($val['classname'] == '解决方案'){
 							?> 
-							<li><a href="javascript:;" onmouseenter="showmenu()">解决方案</a></li>
+							<li class='resolve'><a href="javascript:;" >解决方案</a></li>
 							<?php		
 						}else{
 							?>
@@ -115,72 +115,86 @@
 				<a href="javascript:;" id="sosuo" onclick="sousuo()"><img src="images/search.png" class="search_btn"/></a>
 			</div>
 			<script type="text/javascript">
-				function showmenu() {
+			   $(".nav ul li").mouseenter(function (params) {
+				   $(".menu-dropdown").removeClass('animate')
+					$(".menu-dropdown").css({
+						'height':'0',
+					})
+				})
+				
+				$(".search").mouseenter(function (params) {
+					$(".menu-dropdown").removeClass('animate')
+					$(".menu-dropdown").css({
+						'height':'0',
+					})
+				})
+			$(".resolve").hover(function (params) {
 					$(".menu-dropdown").addClass('animate')
 					$(".menu-dropdown").css({
-						'width':'700px',
-						'height':'400px',
-						'right':'0px',
-						'top':'77px,'
-						'z-index':1
+						'width':'750px',
+						'height':'auto',
+						'left':'500px',
+						'top':'58px',
+						'z-index':2
 					})
-				}
+			})
+		
 				function test1(){
 					var uid = $("#xr_uid").val();
 					
 					if(uid=='' || uid == 0){
-		   // jAlert('请先登录','温馨提示');
-		   $("#maskLayer").attr("style","display:block");
-		  $(".zhuceAndDenglu").css("display",'block');
-		$(".denglu").show()
-		$(".zhuce").hide()	
-			window.scroll(0,0)
-		}else{
-			$.ajax({
-				url:'<?= URL('member.istest')?>',
-				type:'POST',
-				data:{
-					uid	:	uid,
-				},
-				success:function(r){  
-					e = eval('(' + r + ')'); 
-					if(e.status == '1'){    
-						window.location.href="<?= URL('member.xmember','&tid=5')?>";	  
+					// jAlert('请先登录','温馨提示');
+					$("#maskLayer").attr("style","display:block");
+					$(".zhuceAndDenglu").css("display",'block');
+					$(".denglu").show()
+					$(".zhuce").hide()	
+						window.scroll(0,0)
 					}else{
-						jAlert(e.info,'温馨提示');
+						$.ajax({
+							url:'<?= URL('member.istest')?>',
+							type:'POST',
+							data:{
+								uid	:	uid,
+							},
+							success:function(r){  
+								e = eval('(' + r + ')'); 
+								if(e.status == '1'){    
+									window.location.href="<?= URL('member.xmember','&tid=5')?>";	  
+								}else{
+									jAlert(e.info,'温馨提示');
+								}	
+							}
+						}); 		
 					}	
+				} 
+			function sousuo(){
+				var val = formatStr($('#ya').val());
+				if(val == '搜索您感兴趣的课程' || val.replace(/^\s*/g, "") == ''){
+					jAlert('请输入您感兴趣的课程','温馨提示');
+				}else{
+					$.ajax({
+						url:'<?= URL('courSystem.find')?>',
+						type:'POST',
+						data:{
+							inter	:	val,
+						},
+						success:function(r){  
+							e = eval('(' + r + ')'); 
+							if(e.status == '1'){    
+								window.location.href="<?= URL('courSystem.course','&c=')?>"+val;	  
+							}else{
+								jAlert(e.info,'温馨提示');
+							}	
+						}
+					}); 	
 				}
-			}); 		
-		}	
-	} 
-	function sousuo(){
-		var val = formatStr($('#ya').val());
-		if(val == '搜索您感兴趣的课程' || val.replace(/^\s*/g, "") == ''){
-			jAlert('请输入您感兴趣的课程','温馨提示');
-		}else{
-			$.ajax({
-				url:'<?= URL('courSystem.find')?>',
-				type:'POST',
-				data:{
-					inter	:	val,
-				},
-				success:function(r){  
-					e = eval('(' + r + ')'); 
-					if(e.status == '1'){    
-						window.location.href="<?= URL('courSystem.course','&c=')?>"+val;	  
-					}else{
-						jAlert(e.info,'温馨提示');
-					}	
-				}
-			}); 	
-		}
-	}
-	function formatStr(str) {
-		str = str.replace(/<\/?[^>]*>/g,'');
-		str = str.replace(/(&lt;)|(&gt;)/gi,'');
-		str = str.replace(/(\')|(\")/g,'');
-		return str;
-	}
+			}
+			function formatStr(str) {
+				str = str.replace(/<\/?[^>]*>/g,'');
+				str = str.replace(/(&lt;)|(&gt;)/gi,'');
+				str = str.replace(/(\')|(\")/g,'');
+				return str;
+			}
 </script>
 <div class="clearfloat"></div>
 

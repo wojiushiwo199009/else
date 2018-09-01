@@ -134,7 +134,7 @@
                     <a href="" class="top_a sac">我要搜索</a>-->
                     <input class="searTxt ff4" type="text" onfocus="if(this.value=='输入问题进行搜索'){this.value='';this.style.color='#333'}" onblur="if(this.value=='' || this.value=='输入问题进行搜索'){this.value='输入问题进行搜索';this.style.color='#ccc'}" name="pro_name" id="pro_name" value="<?= !empty($pro_name)?$pro_name:'输入问题进行搜索'?>" style="color:#666;">
                     <input class="top_a sac" type="button" value="搜索" onclick="ser_form()" />
-                    <input type="button" class="top_a ans" onclick="make_question()" value="去提问" style="background:#FC8131">
+                    <input type="button" class="top_a ans" onclick="make_question()" value="去提问" >
                     <script>        
                         function ser_form() {
                             var pro_name	=	$("#pro_name").val();		//alert(pro_name);

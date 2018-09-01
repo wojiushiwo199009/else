@@ -160,7 +160,7 @@ body{
 				}
 			?>
             <span class="arrow_dark"></span></div>
-			<div class="son_menu" style="position:absolute; display:none;width:138px;height:320px;overflow-y:scroll;" id="son_menu1">
+			<div class="son_menu" style="position:absolute; display:none;width:146px;height:320px;overflow-y:scroll;" id="son_menu1">
 				<ul>
 						<li value="0" 	 vl="<?=$v['fid']?>"   onclick="selForum(this.value)" class="one" >全部</li>
 					<? $plantlist = DS('publics._get','','bbs_forum','status = 1');?>

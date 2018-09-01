@@ -97,7 +97,7 @@
 }
 
 .c_cate li a:hover strong  {
-	color: #3ab3ff;
+	color: #1890ff;
 	transition: all 1s;
 }
 .c_cate li a:hover .cc_logo img{
@@ -297,7 +297,7 @@
 }
 
 .service_cate li:hover span {
-	color: #3ab3ff;
+	color: #1890ff;
 }
 
 /*============== 服务与管理]] ================*/

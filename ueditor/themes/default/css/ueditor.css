@@ -208,7 +208,7 @@ div.edui-box {
     cursor: se-resize;
 }
 .edui-default .edui-editor-breadcrumb {
-    margin: 2px 0 0 -45px;
+    margin: 2px 0 0 0px;
 }
 
 .edui-default .edui-editor-breadcrumb span {

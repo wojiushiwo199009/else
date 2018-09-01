@@ -18,7 +18,7 @@
 							<?php		
 						}else if($val['classname'] == '解决方案'){
 							?> 
-							<li><a href="javascript:;" onmouseenter="showmenu()">解决方案</a></li>
+							<li class='resolve'><a href="javascript:;">解决方案</a></li>
 							<?php		
 						}else{
 							?>
@@ -96,15 +96,30 @@
     <a href="javascript:;" id="sosuo" onclick="sousuo()"><img src="images/search.png" class="search_btn"/></a>
 </div>
 <script type="text/javascript">
-	function showmenu() {
-					$(".menu-dropdown").addClass('animate')
-					$(".menu-dropdown").css({
-						'width':'700px',
-						'height':'400px',
-						'right':'0px',
-						'z-index':1
-					})
-				}
+    $(".nav ul li").mouseenter(function (params) {
+        $(".menu-dropdown").removeClass('animate')
+        $(".menu-dropdown").css({
+            'height':'0',
+        })
+    })
+    
+    $(".search").mouseenter(function (params) {
+        $(".menu-dropdown").removeClass('animate')
+        $(".menu-dropdown").css({
+            'height':'0',
+        })
+    })
+    $(".resolve").mouseenter(function (params) {
+        $(".menu-dropdown").addClass('animate')
+        $(".menu-dropdown").css({
+            'width':'750px',
+            'height':'auto',
+            'left':'500px',
+            'top':'58px',
+            'z-index':2
+        })
+	})
+
 	function test1(){
 		var uid = $("#xr_uid").val();
      

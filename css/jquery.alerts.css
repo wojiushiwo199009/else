@@ -5,7 +5,7 @@
 	max-width: 600px; /* Dialog will wrap after this width */
  	display:block;
 	background: #FFF;
-	border: solid 2px #48BCE5;
+	border: solid 2px #1099ff;
 	color: #000;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -20,7 +20,7 @@
 	text-align: center;
 	height:27px; line-height:26px;
 	color: #fff;
-	background: #CCC url(../images/xtc_tit_bg_03.jpg) top repeat-x;
+	background: #1099ff;
 	/*border: solid 1px #FFF;
 	border-bottom: solid 1px #777;*/
 	cursor: default;
@@ -50,7 +50,7 @@
 }
 
 #popup_panel {
-	text-align: center; background:#48BCE5; padding:1px 0 0 0; height:26px;        
+	text-align: center; background:#1099ff; padding:1px 0 0 0; height:26px;        
 	margin: 1em 0em 0em 0;
 }
 

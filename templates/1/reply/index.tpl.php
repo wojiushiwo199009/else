@@ -199,7 +199,7 @@ var _hmt = _hmt || [];
 					if($link_list){
 						foreach($link_list as $key => $val){
 				?>
-						<div style="display: block;background-image:url(./images/ecs-bg-x1.jpg);"
+						<div style="display: block;background-image:url(./images/"+<?=$val['linkageid']?>+".jpg);"
                 class="item-sub ecs-bg tpl1 product-bg-common common-header-clearfix" sidebar-type="<?=$val['linkageid']?>">
 			                 <div class="menu-dropdown-bd menu-dropdown-split-line">
 			                    <div class="menu-dropdown-down-item">

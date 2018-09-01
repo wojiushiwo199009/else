@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="css/head.css" /> 
 <link rel="stylesheet" type="text/css" href="css/foot.css" /> 
 <style id="diy_style" type="text/css"></style>
+	<link rel="stylesheet" type="text/css" href="css/menu/global.css" /> 
+<link rel="stylesheet" type="text/css" href="css/menu/common-header9.css" />
 
 <script src="/js/bbsjs/tuji_emote.js" type="text/javascript"></script>
 <script src="/js/bbsjs/jquery-1.js" type="text/javascript"></script>
@@ -19,6 +21,8 @@
 <script src="/js/bbsjs/MjcxMTE4MTE.js" charset="utf-8" type="text/javascript"></script>
 <script src="/js/bbsjs/common.js" type="text/javascript"></script>
 
+	<script type="text/javascript" src="js/menu/base-all.js"></script>		
+<script type="text/javascript" src="js/menu/common-header.js"></script>	
 
 <?php
 	//var_dump($_SESSION['username']);      
@@ -63,6 +67,74 @@ body{
 </head>
 <body id="nv_portal" class="pg_index" onkeydown="if(event.keyCode==27) return false;" >
 	<div class="container">
+			<div class='ali-common-header-inner'>
+		<ul class="menu item pull-left" id='J_common_header_menu' data-spm='201'>
+			<li class="top-menu-item" has-dropdown="true" menu-type="product" data-spm-click="">
+				<span class="menu-hd">
+				</span>
+          <div class="menu-dropdown common-header-clearfix">
+            <div class="menu-dropdown-inner">
+			  <div class="menu-dropdown-sidebar pull-left">
+			  	<?
+				  				$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+							?>
+								<a data-spm-click="gostr=/aliyun;locaid=" class="active common-header-clearfix" sidebar-type="<?=$val['linkageid']?>" href="<?= URL('courSystem.index','&couClass='.$val['linkageid'])?>"><?= $val['name']?><span class="icon pull-right">
+                  </span></a>
+								
+							<?
+						}
+					}
+					?>
+			  </div>
+
+              <div class="menu-dropdown-content">
+                <!-- 下拉右侧内容 -->
+                <!-- 模板一： -->
+
+				<?
+								$link_list = DS('publics._get', '', 'linkage', ' parentid = 0 and keyid = 1');
+
+					if($link_list){
+						foreach($link_list as $key => $val){
+				?>
+
+						<div style="display: block;"
+                class="item-sub ecs-bg tpl1 product-bg-common common-header-clearfix" sidebar-type="<?=$val['linkageid']?>">
+			                 <div class="menu-dropdown-bd menu-dropdown-split-line">
+			                    <div class="menu-dropdown-down-item">
+
+									<?
+									$c_list = DS('publics._get','','linkage',' parentid = '.$val['linkageid']) ?>
+										<?
+
+										if($c_list){
+											foreach($c_list as $ck => $cv){
+												?>
+												<a href="<?= URL('courSystem.index','&couClass='.$cv['linkageid'])?>">
+													<h4><?=$cv['name']?></h4>
+												</a>
+												<?
+											}
+										}
+										?>
+									</div>
+									
+								</div>
+							</div>
+							<?
+						}
+					}
+				?>
+
+              </div>
+            </div>
+          </div>
+        </li>
+		</ul>
+	</div>
 		<div>
 
 <div id="append_parent"></div>
@@ -155,7 +227,7 @@ function copy_html(id1,id2){
 
 
 </div>
-<div style="margin-top:50px">
+<div style="margin-top:50px" class='footers' >
 <?php TPL :: display('footer1');?>
 </div>
 </div>

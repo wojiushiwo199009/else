@@ -1838,7 +1838,7 @@ DIY图片幻灯片未加载时隐藏,模块标识隐藏
 
 
 /*new stylesheet*/
-body{background-color:#F2F2F2 !important;font-size:14px;}
+body{background-color:#f0f8ff;font-size:14px;}
 .clear{display:block;height:0px;line-height:0px;overflow:hidden;clear:both;}
 .focusBox{border:1px solid #12b1e5 !important;}
 .back_left{ width:218px; float:right !important; background-color:#FFFFFF; border:1px solid #E6E6E6; overflow:hidden; margin-left:20px;_margin:0px;}
@@ -2092,7 +2092,7 @@ a:hover{ text-decoration:none;}
 .bluebtn{background-color:#1890ff;border:1px solid #1890ff;border-radius:2px 2px 2px 2px;color:#FFF ;cursor:pointer;}
 .bluebtn span{color:#FFF}
 a.bluebtn{color:#FFFFFF !important;display:inline-block;}
-a.bluebtn:hover{background-color:#2799db;border:1px solid #309ddb;color:#FFF; text-decoration:none;}
+a.bluebtn:hover{background-color:#40a9ff;border:1px solid #40a9ff;color:#FFF; text-decoration:none;}
 a.bluebtn button,a.bluebtn input{background:none;border:none;color:#FFFFFF;cursor:pointer;height:36px;}
 a.disablebtn{background-color:#f6f6f6;border:1px solid  #e4e6e5;border-radius:2px 2px 2px 2px;color:#DDD; cursor:auto;}
 .graybtn{background-color:#f5f5f5;border: 1px solid #e6e6e6;border-radius: 2px 2px 2px 2px;cursor: pointer;font-size: 14px;color:#000000;}
